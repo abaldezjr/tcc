@@ -12,149 +12,98 @@
 
 \input{lib/preambulo}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%          Configuracoes             %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 %\trabalhoacademico{tccgraduacao}
 %\trabalhoacademico{tccespecializacao}
-\trabalhoacademico{dissertação}
+\trabalhoacademico{dissertacao}
 %\trabalhoacademico{tese}
 
-
-% Define se o trabalho eh uma qualificacao
-% Coloque 'nao' para versao final do trabalho
-
 \ehqualificacao{nao}
+\removerbordasdohyperlink{sim} % Quer remover as bordas vermelhas e verdes do PDF gerado? 
+%\cordohyperlink{nao} % Quer dicionar a cor Azul a todos os hyperlinks?
 
-% Remove as bordas vermelhas e verdes do PDF gerado
-% Coloque 'sim' pare remover
-
-\removerbordasdohyperlink{sim} 
-
-% Adiciona a cor Azul a todos os hyperlinks
-
-\cordohyperlink{nao}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%          Informação sobre a IES                 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\ies{Instituto Federal de Educação, Ciência e Tecnologia Campus Rio Grande}
-\iessigla{IFRS}
+%Informação sobre a IES
+\ies{Universidade Federal do Rio Grande}
+\iessigla{FURG}
 \centro{}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%        Informação para TCC de Graduacao         %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%Informação para TCC de Graduacao
 \graduacaoem{Engenharia Mecânica}
 \habilitacao{bacharel} % Pode colocar tambem 'licenciada'
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%     Informação para TCC de Especializacao       %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%Informação para TCC de Especializacao
 \especializacaoem{Utilização da Linguagem LaTeX para Elaboração de Trabalhos Acadêmicos }
 
+%Informação relacionadas ao trabalho
+\autor{Alexandre Marques Baldez Junior, Rodrigo de Souza Torma}
+\titulo{SISTEMA DE COORDENADAS PARA POSICIONAMENTO DE INSTRUMENTOS DE MEDIÇÃO EM UM TÚNEL DE VENTO}
+\data{2021}
+\local{Rio Grande, Rio Grande do Sul}
+\dataaprovacao{xx de maior de 2021} % Exemplo: \dataaprovacao{01 de Janeiro de 2017}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  Informação relacionadas ao trabalho     %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\autor{Nome Sobrenome}
-\titulo{Título do Trabalho}
-\data{2016}
-\local{Rio Grande -- Rio Grande do Sul}
-
-% Exemplo: \dataaprovacao{01 de Janeiro de 2017}
-\dataaprovacao{}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%     Informação sobre o Orientador       %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\orientador{Nome do seu Orientador}
-\orientadories{Instituto Federal de Educação, Ciência e Tecnologia – IFRS}
+%Informação sobre o Orientador
+\orientador{Prof. Dr. Gustavo da Cunha Dias}
+\orientadories{Universidade Federal do Rio Grande - FURG}
 \orientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%      Informação sobre o Co-orientador   %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%Informação sobre o Co-orientador
 % Deixe o nome do coorientador em branco para remover do documento
-
-\coorientador{}
-\coorientadories{Universidade Co-orientador - SIGLA}
-\coorientadorcentro{Centro do Co-orientador - SIGLA}
+\coorientador{Prof. Me. Letieri Rodrigues de Ávila}
+\coorientadories{Universidade Federal do Rio Grande - FURG}
+\coorientadorcentro{Universidade Federal do Rio Grande - FURG}
 \coorientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%      Informação sobre a banca           %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%Informação sobre a banca
 % Atenção! Deixe o nome do membro da banca para remover da folha de aprovacao
 
 % Exemplo de uso:
 % \membrodabancadois{Prof. Dr. Fulano de Tal}
 % \membrodabancadoisies{Universidade Estadual do Ceará - UECE}
 
-\membrodabancadois{Membro da Banca Dois}
-\membrodabancadoiscentro{Faculdade de Filosofia Dom Aureliano Matos – FAFIDAM}
-\membrodabancadoisies{Universidade do Membro da Banca Dois - SIGLA}
-\membrodabancatres{Membro da Banca Três}
-\membrodabancatrescentro{Centro de Ciências e Tecnologia - CCT}
-\membrodabancatresies{Universidade do Membro da Banca Três - SIGLA}
-\membrodabancaquatro{Membro da Banca Quatro}
-\membrodabancaquatrocentro{Centro de Ciências e Tecnologia - CCT}
-\membrodabancaquatroies{Universidade do Membro da Banca Quatro - SIGLA}
-\membrodabancacinco{Membro da Banca Cinco}
-\membrodabancacincocentro{Teste}
-\membrodabancacincoies{Universidade do Membro da Banca Cinco - SIGLA}
-\membrodabancaseis{Membro da Banca Seis}
-\membrodabancaseiscentro{}
-\membrodabancaseisies{Universidade do Membro da Banca Seis - SIGLA}
+\membrodabancadois{Prof. Me. Fernanda Mazuco Clain}
+\membrodabancadoisies{Universidade Federal do Rio Grande - FURG}
+
+%\membrodabancatres{Membro da Banca Três}
+%\membrodabancatrescentro{Centro de Ciências e Tecnologia - CCT}
+%\membrodabancatresies{Universidade do Membro da Banca Três - SIGLA}
+
 
 \begin{document}	
 
 	% Elementos pré-textuais
-	\imprimircapa
-	\imprimirfolhaderosto{}
-	\imprimirerrata{elementos-pre-textuais/errata}
-	\imprimirfolhadeaprovacao
-	\imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
-	\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
-	\imprimirepigrafe{elementos-pre-textuais/epigrafe}
-	\imprimirresumo{elementos-pre-textuais/resumo}
-	\imprimirabstract{elementos-pre-textuais/abstract}
-	\imprimirlistadeilustracoes
-	\imprimirlistadetabelas
-	\imprimirlistadequadros
-	\imprimirlistadealgoritmos
-	\imprimirlistadecodigosfonte
-	\imprimirlistadeabreviaturasesiglas	
-	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
-	\imprimirsumario
+	%\imprimircapa
+	%\imprimirfolhaderosto{}
+	%\imprimirerrata{elementos-pre-textuais/errata}
+	%\imprimirfolhadeaprovacao
+	%\imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
+	%\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
+	%\imprimirepigrafe{elementos-pre-textuais/epigrafe}
+	%\imprimirresumo{elementos-pre-textuais/resumo}
+	%\imprimirabstract{elementos-pre-textuais/abstract}
+	%\imprimirlistadeilustracoes
+	%\imprimirlistadetabelas
+	%\imprimirlistadequadros
+	%\imprimirlistadealgoritmos
+	%\imprimirlistadecodigosfonte
+	%\imprimirlistadeabreviaturasesiglas	
+	%\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
+	%\imprimirsumario
 	
 	%Elementos textuais
 	\textual
-	\input{elementos-textuais/introducao}
-	\input{elementos-textuais/fundamentacao-teorica}
+	%\input{elementos-textuais/introducao}
+	%\input{elementos-textuais/fundamentacao-teorica}
 	\input{elementos-textuais/metodologia}
-	\input{elementos-textuais/resultados}
-	\input{elementos-textuais/conclusao}
+	%\input{elementos-textuais/resultados}
+	%\input{elementos-textuais/conclusao}
 	
 	%Elementos pós-textuais	
 	\bibliography{elementos-pos-textuais/referencias}
 	\imprimirglossario	
 	\imprimirapendices
-		% Adicione aqui os apendices do seu trabalho
 		\input{elementos-pos-textuais/apendices/historico-de-mudancas}
 		\input{elementos-pos-textuais/apendices/lorem-ipsum}
 		\input{elementos-pos-textuais/apendices/termo-de-fiel-depositario}	
 	\imprimiranexos
-		% Adicione aqui os anexos do seu trabalho
 		\input{elementos-pos-textuais/anexos/exemplo-de-anexo}		
 		\input{elementos-pos-textuais/anexos/dinamica-das-classes-sociais}
 	\imprimirindice

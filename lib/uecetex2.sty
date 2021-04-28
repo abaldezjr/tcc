@@ -4,17 +4,9 @@
 % As linhas das margens serao impressas
 %\usepackage[showframe, pass]{geometry}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%             Definições              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Importa o arquivo com as entradas do glassario
+% Importa o arquivo com as entradas do glossario
 \input{elementos-pos-textuais/glossario}
 \input{elementos-pre-textuais/lista-de-abreviaturas-e-siglas}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%       Formatação das Páginas        %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Define o espaço entre linhas para 1.5 cm
 %\OnehalfSpacing	Bug no ABNTEX2?
@@ -343,10 +335,7 @@
 \newcommand{\coorientadories}{\def \@coorientadories}
 \newcommand{\coorientadorcentro}{\def \@coorientadorcentro}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%        Imprimir as Variáveis        %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%Imprimir as Variáveis
 \newcommand{\imprimiries}{\@ies}
 \newcommand{\imprimiriessigla}{\@iessigla}
 \newcommand{\imprimircentro}{\@centro}
@@ -385,13 +374,9 @@
 \newcommand{\imprimircoorientadories}{\@coorientadories}
 \newcommand{\imprimircoorientadorcentro}{\@coorientadorcentro}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%           Valor de Padrão           %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\ies{Universidade Estadual do Ceará}
-\iessigla{UECE}
+%Valor de Padrão 
+\ies{Universidade Federal do Rio Grande}
+\iessigla{FURG}
 \centro{}
 \graduacaoem{}
 \habilitacao{} % Pode colocar tambem 'licenciada'
@@ -433,10 +418,7 @@
 \membrodabancaseiscentro{}
 \membrodabancaseisies{}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%       Definições de Variáveis       %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%Definições de Variáveis
 \newcommand{\preambulotese}{
 	Tese apresentada ao Curso de \imprimirdoutorado\ do \imprimirprogramadoutorado\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do título de doutor em \imprimirdoutorem. Área de Concentração: \imprimirareadeconcentracaodoutorado \\
 }
@@ -474,17 +456,11 @@
 	} %	
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                Capa                 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\imprimircapatese}{%
-	\begin{capa}%
-		% Todos os elementos da capa devem esta centralizado
-		\center
-		% Todos os elementos da capa devem esta em negrito
-		\bfseries
-
+%Capa
+\newcommand{\imprimircapatese}{
+	\begin{capa}
+		\center % Todos os elementos da capa devem esta centralizado
+		\bfseries % Todos os elementos da capa devem esta em negrito
         \includegraphics[scale=0.12]{lib/11.jpg} 
         \vspace{0.1cm}
 		\MakeUppercase{\imprimiries} \\
@@ -493,15 +469,10 @@
 			\MakeUppercase{\imprimirprogramadoutorado} \\
 		}		
 		\MakeUppercase{\imprimirdoutorado} \\
-
 		\vspace{\onelineskip}
-
 		\MakeUppercase{\imprimirautor}
-		
 		\vspace{5cm}
-		
 		\MakeUppercase{\imprimirtitulo}
-		
 		\vfill
 		\normalsize\MakeUppercase\imprimirlocal\par	
 		\normalsize\imprimirdata
@@ -509,12 +480,9 @@
 }
 
 \newcommand{\imprimircapadissertacao}{%
-	\begin{capa}%
-		% Todos os elementos da capa devem esta centralizado
-		\center
-		% Todos os elementos da capa devem esta em negrito
-		\bfseries
-
+	\begin{capa}
+		\center % Todos os elementos da capa devem esta centralizado
+		\bfseries % Todos os elementos da capa devem esta em negrito
         \begin{figure}[tb]
 \hspace{-0.5cm}
 	\includegraphics[width=2.46cm,height=2.67cm,keepaspectratio]{lib/11.jpg}  \hspace{11.75cm}
@@ -527,15 +495,10 @@
 			\MakeUppercase{\imprimirprogramamestrado} \\
 		}		
 		\MakeUppercase{\imprimirmestrado} \\
-
 		\vspace{\onelineskip}
-
 		\MakeUppercase{\imprimirautor}
-		
 		\vspace{5cm}
-		
 		\MakeUppercase{\imprimirtitulo}
-		
 		\vfill
 		\normalsize\MakeUppercase\imprimirlocal\par	
 		\normalsize\imprimirdata
@@ -543,26 +506,19 @@
 }
 
 \newcommand{\imprimircapatcc}[1]{%
-	\begin{capa}%
-		% Todos os elementos da capa devem esta centralizado
-		\center
-		% Todos os elementos da capa devem esta em negrito
-		\bfseries
+	\begin{capa}
+		\center % Todos os elementos da capa devem esta centralizado
+		\bfseries % Todos os elementos da capa devem esta em negrito
 
         \includegraphics[scale=0.12]{lib/doiss} \\
         \vspace{0.1cm}
 		\MakeUppercase{\imprimiries} \\
 		\MakeUppercase{\imprimircentro} \\
 		\MakeUppercase{Curso de #1 em \imprimirgraduacaoem} \\
-
 		\vspace{\onelineskip}
-
 		\MakeUppercase{\imprimirautor}
-		
 		\vspace{5cm}
-		
 		\MakeUppercase{\imprimirtitulo}
-		
 		\vfill
 		\normalsize\MakeUppercase\imprimirlocal\par	
 		\normalsize\imprimirdata
@@ -587,10 +543,7 @@
 	}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%           Folha de Rosto            %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%Folha de Rosto
 \makeatletter
 \renewcommand{\folhaderostocontent}{
 	\begin{center}
@@ -624,25 +577,17 @@
 }
 \makeatother
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%         Folha de Aprovação          %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Folha de Aprovação
 
-% Define o comprimento da linha das assinaturas na Folha de Aprovacao
-\setlength{\ABNTEXsignwidth}{12cm}
 
-% Largura da linha da assinatura
-\setlength{\ABNTEXsignthickness}{1pt}
-
-% Espaço entre uma assintura e outra
-\setlength{\ABNTEXsignskip}{\onelineskip}
+\setlength{\ABNTEXsignwidth}{12cm} % Define o comprimento da linha das assinaturas na Folha de Aprovacao
+\setlength{\ABNTEXsignthickness}{1pt} % Largura da linha da assinatura
+\setlength{\ABNTEXsignskip}{\onelineskip} % Espaço entre uma assintura e outra
 
 \newcommand{\imprimirfolhadeaprovacaotese}{
-	% Define o comprimento da linha das assinaturas na Folha de Aprovacao
-	\setlength{\ABNTEXsignwidth}{8cm}
 	
-	% Espaço entre uma assintura e outra
-	\setlength{\ABNTEXsignskip}{18pt}
+	\setlength{\ABNTEXsignwidth}{8cm} % Define o comprimento da linha das assinaturas na Folha de Aprovacao
+	\setlength{\ABNTEXsignskip}{18pt} % Espaço entre uma assintura e outra
 
 	\begin{center}
 		\MakeUppercase{\imprimirautor}\par
