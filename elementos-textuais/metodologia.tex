@@ -33,7 +33,7 @@ Allen sem cabeça M5.
 % Figura 3.1
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 1]{figuras/3-1}
+\includegraphics[scale = 0.4]{figuras/3-1}
 \caption{Perfil v\_slot  20x40mm em alumínio.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{figp20x40p}
@@ -42,7 +42,7 @@ Allen sem cabeça M5.
 % Figura 3.2
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 1]{figuras/3-2}
+\includegraphics[scale = 0.4]{figuras/3-2}
 \caption{Dimensões do perfil 20x40mm.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{figp20x40d}
@@ -51,7 +51,7 @@ Allen sem cabeça M5.
 % Figura 3.3
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 1]{figuras/3-3}
+\includegraphics[scale = 0.4]{figuras/3-3}
 \caption{Placa de conexão interna de 90º.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{figpconexao90p}
@@ -60,18 +60,16 @@ Allen sem cabeça M5.
 % Figura 3.4
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 1]{figuras/3-4}
+\includegraphics[scale = 0.4]{figuras/3-4}
 \caption{Dimensões da placa de conexão interna de 90º.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{figpconexao90d}
 \end{figure}
     
 % Figura 3.5
-% Estrutura da mesa cartesiana 
-% (Fonte:Próprio autor)
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 1]{figuras/3-5}
+\includegraphics[scale = 0.3]{figuras/3-5}
 \caption{Estrutura da mesa cartesiana.}
 \caption*{Fonte: Próprio autor}
 \label{figestruturamesa}
@@ -80,7 +78,7 @@ Allen sem cabeça M5.
 % Figura 3.6
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 1]{figuras/3-6}
+\includegraphics[scale = 0.25]{figuras/3-6}
 \caption{Detalhe do encaixe a 45° da base da estrutura.}
 \caption*{Fonte: Próprio autor}
 \label{figdetalhe45}
@@ -94,7 +92,7 @@ superior do pórtico a união se dará por meio de parafusos M6 diretamente nos 
 % Figura 3.7
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 1]{figuras/3-7}
+\includegraphics[scale = 0.5]{figuras/3-7}
 \caption{Perfil v\_slot 20x20 mm em alumínio.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{figp20x20p}
@@ -103,7 +101,7 @@ superior do pórtico a união se dará por meio de parafusos M6 diretamente nos 
 % Figura 3.8
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 1]{figuras/3-8}
+\includegraphics[scale = 0.5]{figuras/3-8}
 \caption{Dimensões do perfil 20x20mm.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{figp20x20d}
@@ -112,7 +110,7 @@ superior do pórtico a união se dará por meio de parafusos M6 diretamente nos 
 % Figura 3.9
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 1]{figuras/3-9}
+\includegraphics[scale = 0.40]{figuras/3-9}
 \caption{Placa T simples de aço.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{figplacatp}
@@ -121,7 +119,7 @@ superior do pórtico a união se dará por meio de parafusos M6 diretamente nos 
 % Figura 3.10
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 1]{figuras/3-10}
+\includegraphics[scale = 0.35]{figuras/3-10}
 \caption{Dimensões da placa T simples.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{figplacatd}
@@ -129,6 +127,7 @@ superior do pórtico a união se dará por meio de parafusos M6 diretamente nos 
     
 \subsection{Sistema de transmissão}
 
+%PRECISA COLOCAR REFERENCIA
 Segundo (Budynas,Richard G. 2016)  o parafuso de potência é um dispositivo usado para transformar 
 o movimento angular em movimento linear e, usualmente, para transmitir potência. Para fazer o movimento 
 dos carros do eixo X e do eixo Y, componentes que farão o efetivo deslocamento do equipamento de medição 
@@ -163,85 +162,108 @@ optoacopladores, encoders e um computador. É importante lembrar que para menor 
 pela criação de dispositivos.
 
 % Figura 3.11
-% Fluxograma do sistema eletrônico. 
-% (Fonte: Próprio autor.) 
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.4]{figuras/3-11}
+\caption{Fluxograma do sistema eletrônico.}
+\caption*{Fonte: Próprio autor.}
+\label{figfluxogramaeletronico}
+\end{figure}
+    
 \subsection{Placa de prototipagem eletrônica Arduino}
 
-A placa de prototipagem eletrônica Arduino é responsável pela recepção e tratamento dos dados provenientes da interface 
-computacional. O controle dos motores está fundamentado na programação do microcontrolador de acordo com as necessidades
-definidas inicialmente para operação da mesa cartesiana.
+A placa de prototipagem eletrônica Arduino é responsável pela recepção e tratamento dos dados provenientes 
+da interface computacional. O controle dos motores está fundamentado na programação do microcontrolador 
+de acordo com as necessidades definidas inicialmente para operação da mesa cartesiana.
 
-Com o objetivo de elaborar uma interface de prototipagem de baixo custo para uso em projetos escolares, o arduino foi 
-criado por um grupo de pesquisadores na Itália em 2005. Na sua concepção, para ter maior flexibilidade a diversos tipos 
-de projetos, isto é, para que qualquer projetista pudesse personalizá-lo, foi adotado o conceito de hardware livre.
+Com o objetivo de elaborar uma interface de prototipagem de baixo custo para uso em projetos escolares, 
+o arduino foi criado por um grupo de pesquisadores na Itália em 2005. Na sua concepção, para ter maior 
+flexibilidade a diversos tipos de projetos, isto é, para que qualquer projetista pudesse personalizá-lo, 
+foi adotado o conceito de hardware livre.
 
-Em sua composição, a placa Arduino UNO contém um microcontrolador ATMEL ATMEGA328, que é um dispositivo de 8 bits da 
-família AVR com arquitetura RISC avançada e com encapsulamento DIP28, além de quatorze portas digitais de entrada e saída,
-sendo que seis delas com capacidade de PWM (Pulse Width Modulation), seis entradas analógicas e 32 KB de memória flash, 
-2 KB de RAM e 1 KB de EEPROM. 
+Em sua composição, a placa Arduino UNO contém um microcontrolador ATMEL ATMEGA328, que é um dispositivo 
+de 8 bits da família AVR com arquitetura RISC avançada e com encapsulamento DIP28, além de quatorze portas 
+digitais de entrada e saída, sendo que seis delas com capacidade de PWM (Pulse Width Modulation), seis 
+entradas analógicas e 32 KB de memória flash, 2 KB de RAM e 1 KB de EEPROM. 
 
-A alimentação é via porta USB ou por conector tipo Jack de alimentação externa que trabalha entre os limites de 6 V e 
-20 V sendo recomendável o uso de 7 V a 12 V para não danificar. Para o fornecimento de tensão contínua para alimentação 
-dos circuitos e Shields, a placa Arduino UNO tem um regulador de tensão de 3,3 V.
+A alimentação é via porta USB ou por conector tipo Jack de alimentação externa que trabalha entre os 
+limites de 6 V e 20 V sendo recomendável o uso de 7 V a 12 V para não danificar. Para o fornecimento 
+de tensão contínua para alimentação dos circuitos e Shields, a placa Arduino UNO tem um regulador de tensão de 3,3 V.
 
-Além de alimentar, a porta USB é a via de comunicação com o computador para o envio do código de máquina gerado 
-pelo compilador. O código compilado é enviado pelo microcontrolador ATMEL ATMEGA16U2 que está conectado a dois LEDs 
-chamados de TX e RX cuja função é a indicação do envio e recepção dos dados da placa para o computador.
+Além de alimentar, a porta USB é a via de comunicação com o computador para o envio do código de máquina 
+gerado pelo compilador. O código compilado é enviado pelo microcontrolador ATMEL ATMEGA16U2 que está 
+conectado a dois LEDs chamados de TX e RX cuja função é a indicação do envio e recepção dos dados da 
+placa para o computador.
 
-A placa Arduino é programada via IDE (Integrated Development Environment, ou Ambiente de Desenvolvimento Integrado), 
-utilizando uma linguagem baseada em C/C++.
+A placa Arduino é programada via IDE (Integrated Development Environment, ou Ambiente de Desenvolvimento 
+Integrado), utilizando uma linguagem baseada em C/C++.
 
 % Figura 3.12
-% Descrição dos componentes da placa Arduino. 
-% (Fonte: Próprio autor.)
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.5]{figuras/3-12}
+\caption{Descrição dos componentes da placa Arduino.}
+\caption*{Fonte: Próprio autor.}
+\label{figplacaarduino}
+\end{figure}
+    
 \begin{itemize}
-\item Botão reset: o botão reset serve para reiniciar a placa arduino.
-\item Conector USB tipo B: o conector USB tipo B serve para conectar a placa Arduino ao computador.
-\item Conector DC: o conector DC serve para alimentação externa do Arduino.
-\item Portas digitais: são às portas que trabalham com os sinais digitais que são sinais com valores discretos, no arduino temos às constantes LOW que significa 0 V e também HIGH que significa 5 V, no código são 0 e 1 respectivamente. Dentro das portas digitais temos às portas PWM (Pulse Width Modulation) que são portas que modulam o sinal pela largura do pulso, no arduino podemos variar de 0 a 255. Resumidamente, a placa Arduino possui quatorze portas digitais, sendo que seis delas são portas PWM como dito anteriormente, os pinos delas são 3,5,6,9,10 e 11.
-\item Portas analógicas: são às portas que trabalham com os sinais analógicos que são sinais com valores contínuos, no arduino podemos variar de 0 a 1023.
-\item Portas de alimentação: são às portas de saída de tensão do arduino, temos três portas: porta 3,3 V cuja saída trabalha em 3,3 V, porta 5 V cuja saída trabalha em 5 V e a porta Vin cuja saída trabalha com a tensão de entrada do arduino.
-\item Led porta 13: led conectado a porta 13 do arduino.
-\item Leds das portas RX TX: leds conectados às portas RX TX, sendo que o led TX serve para indicar a transmissão de dados e o RX para indicar a recepção de dados.
-\item Processador ATMEGA328: o processador é responsável pelo processamento da lógica de programação.
-\item Led de power: led que acende quando o arduino está ligado.
-\item Conector ICSP: o conector ICSP, é o conector in circuit system programmer, que se refere a capacidade de programar Arduinos diretamente dos seus microcontroladores. 
-\item Conjunto microcontrolador e cristal para USB: esse conjunto possui um microcontrolador ATMEGA16U2 e um cristal externo de 16 MHz, e é responsável pelo gerenciamento da porta USB.
-\item Circuito de proteção de sobretensão na USB: responsável por proteger a entrada USB de sobretensão.
-\item Controlador de tensão de alimentação: esse controlador é responsável por verificar se a tensão DC está presente, se não estiver, deixa que a tensão da USB alimente o circuito. 
-\item Regulador de tensão de 5 V: serve para regular a tensão em 5 V.
-\item Regulador de tensão de 3,3 V: serve para regular a tensão em 3,3 V.
-\item Cristal para clock: serve para gerar o clock.
+\item \textbf{Botão reset:} o botão reset serve para reiniciar a placa arduino.
+\item \textbf{Conector USB tipo B:} o conector USB tipo B serve para conectar a placa Arduino ao computador.
+\item \textbf{Conector DC:} o conector DC serve para alimentação externa do Arduino.
+\item \textbf{Portas digitais:} são às portas que trabalham com os sinais digitais que são sinais com valores discretos, no arduino temos às constantes LOW que significa 0 V e também HIGH que significa 5 V, no código são 0 e 1 respectivamente. Dentro das portas digitais temos às portas PWM (Pulse Width Modulation) que são portas que modulam o sinal pela largura do pulso, no arduino podemos variar de 0 a 255. Resumidamente, a placa Arduino possui quatorze portas digitais, sendo que seis delas são portas PWM como dito anteriormente, os pinos delas são 3,5,6,9,10 e 11.
+\item \textbf{Portas analógicas:} são às portas que trabalham com os sinais analógicos que são sinais com valores contínuos, no arduino podemos variar de 0 a 1023.
+\item \textbf{Portas de alimentação:} são às portas de saída de tensão do arduino, temos três portas: porta 3,3 V cuja saída trabalha em 3,3 V, porta 5 V cuja saída trabalha em 5 V e a porta Vin cuja saída trabalha com a tensão de entrada do arduino.
+\item \textbf{Led porta 13:} led conectado a porta 13 do arduino.
+\item \textbf{Leds das portas RX TX:} leds conectados às portas RX TX, sendo que o led TX serve para indicar a transmissão de dados e o RX para indicar a recepção de dados.
+\item \textbf{Processador ATMEGA328:} o processador é responsável pelo processamento da lógica de programação.
+\item \textbf{Led de power:} led que acende quando o arduino está ligado.
+\item \textbf{Conector ICSP:} o conector ICSP, é o conector in circuit system programmer, que se refere a capacidade de programar Arduinos diretamente dos seus microcontroladores. 
+\item \textbf{Conjunto microcontrolador e cristal para USB:} esse conjunto possui um microcontrolador ATMEGA16U2 e um cristal externo de 16 MHz, e é responsável pelo gerenciamento da porta USB.
+\item \textbf{Circuito de proteção de sobretensão na USB:} responsável por proteger a entrada USB de sobretensão.
+\item \textbf{Controlador de tensão de alimentação:} esse controlador é responsável por verificar se a tensão DC está presente, se não estiver, deixa que a tensão da USB alimente o circuito. 
+\item \textbf{Regulador de tensão de 5 V:} serve para regular a tensão em 5 V.
+\item \textbf{Regulador de tensão de 3,3 V:} serve para regular a tensão em 3,3 V.
+\item \textbf{Cristal para clock:} serve para gerar o clock.
 \end{itemize}
 
 \subsection{Drivers de potência}
 
-Os drivers de potência são dispositivos que conservam sinais fundamentais de entrada em suas saídas, potencializando 
-e fornecendo maior corrente elétrica para equipamentos atuadores. Os drivers de potência podem ser formados por elementos 
-eletromecânicos (relés) e semicondutores (diodos, transistores, e circuitos integrados). 
+Os drivers de potência são dispositivos que conservam sinais fundamentais de entrada em suas saídas, 
+potencializando e fornecendo maior corrente elétrica para equipamentos atuadores. Os drivers de potência 
+podem ser formados por elementos eletromecânicos (relés) e semicondutores (diodos, transistores, e 
+circuitos integrados). 
 
-No presente projeto, os drivers têm a função de, a partir dos sinais originados pelo Arduino, atender a demanda dos 
-motores de passo utilizados.
+No presente projeto, os drivers têm a função de, a partir dos sinais originados pelo Arduino, atender 
+a demanda dos motores de passo utilizados.
 
-A equipe do projeto optou por desenvolver para a mesa cartesiana que necessita de dois atuadores (motores de passo), 
-drivers individuais para cada motor devido ao custo que seria menor.
+A equipe do projeto optou por desenvolver para a mesa cartesiana que necessita de dois atuadores 
+(motores de passo), drivers individuais para cada motor devido ao custo que seria menor.
 
-A construção dos drivers que controlam os motores de passo da mesa cartesiana foi baseada em um circuito eletrônico 
-para motores que trabalham com tensão de 12 V DC e até 10 A de corrente elétrica. 
+A construção dos drivers que controlam os motores de passo da mesa cartesiana foi baseada em um 
+circuito eletrônico para motores que trabalham com tensão de 12 V DC e até 10 A de corrente elétrica. 
 
 % Figura 3.13
-% Driver fabricado pela equipe do projeto 
-% (Fonte: Próprio Autor)
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.2]{figuras/3-13}
+\caption{Driver fabricado pela equipe do projeto.}
+\caption*{Fonte: Próprio autor.}
+\label{figdriver}
+\end{figure}
+    
 O driver criado foi utilizado para controlar motores de passo e pode operar com tensões entre 8 V e 35 V e e
-ntregar até 35 V por bobina. A Figura 3.14 mostra o driver com os respectivos componentes.
+ntregar até 35 V por bobina. A \ref{figdriverportas} mostra o driver com os respectivos componentes.
 
 % Figura 3.14
-% Portas do driver fabricado pela equipe do projeto 
-% (Fonte: Próprio Autor)
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.2]{figuras/3-14}
+\caption{Portas do driver fabricado pela equipe do projeto.}
+\caption*{Fonte: Próprio autor.}
+\label{figdriverportas}
+\end{figure}
+    
 AQUI EMBAIXO UMA EXPLICAÇÃO DA IMAGEM DAS PORTAS, EXPLICANDO PARA QUE SERVE CADA PORTA COMO SE FOSSE UM DATASHEET 
 DO DRIVER CRIADO
 
@@ -285,12 +307,18 @@ controle de quantos passos serão dados, o motor necessita de largura de pulso a
 para cada passo. A Figura 3.15 é um exemplo para melhor entendimento do conceito de passo.
 
 % Figura 3.15
-% Conceito didático do motor de passo 
-% (Fonte: https://www.fernandok.com - 2021)
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.4]{figuras/3-15}
+\caption{Conceito didático do motor de passo.}
+\caption*{Fonte: https://www.fernandok.com.}
+\label{figdidaticopasso}
+\end{figure}
+    
+A \ref{figdidaticopasso} mostra um motor de passo com cinquenta dentes de precisão, portanto combinando 
+o número de dentes com as quatro fases de um motor bipolar temos duzentos passos.
 
-A Figura 3.15 mostra um motor de passo com cinquenta dentes de precisão, portanto combinando o número de dentes 
-com as quatro fases de um motor bipolar temos duzentos passos.
-
+%escrever equação
 NÚMERO PASSOS = NÚMERO DENTES * NÚMERO FASES
 
 A precisão do motor é definida por trezentos e sessenta graus divididos pelo número de passos. Portanto, 
@@ -301,21 +329,26 @@ de passo possui cem dentes de precisão, portanto a precisão é de zero vírgul
 Para aumentar a precisão dos motores é possível subdividir o passo de um motor em menores passos fornecendo 
 ao mesmo tempo corrente elétrica em duas fases. Essa forma de trabalho é chamada de micropassos.
 
-Logo, quando é fornecido a mesma magnitude de corrente a duas fases, um campo magnético de mesma magnitude é gerado, 
-resultando em um movimento angular com a metade do passo original, essa configuração é chamada de  meio passo. 
-Assim, ao aplicar magnitudes de corrente diferentes a duas fases, o rotor se desloca proporcionalmente ao campo 
-eletromagnético mais forte.
+Logo, quando é fornecido a mesma magnitude de corrente a duas fases, um campo magnético de mesma magnitude 
+é gerado, resultando em um movimento angular com a metade do passo original, essa configuração é chamada de 
+meio passo. Assim, ao aplicar magnitudes de corrente diferentes a duas fases, o rotor se desloca 
+proporcionalmente ao campo eletromagnético mais forte.
 
-Os motores de passo utilizados no projeto da mesa cartesiana possuem 5 kgf.cm de torque, passo de 1.8° e corrente 
-máxima de 2 Ampères por fase. O incremento de rotação e o torque são definidos conforme o modo de excitação que 
-pode ser por passo completo, meio passo e micropasso explicadas anteriormente. O passo é dividido em quatro, 
-oito ou dezesseis na maioria das vezes, mas também, atualmente se encontra sistemas capazes de  dividir um passo 
-em milhares de vezes.
+Os motores de passo utilizados no projeto da mesa cartesiana possuem 5 kgf.cm de torque, passo de 1.8° e 
+corrente máxima de 2 Ampères por fase. O incremento de rotação e o torque são definidos conforme o modo 
+de excitação que pode ser por passo completo, meio passo e micropasso explicadas anteriormente. O passo 
+é dividido em quatro, oito ou dezesseis na maioria das vezes, mas também, atualmente se encontra 
+sistemas capazes de  dividir um passo em milhares de vezes.
 
 % Figura 3.16
-% Esquema elétrico do motor de passo. 
-% (Fonte: Próprio autor.)
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.2]{figuras/3-16}
+\caption{Esquema elétrico do motor de passo.}
+\caption*{Fonte: Próprio autor.}
+\label{figesquemaeletrico}
+\end{figure}
+    
 As Tabelas 2, 3 e 4 mostram a sequência de polaridades aplicadas no motor no movimento de sentido horário.
 
 % Tabela 2
@@ -438,9 +471,14 @@ Conforme a determinação da tensão de saída e o cálculo de corrente necessá
 é possível determinar que a fonte deve ter 12 V e 10,64 A.
 
 % Figura 3.17
-% Foto da fonte do sistema
-% (Fonte: Próprio autor.)
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.2]{figuras/3-17}
+\caption{Fonte do sistema.}
+\caption*{Fonte: Próprio autor.}
+\label{figfonte}
+\end{figure}
+    
 \subsection{Acopladores ópticos}
 
 Os acopladores ópticos ou optoacopladores são dispositivos que realizam a transferência de 
@@ -451,33 +489,41 @@ os circuitos de controle de potência, protegendo os circuitos sensíveis a uma 
 como a placa controladora Arduino.
 
 % Figura 3.18
-% Funcionamento do acoplador no sistema.
-% (Fonte: Próprio autor)
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.7]{figuras/3-18}
+\caption{Funcionamento do acoplador no sistema.}
+\caption*{Fonte: Próprio autor.}
+\label{figacoplador}
+\end{figure}
+    
 A sua composição contém uma fonte emissora de luz (LED) e um sensor fototransistor sensível às variações 
 espectrais da fonte emissora. Seu funcionamento é baseado no efeito fotoelétrico, onde o diodo LED produz 
 um feixe de luz infravermelha polarizando a base do fototransistor impondo uma condução entre base e emissor.
 
-O optoacoplador escolhido para o projeto foi o PC 817 por já estar disponível no Laboratório de Sistemas Térmicos.
+O optoacoplador escolhido para o projeto foi o PC 817 por já estar disponível no Laboratório de Sistemas 
+Térmicos.
 
 \subsection{Encoders}
 
-Geradores de pulsos ou encoders são sensores/transdutores eletromecânicos responsáveis pelo sistema de controle 
-de posição transformando a medida de posição de algum objeto, seja linear ou angular, em sinal elétrico digital 
-que é transmitida à placa controladora, também conseguem converter movimentos circulares ou lineares em pulso elétricos.
+Geradores de pulsos ou encoders são sensores/transdutores eletromecânicos responsáveis pelo sistema de 
+controle de posição transformando a medida de posição de algum objeto, seja linear ou angular, em sinal 
+elétrico digital que é transmitida à placa controladora, também conseguem converter movimentos circulares 
+ou lineares em pulso elétricos.
 
-Um encoder tem a capacidade de quantização de distâncias, controle de velocidades, medição de ângulos, medição de posição,
-medição de deslocamento relativo e etc. Sua composição contém um disco com marcações, um emissor e um receptor. 
-Conforme o disco gira, vão sendo contadas às marcações e o emissor envia um sinal à placa controladora que por sua vez 
-executa cálculos de distâncias, velocidades, ângulos, número de rotações e etc.
+Um encoder tem a capacidade de quantização de distâncias, controle de velocidades, medição de ângulos, 
+medição de posição, medição de deslocamento relativo e etc. Sua composição contém um disco com marcações, 
+um emissor e um receptor. Conforme o disco gira, vão sendo contadas às marcações e o emissor envia um sinal 
+à placa controladora que por sua vez executa cálculos de distâncias, velocidades, ângulos, número de rotações 
+e etc.
 
 O princípio de funcionamento é dividido em três tipos, sendo eles: tacômetro, incremental e absoluto.
 
-O encoder do tipo tacômetro possui um sinal de saída digital responsável em emitir um pulso para cada incremento 
-captado no deslocamento. Este é utilizado na medição de velocidade e também no deslocamento angular unidirecional.
-O encoder incremental conta com sistema eletrônico externo responsável pela interpretação de posição, este dispositivo 
-utiliza dois ou mais elementos geradores de sinal possuindo a capacidade de rotacionar por quantas revoluções 
-forem necessárias.
+O encoder do tipo tacômetro possui um sinal de saída digital responsável em emitir um pulso para cada 
+incremento captado no deslocamento. Este é utilizado na medição de velocidade e também no deslocamento 
+angular unidirecional. O encoder incremental conta com sistema eletrônico externo responsável pela 
+interpretação de posição, este dispositivo utiliza dois ou mais elementos geradores de sinal possuindo 
+a capacidade de rotacionar por quantas revoluções forem necessárias.
 
 E o encoder absoluto utiliza várias faixas de saídas com leitura em paralelo e são limitados a uma revolução. 
 Os dados podem ser recuperados, se uma falha no sistema ocorrer, devido a representação binária da posição 
@@ -485,11 +531,12 @@ angular do eixo.
 
 \subsection{Chaves fim de curso}
 
+%PRECISA COLOCAR REFERENCIA
 As chaves fim de curso são dispositivos eletromecânicos usados para limitação de campo de movimento de eixos, 
-como os presentes na mesa cartesiana. Esses componentes têm a capacidade de mudança de estado de conexão em circuitos, 
-alternando o estado de aberto para fechado e vice-versa (ALCIATORE; HISTAND, 2014). Seu estado inicialmente pode 
-ser tanto normalmente aberto como normalmente fechado alterando seu estado por pino, 
-gatilho, roldana, haste alavanca, etc. 
+como os presentes na mesa cartesiana. Esses componentes têm a capacidade de mudança de estado de conexão 
+em circuitos, alternando o estado de aberto para fechado e vice-versa (ALCIATORE; HISTAND, 2014). 
+Seu estado inicialmente pode ser tanto normalmente aberto como normalmente fechado alterando seu estado 
+por pino, gatilho, roldana, haste alavanca, etc. 
 
 Uma chave fim de curso é composta basicamente por três elementos, sendo eles:
 
@@ -506,16 +553,21 @@ A seguir será descrito o desenvolvimento do sistema de software.
 
 \subsection{Plataforma de prototipação Arduino IDE}
 
-A plataforma de prototipação Arduino IDE (Integrated development environment ou ambiente de desenvolvimento integrado) 
-é um software que permite o desenvolvimento e envio de códigos compilados direto para o microcontrolador. 
-Essa plataforma tem a flexibilidade de ser utilizada em vários sistemas operacionais e foi desenvolvida 
-na linguagem Java oferecendo suporte de desenvolvimento na linguagem C e C++. O download da plataforma foi 
-realizado através do link: https://www.arduino.cc/en/software
+A plataforma de prototipação Arduino IDE (Integrated development environment ou ambiente de desenvolvimento 
+integrado) é um software que permite o desenvolvimento e envio de códigos compilados direto para o 
+microcontrolador. Essa plataforma tem a flexibilidade de ser utilizada em vários sistemas operacionais 
+e foi desenvolvida na linguagem Java oferecendo suporte de desenvolvimento na linguagem C e C++. 
+O download da plataforma foi realizado através do link: https://www.arduino.cc/en/software
 
 % Figura 3.19
-% Ambiente de desenvolvimento integrado Arduino.
-% (Fonte: Próprio autor.)
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.5]{figuras/3-19}
+\caption{Ambiente de desenvolvimento integrado Arduino.}
+\caption*{Fonte: Próprio autor.}
+\label{figidearduino}
+\end{figure}
+    
 \subsection{Logica de programação}
 
 O desenvolvimento da lógica de programação da placa controladora foi organizado de maneira modular 
@@ -524,9 +576,14 @@ usando orientação a objetos para uma manutenção facilitada e um entendimento
 As operações que o software deve executar foram apresentadas no fluxograma abaixo.
 
 % Figura 3.20
-% Fluxo de execução do software.
-% (Fonte: Próprio autor)
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.7]{figuras/3-20}
+\caption{Fluxo de execução do software.}
+\caption*{Fonte: Próprio autor.}
+\label{figfluxoexecucao}
+\end{figure}
+    
 A Figura 3.20 apresenta um fluxograma simplificado da lógica de programação presente na placa controladora 
 Arduino que inicialmente tem como primeiro comando ficar esperando o envio de dados pela porta Serial, 
 se caso há esse envio, então o programa faz a leitura da porta serial, armazenando os dados em variáveis 
@@ -536,28 +593,32 @@ eixo X parar sua rotação, o comando de movimentação do motor do eixo vertica
 Finalmente, após o fim da execução do motor que controla o eixo Y, o software volta a analisar se é enviado 
 dados pela porta serial.
 
-
 \subsection{Diagrama de classes}
 
-Diagrama de classe é uma representação da estrutura e relações entre classes que um software possui facilitando 
-e servindo de modelo para criação de objetos. Esse diagrama permite modelar classes com seus atributos e métodos 
-além da relação entre objetos.
+Diagrama de classe é uma representação da estrutura e relações entre classes que um software possui 
+facilitando e servindo de modelo para criação de objetos. Esse diagrama permite modelar classes com seus 
+atributos e métodos além da relação entre objetos.
 
-Para o desenvolvimento do software da placa controladora cuja linguagem é C++ que é fundamentada em orientação 
-a objetos, foi definido que seria a melhor opção realizar um diagrama de classes antes do desenvolvimento do código. 
-Sendo assim a Figura 3.21 apresentada abaixo é o resultado do que foi modelado.
+Para o desenvolvimento do software da placa controladora cuja linguagem é C++ que é fundamentada em 
+orientação a objetos, foi definido que seria a melhor opção realizar um diagrama de classes antes do 
+desenvolvimento do código. Sendo assim a Figura 3.21 apresentada abaixo é o resultado do que foi modelado.
 
 % Figura 3.21
-% Diagrama de classes do sistema de software presente no Arduino
-% (Fonte: Próprio autor)
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.5]{figuras/3-21}
+\caption{Diagrama de classes do sistema de software presente no Arduino.}
+\caption*{Fonte: Próprio autor.}
+\label{figdiagramaclasses}
+\end{figure}
+    
 A seguir será explicado este diagrama classe a classe.
 
 “Sigmoidal” é a classe responsável pela aceleração sigmóide nos motores de passo, essa classe utiliza 
 a função sigmóide que é uma função matemática com o gráfico parecido com a letra S. Para o desenvolvimento 
 da mesa cartesiana houve a preocupação dos projetistas em configurar os motores de passo com uma aceleração 
-variável para maior vida útil dos equipamentos, já que com aceleração constante pode causar forças desnecessárias 
-durante o processo de rotação.
+variável para maior vida útil dos equipamentos, já que com aceleração constante pode causar forças 
+desnecessárias durante o processo de rotação.
 
 A tabela 10 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Sigmoidal”.
 
@@ -580,16 +641,19 @@ que o motor sofrerá os pulsos nas bobinas, “vetorAceleracao” que determina 
 um comportamento de aceleração ou desaceleração, “amplitude” que é a diferença entre o “periodoMaximo” 
 e o “periodoMinimo” e é utilizada na equação do cálculo do X médio e do cálculo do instante, “declividade” 
 que determina a inclinação da curva de aceleração (o quão rápido o motor irá acelerar), “xMedio” que é a 
-metade do número de passos (iterações) que o motor precisará para acelerar e é utilizado no cálculo do instante. 
+metade do número de passos (iterações) que o motor precisará para acelerar e é utilizado no cálculo 
+do instante. 
 
 Como operações, a classe “Sigmoidal” tem os métodos de acesso getters e setters que acessam os atributos 
 privados citados acima, esses métodos são necessários para cumprir o princípio de encapsulamento da orientação 
 a objetos protegendo a lógica da classe. A classe “Sigmoidal” dispõe de duas operações, as quais são definidas 
 por: “calculoDoXMedio”, que calcula o valor do atributo xMedio, “calculoDoInstante”, que calcula o período a 
-ser aplicado em um determinado instante, esse cálculo é utilizado na lógica do método “rotacionarPasso” da classe “Eixo”.
+ser aplicado em um determinado instante, esse cálculo é utilizado na lógica do método “rotacionarPasso” 
+da classe “Eixo”.
 
-“Pino” é a classe que representa os pinos da placa Arduino, pois devido ao número alto de vezes que foi necessário 
-a utilização dos pinos, foi definido que seria melhor a criação de uma classe para facilitar as operações com pinos. 
+“Pino” é a classe que representa os pinos da placa Arduino, pois devido ao número alto de vezes que foi 
+necessário a utilização dos pinos, foi definido que seria melhor a criação de uma classe para facilitar 
+as operações com pinos. 
 
 A tabela 11 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Pino”.
 
@@ -603,15 +667,15 @@ Declaração | Funcionalidade
 - modo: byte | Modo do pino (OUTPUT, INPUT)
 - estado: unsigned int | Estado do pino (LOW, HIGH) e| (0, 255) e| (0, 1023)
 
-A classe “Pino” possui como atributos privados: “tipo”, que é o tipo de entrada do pino que pode ser analogico 
-ou digital, “numero”, que é o número de uma determinada porta na placa, “modo” que define se a porta é de entrada 
-ou saída de dados, e “estado”, que pode estar ligado ou desligado nas portas digitais, ter valores de 0 a 255 nas 
-portas PWM e de 0 a 1023 nas portas analogicas. Como operações, a classe Pino tem os métodos de acesso getters e 
-setters que acessam os atributos privados citados acima.
+A classe “Pino” possui como atributos privados: “tipo”, que é o tipo de entrada do pino que pode ser 
+analogico ou digital, “numero”, que é o número de uma determinada porta na placa, “modo” que define se 
+a porta é de entrada ou saída de dados, e “estado”, que pode estar ligado ou desligado nas portas digitais, 
+ter valores de 0 a 255 nas portas PWM e de 0 a 1023 nas portas analogicas. Como operações, a classe Pino 
+tem os métodos de acesso getters e setters que acessam os atributos privados citados acima.
 
-“Driver” é a classe responsável pelo controle digital do driver de potência, com ela é possível definir o modo 
-do passo dos motores, executar o pulso que dará movimento ao motor de passo, ligar e desligar o driver, deixá-lo 
-no modo “sleep” e também “reseta-lo”.
+“Driver” é a classe responsável pelo controle digital do driver de potência, com ela é possível definir 
+o modo do passo dos motores, executar o pulso que dará movimento ao motor de passo, ligar e desligar 
+o driver, deixá-lo no modo “sleep” e também “reseta-lo”.
 
 A tabela 12 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Driver”
 
@@ -646,25 +710,26 @@ Declaração | Funcionalidade
 + executarPasso(cont:int, linf:int, lsup:int):void | Executar um passo do motor com a lógica de sequência dos passos.
 + setarModoPasso(mp:int, b:byte):void | Definir o modo de passo do driver
 
-A classe “Driver” possui os atributos privados: “pinoEnable”, que permite ligar ou desligar o driver, “pinoReset”, 
-que reinicia o driver, “pinoSleep”, que ativa o modo sleep do driver, “pinoM0”, “pinoM1” e “pinoM2”, que definem 
-o modo do Passo, “pinoPasso” e “pinoDirecao” que são os pinos de execução de passo e configuração de direção para 
-tipo de acionamento via hardware, “pinoIN1”, “pinoIN2”, “pinoIN3” e “pinoIN4” que são os pinos referentes ao controle 
-das bobinas do motor de passo para tipo de acionamento via software, “tipoAcionamento” para configuração do tipo 
-de acionamento do driver que pode ser via software ou hardware conforme a necessidade de cada tipo de driver utilizado, 
-“tipoPasso” para configuração do tipo de passo do driver que pode ser (wavestep, fullstep, halfstep), “direcao”, 
-que define o sentido do movimento, “passoAtual” que é o índice de acesso às informações do vetor de passos, “modoPasso”, 
-que define o modo do passo do driver, “passosPorVolta”, que define a quantidade de passos a cada volta do motor como 
-por exemplo, 200 passos de 1,8 graus resultando em 360 graus. 
+A classe “Driver” possui os atributos privados: “pinoEnable”, que permite ligar ou desligar o driver, 
+“pinoReset”, que reinicia o driver, “pinoSleep”, que ativa o modo sleep do driver, “pinoM0”, “pinoM1” 
+e “pinoM2”, que definem o modo do Passo, “pinoPasso” e “pinoDirecao” que são os pinos de execução de 
+passo e configuração de direção para tipo de acionamento via hardware, “pinoIN1”, “pinoIN2”, “pinoIN3” 
+e “pinoIN4” que são os pinos referentes ao controle das bobinas do motor de passo para tipo de acionamento 
+via software, “tipoAcionamento” para configuração do tipo de acionamento do driver que pode ser via software 
+ou hardware conforme a necessidade de cada tipo de driver utilizado, “tipoPasso” para configuração do tipo 
+de passo do driver que pode ser (wavestep, fullstep, halfstep), “direcao”, que define o sentido do movimento, 
+“passoAtual” que é o índice de acesso às informações do vetor de passos, “modoPasso”, que define o modo do 
+passo do driver, “passosPorVolta”, que define a quantidade de passos a cada volta do motor como por exemplo, 
+200 passos de 1,8 graus resultando em 360 graus. 
 
-Como operações, a classe ”Driver” tem os métodos: métodos de acesso getters e setters que acessam os atributos privados 
-da classe, os métodos: “setarEstados”, que define os estados dos pinos IN1, IN2, IN3, IN4 do motor de passo, “passo” 
-que executa um passo do motor, “setarModoPasso”, que define o modo de passo do driver e “executarPasso”, executa 
-um passo do motor com a lógica de configurações de passos.
+Como operações, a classe ”Driver” tem os métodos: métodos de acesso getters e setters que acessam os 
+atributos privados da classe, os métodos: “setarEstados”, que define os estados dos pinos IN1, IN2, IN3, 
+IN4 do motor de passo, “passo” que executa um passo do motor, “setarModoPasso”, que define o modo de passo 
+do driver e “executarPasso”, executa um passo do motor com a lógica de configurações de passos.
 
-“Eixo” é a classe que foi desenvolvida a lógica de movimentação dos eixos da mesa cartesiana. Com ela é possível 
-rotacionar definindo a coordenada cartesiana de preferência, verificar se a posição do eixo está ativando a chave 
-de fim de curso.
+“Eixo” é a classe que foi desenvolvida a lógica de movimentação dos eixos da mesa cartesiana. Com ela é 
+possível rotacionar definindo a coordenada cartesiana de preferência, verificar se a posição do eixo 
+está ativando a chave de fim de curso.
 
 A tabela 13 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Eixo”.
 
@@ -683,16 +748,17 @@ Declaração | Funcionalidade
 - rotacionarPassos(direcao:bool,passos:int):void | Rotacionar o motor, tendo como parâmetros de entrada a direção e a quantidade de passos.
 + rotacionarPara(coordenada:double):void | Rotacionar o motor tendo como parâmetro a coordenada cartesiana do eixo.
 
-A classe “Eixo” possui os atributos privados: “driver”, que é responsável pelas configurações e operações do driver 
-de potência que controla o motor de passo acoplado ao eixo, “sigmoidal” que define a aceleração variável do motor, 
-“pinoCursoMinimo” e “pinoCursoMaximo”, que são os pinos referentes às chaves fim de curso de cada eixo, 
-“estadoFimDeCurso”, que indica o estado que a chave fim de curso inicializará estando desativada. 
+A classe “Eixo” possui os atributos privados: “driver”, que é responsável pelas configurações e operações 
+do driver de potência que controla o motor de passo acoplado ao eixo, “sigmoidal” que define a aceleração 
+variável do motor, “pinoCursoMinimo” e “pinoCursoMaximo”, que são os pinos referentes às chaves fim de 
+curso de cada eixo, “estadoFimDeCurso”, que indica o estado que a chave fim de curso inicializará estando 
+desativada. 
 
-Como operações, a classe tem os métodos: métodos de acesso getters e setters que acessam os atributos privados 
-da classe, os métodos: “podeMovimentar”, que indica se o motor de passo pode executar o próximo passo ou se já 
-chegou ao fim do curso, “rotacionarPassos”, que rotaciona o eixo tendo como parâmetros de entrada uma direção 
-e uma quantidade de passos a serem executadas e “rotacionarPara”, que rotaciona o eixo tendo como parâmetros 
-de entrada uma coordenada cartesiana.
+Como operações, a classe tem os métodos: métodos de acesso getters e setters que acessam os atributos 
+privados da classe, os métodos: “podeMovimentar”, que indica se o motor de passo pode executar o próximo 
+passo ou se já chegou ao fim do curso, “rotacionarPassos”, que rotaciona o eixo tendo como parâmetros de 
+entrada uma direção e uma quantidade de passos a serem executadas e “rotacionarPara”, que rotaciona o 
+eixo tendo como parâmetros de entrada uma coordenada cartesiana.
 
 Além das classes utilizadas, o software possui a sketch principal que é responsável pela configuração das 
 informações iniciais, criação dos objetos na memória, configuração dos atributos de cada objeto, execução 
@@ -700,9 +766,14 @@ da leitura pela porta serial, tratamento de dados recebidos e a movimentação d
 A Figura 3.22 apresenta um diagrama geral da organização do software.
 
 % Figura 3.22
-% Diagrama da organização geral do software.
-% (Fonte: Próprio autor.)
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.85]{figuras/3-22}
+\caption{Diagrama da organização geral do software.}
+\caption*{Fonte: Próprio autor.}
+\label{figorgsoftware}
+\end{figure}
+    
 O arquivo MesaCartesiana.ino é o principal, ele instancia os objetos das classes: “Pino”, “Sigmoidal”, 
 “Driver” e “Eixo” e também tem a responsabilidade de receber às coordenadas através da comunicação serial 
 e às enviar para o objeto da classe “Eixo” que fará a rotação dos motores.
@@ -713,22 +784,16 @@ Nesta seção será descrito como os sistemas são integrados mostrando como os 
 A Figura 3.23 é um fluxograma que descreve de maneira gráfica a integração dos sistemas.
 
 % Figura 3.23
-% Fluxograma para apresentar a integração sistemas.
-% (Fonte: Próprio autor.)
-
-O sistema de software se comunica com o sistema eletrônico através do envio de dados pela comunicação Serial 
-presente no Arduino IDE para o software presente no microcontrolador ATMEGA da placa Arduino. Por sua vez, 
-o microcontrolador envia um comando elétrico ao sistema eletrônico que acionará os motores de passo que convertem 
-a energia elétrica em mecânica transmitindo o movimento dos fusos da estrutura do sistema mecânico.
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale = 0.9]{figuras/3-23}
+\caption{Fluxograma para apresentar a integração sistemas.}
+\caption*{Fonte: Próprio autor.}
+\label{figintegracao}
+\end{figure}
+    
+O sistema de software se comunica com o sistema eletrônico através do envio de dados pela comunicação 
+Serial presente no Arduino IDE para o software presente no microcontrolador ATMEGA da placa Arduino. 
+Por sua vez, o microcontrolador envia um comando elétrico ao sistema eletrônico que acionará os motores 
+de passo que convertem a energia elétrica em mecânica transmitindo o movimento dos fusos da estrutura do 
+sistema mecânico.

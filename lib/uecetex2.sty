@@ -1,8 +1,7 @@
 
 
-% Se você quer ver as margens do documento no PDF, descomente essa linha
-% As linhas das margens serao impressas
-%\usepackage[showframe, pass]{geometry}
+%\usepackage[showframe, pass]{geometry} %Se você quer ver as margens do documento no PDF, descomente essa linha
+
 
 % Importa o arquivo com as entradas do glossario
 \input{elementos-pos-textuais/glossario}
@@ -71,8 +70,7 @@
 	skip=0pt                %Retira o espaco entre a figura/tabela e o caption
 }
 
-% Remove o ponto final de cada entrada da 
-%lista de abreviaturas e siglas
+% Remove o ponto final de cada entrada da lista de abreviaturas e siglas
 \renewcommand{\glspostdescription}{}
 
 % Espaçamento entre o texto e a legenda
@@ -127,7 +125,6 @@
 % Cria o comando para fazer notas e anotacoes na figura e na tabela
 \newcommand{\Nota}[2][\notaname]{\Fonte[#1]{#2}} 
 
-
 %Remove as bordas do hyperlinks.
 \newcommand{\removerbordasdohyperlink}[1]{%
 	\ifthenelse{\equal{#1}{sim}}{%
@@ -149,7 +146,6 @@
 
 % Adiciona o sexo do orientador e do co-orientador no documento atraves
 % do artigo "a".
-
 \provideboolean{uecetex2@orientadorfeminino}
 \provideboolean{uecetex2@coorientadorfeminino}
 
@@ -578,7 +574,6 @@
 \makeatother
 
 %Folha de Aprovação
-
 
 \setlength{\ABNTEXsignwidth}{12cm} % Define o comprimento da linha das assinaturas na Folha de Aprovacao
 \setlength{\ABNTEXsignthickness}{1pt} % Largura da linha da assinatura

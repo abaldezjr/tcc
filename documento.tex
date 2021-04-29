@@ -1,4 +1,3 @@
-
 \documentclass[        
     a4paper,          % Tamanho da folha A4
     12pt,             % Tamanho da fonte 12pt
@@ -45,58 +44,48 @@
 \orientadories{Universidade Federal do Rio Grande - FURG}
 \orientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
 
-%Informação sobre o Co-orientador
-% Deixe o nome do coorientador em branco para remover do documento
+%Informação sobre o Coorientador
 \coorientador{Prof. Me. Letieri Rodrigues de Ávila}
 \coorientadories{Universidade Federal do Rio Grande - FURG}
 \coorientadorcentro{Universidade Federal do Rio Grande - FURG}
 \coorientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
 
 %Informação sobre a banca
-% Atenção! Deixe o nome do membro da banca para remover da folha de aprovacao
-
-% Exemplo de uso:
-% \membrodabancadois{Prof. Dr. Fulano de Tal}
-% \membrodabancadoisies{Universidade Estadual do Ceará - UECE}
-
 \membrodabancadois{Prof. Me. Fernanda Mazuco Clain}
 \membrodabancadoisies{Universidade Federal do Rio Grande - FURG}
-
-%\membrodabancatres{Membro da Banca Três}
-%\membrodabancatrescentro{Centro de Ciências e Tecnologia - CCT}
-%\membrodabancatresies{Universidade do Membro da Banca Três - SIGLA}
-
 
 \begin{document}	
 
 	% Elementos pré-textuais
-	%\imprimircapa
-	%\imprimirfolhaderosto{}
-	%\imprimirerrata{elementos-pre-textuais/errata}
-	%\imprimirfolhadeaprovacao
-	%\imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
-	%\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
-	%\imprimirepigrafe{elementos-pre-textuais/epigrafe}
-	%\imprimirresumo{elementos-pre-textuais/resumo}
-	%\imprimirabstract{elementos-pre-textuais/abstract}
-	%\imprimirlistadeilustracoes
-	%\imprimirlistadetabelas
-	%\imprimirlistadequadros
-	%\imprimirlistadealgoritmos
-	%\imprimirlistadecodigosfonte
-	%\imprimirlistadeabreviaturasesiglas	
-	%\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
-	%\imprimirsumario
+	\pretextual
+	\imprimircapa
+	\imprimirfolhaderosto{}
+	\imprimirerrata{elementos-pre-textuais/errata}
+	\imprimirfolhadeaprovacao
+	\imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
+	\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
+	\imprimirepigrafe{elementos-pre-textuais/epigrafe}
+	\imprimirresumo{elementos-pre-textuais/resumo}
+	\imprimirabstract{elementos-pre-textuais/abstract}
+	\imprimirlistadeilustracoes
+	\imprimirlistadetabelas
+	\imprimirlistadequadros
+	\imprimirlistadealgoritmos
+	\imprimirlistadecodigosfonte
+	\imprimirlistadeabreviaturasesiglas	
+	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
+	\imprimirsumario
 	
 	%Elementos textuais
 	\textual
-	%\input{elementos-textuais/introducao}
-	%\input{elementos-textuais/fundamentacao-teorica}
+	\input{elementos-textuais/introducao}
+	\input{elementos-textuais/fundamentacao-teorica}
 	\input{elementos-textuais/metodologia}
-	%\input{elementos-textuais/resultados}
-	%\input{elementos-textuais/conclusao}
+	\input{elementos-textuais/resultados}
+	\input{elementos-textuais/conclusao}
 	
 	%Elementos pós-textuais	
+	\postextual
 	\bibliography{elementos-pos-textuais/referencias}
 	\imprimirglossario	
 	\imprimirapendices
