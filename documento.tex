@@ -1,5 +1,5 @@
-\documentclass[        
-    a4paper,          % Tamanho da folha A4
+\documentclass[
+	a4paper,          % Tamanho da folha A4
     12pt,             % Tamanho da fonte 12pt
     chapter=TITLE,    % Todos os capitulos devem ter caixa alta
     section=TITLE,    % Todas as secoes devem ter caixa alta
@@ -9,92 +9,12 @@
     brazil            % Ultimo idioma eh o idioma padrão do documento
 ]{abntex2}
 
-\input{lib/preambulo}
-
-%\trabalhoacademico{tccgraduacao}
-%\trabalhoacademico{tccespecializacao}
-\trabalhoacademico{dissertacao}
-%\trabalhoacademico{tese}
-
-\ehqualificacao{nao}
-\removerbordasdohyperlink{sim} % Quer remover as bordas vermelhas e verdes do PDF gerado? 
-%\cordohyperlink{nao} % Quer dicionar a cor Azul a todos os hyperlinks?
-
-%Informação sobre a IES
-\ies{Universidade Federal do Rio Grande}
-\iessigla{FURG}
-\centro{}
-
-%Informação para TCC de Graduacao
-\graduacaoem{Engenharia Mecânica}
-\habilitacao{bacharel} % Pode colocar tambem 'licenciada'
-
-%Informação para TCC de Especializacao
-\especializacaoem{Utilização da Linguagem LaTeX para Elaboração de Trabalhos Acadêmicos }
-
-%Informação relacionadas ao trabalho
-\autor{Alexandre Marques Baldez Junior, Rodrigo de Souza Torma}
-\titulo{SISTEMA DE COORDENADAS PARA POSICIONAMENTO DE INSTRUMENTOS DE MEDIÇÃO EM UM TÚNEL DE VENTO}
-\data{2021}
-\local{Rio Grande, Rio Grande do Sul}
-\dataaprovacao{xx de maior de 2021} % Exemplo: \dataaprovacao{01 de Janeiro de 2017}
-
-%Informação sobre o Orientador
-\orientador{Prof. Dr. Gustavo da Cunha Dias}
-\orientadories{Universidade Federal do Rio Grande - FURG}
-\orientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
-
-%Informação sobre o Coorientador
-\coorientador{Prof. Me. Letieri Rodrigues de Ávila}
-\coorientadories{Universidade Federal do Rio Grande - FURG}
-\coorientadorcentro{Universidade Federal do Rio Grande - FURG}
-\coorientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
-
-%Informação sobre a banca
-\membrodabancadois{Prof. Me. Fernanda Mazuco Clain}
-\membrodabancadoisies{Universidade Federal do Rio Grande - FURG}
+\input{lib/usepackages}
 
 \begin{document}	
-
-	% Elementos pré-textuais
-	\pretextual
-	\imprimircapa
-	\imprimirfolhaderosto{}
-	\imprimirerrata{elementos-pre-textuais/errata}
-	\imprimirfolhadeaprovacao
-	\imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
-	\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
-	\imprimirepigrafe{elementos-pre-textuais/epigrafe}
-	\imprimirresumo{elementos-pre-textuais/resumo}
-	\imprimirabstract{elementos-pre-textuais/abstract}
-	\imprimirlistadeilustracoes
-	\imprimirlistadetabelas
-	\imprimirlistadequadros
-	\imprimirlistadealgoritmos
-	\imprimirlistadecodigosfonte
-	\imprimirlistadeabreviaturasesiglas	
-	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
-	\imprimirsumario
-	
-	%Elementos textuais
-	\textual
-	\input{elementos-textuais/introducao}
-	\input{elementos-textuais/fundamentacao-teorica}
-	\input{elementos-textuais/metodologia}
-	\input{elementos-textuais/resultados}
-	\input{elementos-textuais/conclusao}
-	
-	%Elementos pós-textuais	
-	\postextual
-	\bibliography{elementos-pos-textuais/referencias}
-	\imprimirglossario	
-	\imprimirapendices
-		\input{elementos-pos-textuais/apendices/historico-de-mudancas}
-		\input{elementos-pos-textuais/apendices/lorem-ipsum}
-		\input{elementos-pos-textuais/apendices/termo-de-fiel-depositario}	
-	\imprimiranexos
-		\input{elementos-pos-textuais/anexos/exemplo-de-anexo}		
-		\input{elementos-pos-textuais/anexos/dinamica-das-classes-sociais}
-	\imprimirindice
-
+\input{elementos-textuais/introducao}
+\input{elementos-textuais/fundamentacao-teorica}
+\input{elementos-textuais/metodologia}
+\input{elementos-textuais/resultados}
+\input{elementos-textuais/conclusao}
 \end{document}

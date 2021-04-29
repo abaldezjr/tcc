@@ -264,20 +264,28 @@ ntregar até 35 V por bobina. A \ref{figdriverportas} mostra o driver com os res
 \label{figdriverportas}
 \end{figure}
     
-AQUI EMBAIXO UMA EXPLICAÇÃO DA IMAGEM DAS PORTAS, EXPLICANDO PARA QUE SERVE CADA PORTA COMO SE FOSSE UM DATASHEET 
-DO DRIVER CRIADO
+AQUI EMBAIXO UMA EXPLICAÇÃO DA IMAGEM DAS PORTAS, EXPLICANDO PARA QUE SERVE CADA PORTA COMO SE 
+FOSSE UM DATASHEET DO DRIVER CRIADO
 
 % Tabela 1
-% Parâmetros do driver de potência.
-% (Fonte: Próprio Autor)
-
-Parâmetro | Magnitude
-Tensão lógica mínima | 3v
-Tensão lógica máxima | 5,5v
-Corrente contínua por fase | 1A
-Corrente máxima por fase | 2A
-Tensão de operação mínima | 8v
-Tensão de operação máxima | 35v
+\begin{table}
+    \centering
+    \caption{Parâmetros do driver de potência.}
+    \begin{tabular}{lc}
+        \hline
+        \textbf{Parâmetro} & \textbf{Magnitude}\\
+        \hline
+        Tensão lógica mínima & 3v\\
+        Tensão lógica máxima & 5,5v\\
+        Corrente contínua por fase & 1A\\
+        Corrente máxima por fase & 2A\\
+        Tensão de operação mínima & 8v\\
+        Tensão de operação máxima & 35v\\ 
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:pdriver}
+\end{table}
 
 \subsection{Atuadores}
 
@@ -352,86 +360,144 @@ sistemas capazes de  dividir um passo em milhares de vezes.
 As Tabelas 2, 3 e 4 mostram a sequência de polaridades aplicadas no motor no movimento de sentido horário.
 
 % Tabela 2
-% Sequência de passos com uma fase (wavestep) para movimentação no sentido horário.
-% (Fonte: Próprio autor.)
-
-Passo | A+ | B+ | A- | B- | Decimal
-1 | 0 | 0 | 0 | 1 | 1
-2 | 0 | 0 | 1 | 0 | 2
-3 | 0 | 1 | 0 | 0 | 4
-4 | 1 | 0 | 0 | 0 | 8
+\begin{table}
+    \centering
+    \caption{Sequência de passos com uma fase (wavestep) para movimentação no sentido horário.}
+    \begin{tabular}{cccccc}
+        \hline
+        \textbf{Passo} & \textbf{A+} & \textbf{B+} & \textbf{A-} & \textbf{B-} & \textbf{Decimal}\\
+        \hline
+        1 & 0 & 0 & 0 & 1 & 1\\
+        2 & 0 & 0 & 1 & 0 & 2\\
+        3 & 0 & 1 & 0 & 0 & 4\\
+        4 & 1 & 0 & 0 & 0 & 8\\        
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:wavestephorario}
+\end{table}
 
 % Tabela 3
-% Sequência de passos com duas fases (fullstep) para movimentação no sentido horário.
-% (Fonte: Próprio autor.)
-
-Passo | A+ | B+ | A- | B- | Decimal
-1 | 1 | 0 | 0 | 1 | 9
-2 | 0 | 0 | 1 | 1 | 3
-3 | 0 | 1 | 1 | 0 | 6
-4 | 1 | 1 | 0 | 0 | 12
+\begin{table}
+    \centering
+    \caption{Sequência de passos com duas fases (fullstep) para movimentação no sentido horário.}
+    \begin{tabular}{cccccc}
+        \hline
+        \textbf{Passo} & \textbf{A+} & \textbf{B+} & \textbf{A-} & \textbf{B-} & \textbf{Decimal}\\
+        \hline
+        1 & 1 & 0 & 0 & 1 & 9\\
+        2 & 0 & 0 & 1 & 1 & 3\\
+        3 & 0 & 1 & 1 & 0 & 6\\
+        4 & 1 & 1 & 0 & 0 & 12\\
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:fullstephorario}
+\end{table}
 
 % Tabela 4
-% Sequência de passos com meio passo (halfstep) para movimentação no sentido horário.
-% (Fonte: Próprio autor.)
-
-Passo | A+ | B+ | A- | B- | Decimal
-1 | 1 | 0 | 0 | 1 | 9
-2 | 0 | 0 | 0 | 1 | 1
-3 | 0 | 0 | 1 | 1 | 3
-4 | 0 | 0 | 1 | 0 | 2
-5 | 0 | 1 | 1 | 0 | 6
-6 | 0 | 1 | 0 | 0 | 4
-7 | 1 | 1 | 0 | 0 | 12
-8 | 1 | 0 | 0 | 0 | 8
+\begin{table}
+    \centering
+    \caption{Sequência de passos com meio passo (halfstep) para movimentação no sentido horário.}
+    \begin{tabular}{cccccc}
+        \hline
+        \textbf{Passo} & \textbf{A+} & \textbf{B+} & \textbf{A-} & \textbf{B-} & \textbf{Decimal}\\
+        \hline
+        1 & 1 & 0 & 0 & 1 & 9\\
+        2 & 0 & 0 & 0 & 1 & 1\\
+        3 & 0 & 0 & 1 & 1 & 3\\
+        4 & 0 & 0 & 1 & 0 & 2\\
+        5 & 0 & 1 & 1 & 0 & 6\\
+        6 & 0 & 1 & 0 & 0 & 4\\
+        7 & 1 & 1 & 0 & 0 & 12\\
+        8 & 1 & 0 & 0 & 0 & 8\\
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:halfstephorario}
+\end{table}
 
 As Tabelas 5, 6 e 7 mostram a sequência de polaridades aplicadas no motor no movimento de sentido anti-horário.
 
 % Tabela 5
 % Sequência de passos com uma fase (wavestep) para movimentação no sentido anti-horário.
 % (Fonte: Próprio autor.)
-
-Passo | A+ | B+ | A- | B- | Decimal
-1 | 1 | 0 | 0 | 0 | 8
-2 | 0 | 1 | 0 | 0 | 4
-3 | 0 | 0 | 1 | 0 | 2
-4 | 0 | 0 | 0 | 1 | 1
+\begin{table}
+    \centering
+    \caption{Sequência de passos com uma fase (wavestep) para movimentação no sentido anti-horário.}
+    \begin{tabular}{cccccc}
+        \hline
+        \textbf{Passo} & \textbf{A+} & \textbf{B+} & \textbf{A-} & \textbf{B-} & \textbf{Decimal}\\
+        \hline
+        1 & 1 & 0 & 0 & 0 & 8\\
+        2 & 0 & 1 & 0 & 0 & 4\\
+        3 & 0 & 0 & 1 & 0 & 2\\
+        4 & 0 & 0 & 0 & 1 & 1\\
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:wavestepantihorario}
+\end{table}
 
 % Tabela 6
-% Sequência de passos com duas fases (fullstep) para movimentação no sentido anti-horário.
-% (Fonte: Próprio autor.)
-
-Passo | A+ | B+ | A- | B- | Decimal
-1 | 1 | 1 | 0 | 0 | 12
-2 | 0 | 1 | 1 | 0 | 6
-3 | 0 | 0 | 1 | 1 | 3
-4 | 1 | 0 | 0 | 1 | 9
+\begin{table}
+    \centering
+    \caption{Sequência de passos com duas fases (fullstep) para movimentação no sentido anti-horário.}
+    \begin{tabular}{cccccc}
+        \hline
+        \textbf{Passo} & \textbf{A+} & \textbf{B+} & \textbf{A-} & \textbf{B-} & \textbf{Decimal}\\
+        \hline
+        1 & 1 & 1 & 0 & 0 & 12\\
+        2 & 0 & 1 & 1 & 0 & 6\\
+        3 & 0 & 0 & 1 & 1 & 3\\
+        4 & 1 & 0 & 0 & 1 & 9\\
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:fullstepantihorario}
+\end{table}
 
 % Tabela 7
-% Sequência de passos com meio passo (halfstep) para movimentação no sentido anti-horário.
-% (Fonte: Próprio autor.)
-
-Passo | A+ | B+ | A- | B- | Decimal
-1 | 1 | 0 | 0 | 0 | 8
-2 | 1 | 1 | 0 | 0 | 12
-3 | 0 | 1 | 0 | 0 | 4
-4 | 0 | 1 | 1 | 0 | 6
-5 | 0 | 0 | 1 | 0 | 2
-6 | 0 | 0 | 1 | 1 | 3
-7 | 0 | 0 | 0 | 1 | 1
-8 | 1 | 0 | 0 | 1 | 9
+\begin{table}
+    \centering
+    \caption{Sequência de passos com meio passo (halfstep) para movimentação no sentido anti-horário.}
+    \begin{tabular}{cccccc}
+        \hline
+        \textbf{Passo} & \textbf{A+} & \textbf{B+} & \textbf{A-} & \textbf{B-} & \textbf{Decimal}\\
+        \hline
+        1 & 1 & 0 & 0 & 0 & 8\\
+        2 & 1 & 1 & 0 & 0 & 12\\
+        3 & 0 & 1 & 0 & 0 & 4\\
+        4 & 0 & 1 & 1 & 0 & 6\\
+        5 & 0 & 0 & 1 & 0 & 2\\
+        6 & 0 & 0 & 1 & 1 & 3\\
+        7 & 0 & 0 & 0 & 1 & 1\\
+        8 & 1 & 0 & 0 & 1 & 9\\
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:halfstepantihorario}
+\end{table}
 
 A Tabela 8 apresenta alguns parâmetros dos motores de passo.
 
 % Tabela 8
-% Parâmetros dos motores de passo.
-% (Fonte: Próprio autor.)
-
-Parâmetros | Magnitude
-Número de passos por revolução | 200 (1,8 graus por passo)
-Corrente de operação | 800 mA
-Tensão de alimentação | 12 V
-Configuração das bobinas | Bipolar (4 fios)
+\begin{table}
+    \centering
+    \caption{Parâmetros dos motores de passo.}
+    \begin{tabular}{lc}
+        \hline
+        \textbf{Parâmetros} & \textbf{Magnitude}\\
+        \hline
+        Número de passos por revolução & 200 (1,8 graus por passo)\\
+        Corrente de operação & 800 mA\\
+        Tensão de alimentação & 12 V\\
+        Configuração das bobinas & Bipolar (4 fios)\\
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:pmotordepasso}
+\end{table}
 
 \subsection{Fonte de alimentação}
 
@@ -443,15 +509,23 @@ que os dispositivos que são alimentados pela fonte necessitam.
 A Tabela 9 apresenta a demanda de energia elétrica de cada dispositivo.
 
 % Tabela 9
-% Demanda de energia elétrica de cada componente do sistema.
-% (Fonte: Próprio autor.)
-
-Componente | Quantidade | Tensão | Consumo | Consumo Total
-Arduino | 1 | 7 a 12 V | 800 mA | 800 mA
-Driver | 2 | 8 a 35 V | 2 A | 4 A
-Motor de passo | 2 | 5 a 36 V | 2 A | 4 A
-Optoacoplador | 2 | 5 a 35 V | 5mA | 10 mA
-Resultado | - | 12 V | - | 8,18 A
+\begin{table}
+    \centering
+    \caption{Demanda de energia elétrica de cada componente do sistema.}
+    \begin{tabular}{lcccc}
+        \hline
+        \textbf{Componente} & \textbf{Quantidade} & \textbf{Tensão} & \textbf{Consumo} & \textbf{Consumo Total}\\
+        \hline
+        Arduino & 1 & 7 a 12 V & 800 mA & 800 mA\\
+        Driver & 2 & 8 a 35 V & 2 A & 4 A\\
+        Motor de passo & 2 & 5 a 36 V & 2 A & 4 A\\
+        Optoacoplador & 2 & 5 a 35 V & 5mA & 10 mA\\
+        Resultado & - & 12 V & - & 8,18 A\\
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:demandafonte}
+\end{table}
 
 A Tabela 9 indica que a placa controladora Arduino opera no intervalo de tensão de 7 V a 12 V, 
 os drivers de potência no intervalo de 8 V a 35 V, os motores de passo no intervalo de 5 V a 36 V 
@@ -623,18 +697,26 @@ desnecessárias durante o processo de rotação.
 A tabela 10 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Sigmoidal”.
 
 % Tabela 10
-% Declaração e funcionalidade dos atributos e métodos da classe Sigmoidal
-% (Fonte: Próprio autor.)
-
-Declaração | Funcionalidade
-- periodoMinimo: double | Período máximo do passo do motor.
-- periodoMaximo: double | Período mínimo do passo do motor.
-- vetorAceleracao: int | Determina se a curva será de aceleração (1) ou desaceleração (-1)
-- amplitude: double | Amplitude da aceleração, diferença do período máximo menos o período mínimo
-- declividade: double | Inclinação da curva de aceleração, o quão rápido o motor irá acelerar
-- xMedio: double | É a metade do número de iterações necessários para percorrer a curva sigmoidal
-- calculoDoXMedio(): double | Calcula o número de Iterações necessários para percorrer metade da curva sigmoidal.
-+ calculoDoInstante(): double | Calcula um instante na curva tendo como entrada uma iteração
+\begin{table}
+    \centering
+    \caption{Declaração e funcionalidade dos atributos e métodos da classe Sigmoidal.}
+    \begin{tabular}{lp{9cm}}
+        \hline
+        \textbf{Declaração} & \textbf{Funcionalidade}\\
+        \hline
+        - periodoMinimo: double & Período máximo do passo do motor.\\
+        - periodoMaximo: double & Período mínimo do passo do motor.\\
+        - vetorAceleracao: int & Determina se a curva será de aceleração (1) ou desaceleração (-1)\\
+        - amplitude: double & Amplitude da aceleração, diferença do período máximo menos o período mínimo\\
+        - declividade: double & Inclinação da curva de aceleração, o quão rápido o motor irá acelerar\\
+        - xMedio: double & É a metade do número de iterações necessários para percorrer a curva sigmoidal\\
+        - calculoDoXMedio(): double & Calcula o número de Iterações necessários para percorrer metade da curva sigmoidal.\\
+        + calculoDoInstante(): double & Calcula um instante na curva tendo como entrada uma iteração\\
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:classesigmoidal}
+\end{table}
 
 A classe “Sigmoidal” tem como atributos privados: “periodoMaximo” e o “periodoMinimo” que são os períodos 
 que o motor sofrerá os pulsos nas bobinas, “vetorAceleracao” que determina se a curva sigmoidal terá 
@@ -658,14 +740,22 @@ as operações com pinos.
 A tabela 11 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Pino”.
 
 % Tabela 11
-% Declaração e funcionalidade dos atributos e métodos da classe Pino
-% (Fonte: Próprio autor.)
-
-Declaração | Funcionalidade
-- tipo: TipoPino | Tipo do pino (ANALOGICO, DIGITAL)
-- numero: byte | Número do pino
-- modo: byte | Modo do pino (OUTPUT, INPUT)
-- estado: unsigned int | Estado do pino (LOW, HIGH) e| (0, 255) e| (0, 1023)
+\begin{table}
+    \centering
+    \caption{Declaração e funcionalidade dos atributos e métodos da classe Pino.}
+    \begin{tabular}{lp{9cm}}
+        \hline
+        \textbf{Declaração} & \textbf{Funcionalidade}\\
+        \hline
+        - tipo: TipoPino & Tipo do pino (ANALOGICO, DIGITAL).\\
+        - numero: byte & Número do pino.\\
+        - modo: byte & Modo do pino (OUTPUT, INPUT).\\
+        - estado: unsigned int & Estado do pino (LOW, HIGH) | (0, 255) | (0, 1023).\\
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:classepino}
+\end{table}
 
 A classe “Pino” possui como atributos privados: “tipo”, que é o tipo de entrada do pino que pode ser 
 analogico ou digital, “numero”, que é o número de uma determinada porta na placa, “modo” que define se 
@@ -680,35 +770,42 @@ o driver, deixá-lo no modo “sleep” e também “reseta-lo”.
 A tabela 12 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Driver”
 
 % Tabela 12
-% Declaração e funcionalidade dos atributos e métodos da classe Driver.
-% (Fonte: Próprio autor.)
-
-
-Declaração | Funcionalidade
-- pinoEnable: Pino | Ativar e desativar o driver
-- pinoReset: Pino | Resetar o driver
-- pinoSleep: Pino | Ativar e desativar o modo sleep do driver
-- pinoM0: Pino | Pino M0 do modo de passo do driver
-- pinoM1: Pino | Pino M1 do modo de passo do driver
-- pinoM2: Pino | Pino M2 do modo de passo do driver
-- pinoPasso: Pino | Pino de execução do passo do driver
-- pinoDirecao: Pino | Pino de configuração da direção do driver
-- pinoIN1: Pino | Pino IN1 do motor de passo
-- pinoIN2: Pino | Pino IN2 do motor de passo
-- pinoIN3: Pino | Pino IN3 do motor de passo
-- pinoIN4: Pino | Pino IN4 do motor de passo
-- tipoAcionamento: TipoAcionamento | Tipo de acionamento do driver: (SOFTWARE, HARDWARE)
-- tipoPasso: TipoPasso | Tipo do passo do driver: (WAVESTEP, FULLSTEP, HALFSTEP)
-- direcao: Direcao | Configuração da direção do driver: (ANTIHORARIO, HORARIO)
-- passoAtual: int | PassoAtual é o indice de acesso as informações do vetor de passos
-- modoPasso: int | Pino do modo de passo do driver
-- passosPorVolta: int | Quantidade de passos a cada volta do motor de passo.
-- vetorPasso: byte | Vetor de bytes de sequência dos passos.
-- setarEstadoModo(pM0:bool, pM1:bool ,pM2:bool):void | Definir o modo de passo do driver passando como parâmetro os estados dos pinos M0,M1,M2
-- setarEstados(b: byte):void | Definir estados dos pinos IN1, IN2, IN3, IN4 do motor de passo
-- passo():void | Executar um passo do motor.
-+ executarPasso(cont:int, linf:int, lsup:int):void | Executar um passo do motor com a lógica de sequência dos passos.
-+ setarModoPasso(mp:int, b:byte):void | Definir o modo de passo do driver
+\begin{table}
+    \centering
+    \caption{Declaração e funcionalidade dos atributos e métodos da classe Driver.}
+    \begin{tabular}{lp{6cm}}
+        \hline
+        \textbf{Declaração} & \textbf{Funcionalidade}\\
+        \hline
+        - pinoEnable: Pino & Ativar e desativar o driver.\\
+        - pinoReset: Pino & Resetar o driver.\\
+        - pinoSleep: Pino & Ativar e desativar o modo sleep do driver.\\
+        - pinoM0: Pino & Pino M0 do modo de passo do driver.\\
+        - pinoM1: Pino & Pino M1 do modo de passo do driver.\\
+        - pinoM2: Pino & Pino M2 do modo de passo do driver.\\
+        - pinoPasso: Pino & Pino de execução do passo do driver.\\
+        - pinoDirecao: Pino & Pino de configuração da direção do driver.\\
+        - pinoIN1: Pino & Pino IN1 do motor de passo.\\
+        - pinoIN2: Pino & Pino IN2 do motor de passo.\\
+        - pinoIN3: Pino & Pino IN3 do motor de passo.\\
+        - pinoIN4: Pino & Pino IN4 do motor de passo.\\
+        - tipoAcionamento: TipoAcionamento & Tipo de acionamento do driver: (SOFTWARE, HARDWARE).\\
+        - tipoPasso: TipoPasso & Tipo do passo do driver: (WAVESTEP, FULLSTEP, HALFSTEP).\\
+        - direcao: Direcao & Configuração da direção do driver: (ANTIHORARIO, HORARIO).\\
+        - passoAtual: int & PassoAtual é o indice de acesso as informações do vetor de passos.\\
+        - modoPasso: int & Pino do modo de passo do driver.\\
+        - passosPorVolta: int & Quantidade de passos a cada volta do motor de passo.\\
+        - vetorPasso: byte & Vetor de bytes de sequência dos passos.\\
+        - setarEstadoModo(pM0:bool, pM1:bool, pM2:bool): void & Definir o modo de passo do driver passando como parâmetro os estados dos pinos M0, M1, M2.\\
+        - setarEstados(b: byte):void & Definir estados dos pinos IN1, IN2, IN3, IN4 do motor de passo.\\
+        - passo():void & Executar um passo do motor.\\
+        + executarPasso(cont:int, linf:int, lsup:int):void & Executar um passo do motor com a lógica de sequência dos passos.\\
+        + setarModoPasso(mp:int, b:byte):void & Definir o modo de passo do driver.\\
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:classedriver}
+\end{table}
 
 A classe “Driver” possui os atributos privados: “pinoEnable”, que permite ligar ou desligar o driver, 
 “pinoReset”, que reinicia o driver, “pinoSleep”, que ativa o modo sleep do driver, “pinoM0”, “pinoM1” 
@@ -734,19 +831,27 @@ está ativando a chave de fim de curso.
 A tabela 13 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Eixo”.
 
 % Tabela 13
-% Declaração e funcionalidade dos atributos e métodos da classe Eixo.
-% (Fonte: Próprio autor.)
-
-Declaração | Funcionalidade
-- driver: Driver | Define as configurações do driver que controla os motores de passo,
-- sigmoidal: Sigmoidal | Define a aceleração sigmoidal dos motores de passo.
-- pinoCursoMinimo: Pino | Pino do curso mínimo da chave fim de curso
-- pinoCursoMaximo: Pino | Pino do curso máximo da chave fim de curso
-- posicao: int | Pino da posição atual do eixo
-- estadoFimDeCurso: bool | Pino do estado de fim de curso que pode inicializar LOW ou HIGH
-- podeMovimentar(direcao:bool):bool | Verificar se o motor está no fim de curso.
-- rotacionarPassos(direcao:bool,passos:int):void | Rotacionar o motor, tendo como parâmetros de entrada a direção e a quantidade de passos.
-+ rotacionarPara(coordenada:double):void | Rotacionar o motor tendo como parâmetro a coordenada cartesiana do eixo.
+\begin{table}
+    \centering
+    \caption{Declaração e funcionalidade dos atributos e métodos da classe Eixo.}
+    \begin{tabular}{lp{6cm}}
+        \hline
+        \textbf{Declaração} & \textbf{Funcionalidade}\\
+        \hline
+        - driver: Driver & Define as configurações do driver que controla os motores de passo.\\
+        - sigmoidal: Sigmoidal & Define a aceleração sigmoidal dos motores de passo.\\
+        - pinoCursoMinimo: Pino & Pino do curso mínimo da chave fim de curso.\\
+        - pinoCursoMaximo: Pino & Pino do curso máximo da chave fim de curso.\\
+        - posicao: int & Pino da posição atual do eixo.\\
+        - estadoFimDeCurso: bool & Pino do estado de fim de curso que pode inicializar LOW ou HIGH.\\
+        - podeMovimentar(direcao:bool):bool & Verificar se o motor está no fim de curso.\\
+        - rotacionarPassos(direcao:bool,passos:int):void & Rotacionar o motor, tendo como parâmetros de entrada a direção e a quantidade de passos.\\
+        + rotacionarPara(coordenada:double):void & Rotacionar o motor tendo como parâmetro a coordenada cartesiana do eixo.\\
+        \hline       
+    \end{tabular}
+    \caption*{Fonte: Próprio Autor, 2021.}
+    \label{tab:classeeixo}
+\end{table}
 
 A classe “Eixo” possui os atributos privados: “driver”, que é responsável pelas configurações e operações 
 do driver de potência que controla o motor de passo acoplado ao eixo, “sigmoidal” que define a aceleração 
