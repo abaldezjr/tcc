@@ -1,34 +1,23 @@
-\chapter{Metodologia}
-\label{chap:metodologia}
+\chapter{Metodologia}\label{ch:metodologia}
 
 A metodologia desse projeto será dividida em quatro fases: sistema mecânico, sistema eletrônico, 
 desenvolvimento do sistema de software e integração dos sistemas.
 
-\section{Sistema mecânico}
+\section{Sistema mecânico}\label{sec:metmecanico}
 
 Nessa sessão será desenvolvido o projeto de sistema mecânico que se divide em estrutura e componentes. 
 Para compreensão facilitada do projeto, os cálculos de resistência e equilíbrio foram desconsiderados, 
 já que o equipamento é de pequena escala.
 
-\subsection{Estrutura}
+\subsection{Estrutura}\label{subsec:metestrutura}
 
-A estrutura ou mesa cartesiana, como é chamada neste trabalho, compõem o sistema mecânico junto com seus 
-componentes, é a parte responsável por manter a união das peças que ela a compõem e também servir de base 
-para o posicionamento dentro da área de testes do túnel de vento. Como o túnel de vento do Laboratório de 
-Sistemas Térmicos da Universidade Federal do Rio Grande é utilizado para atividades de pesquisa em energia 
-renovável e fenômenos de transporte, optou-se por projetar uma estrutura móvel, que pode ser colocada e 
-retirada de dentro do túnel, quando há a necessidade da caracterização do canal aberto. Para que essa 
-operação se torne prática a mesa deve ser leve e resistente.
-
-Por ser um metal leve, durável e resistente, o alumínio se torna uma boa opção para a confecção desta 
-estrutura. Com uma alta relação resistência / peso, confere um excepcional desempenho, além de dar um ótimo 
-acabamento à peça. A estrutura de metal será dividida em duas partes, a base e o pórtico. A base será 
-o componente que terá a função de dar estabilidade a mesa e evitar que esta venha  a tombar, terá um 
-formato retangular de 500x400 mm e será feito com um perfil v\_slot de 20 x 40 mm em alumínio, conforme 
-apresentado na Figura 3.1 Para fazer a união dos perfis, que serão cortados em tamanho adequado com cantos 
-esquadrejados em ângulo de 45 graus, para dar um melhor acabamento à peça, será utilizada uma placa de 
-conexão interna de 90 graus, conforme Figura 3.3, que unirá os cantos dos perfis por meio de parafusos 
-Allen sem cabeça M5.
+%A estrutura ou mesa cartesiana, como é chamada neste trabalho, compõem o sistema mecânico junto com seus 
+%componentes, é a parte responsável por manter a união das peças que ela a compõem e também servir de base 
+%para o posicionamento dentro da área de testes do túnel de vento. Como o túnel de vento do Laboratório de 
+%Sistemas Térmicos da Universidade Federal do Rio Grande é utilizado para atividades de pesquisa em energia 
+%renovável e fenômenos de transporte, optou-se por projetar uma estrutura móvel, que pode ser colocada e 
+%retirada de dentro do túnel, quando há a necessidade da caracterização do canal aberto. Para que essa 
+%operação se torne prática a mesa deve ser leve e resistente.
 
 % Figura 3.1
 \begin{figure}[!htb]
@@ -36,98 +25,110 @@ Allen sem cabeça M5.
 \includegraphics[scale = 0.4]{figuras/3-1}
 \caption{Perfil v\_slot  20x40mm em alumínio.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
-\label{figp20x40p}
+\label{fig:p20x40p}
 \end{figure}
+
+Por ser um metal leve, durável e resistente, o alumínio se torna uma boa opção para a confecção desta 
+estrutura. Com uma alta relação resistência / peso, confere um excepcional desempenho, além de dar um ótimo 
+acabamento à peça. A estrutura de metal será dividida em duas partes, a base e o pórtico. A base será 
+o componente que terá a função de dar estabilidade a mesa e evitar que esta venha  a tombar, terá um 
+formato retangular de 500x400 mm e será feito com um perfil v\_slot de 20 x 40 mm em alumínio, conforme 
+apresentado na Figura \ref{fig:p20x40p}. 
+Para fazer a união dos perfis, que serão cortados em tamanho 
+adequado com cantos esquadrejados em ângulo de 45 graus, para dar um melhor acabamento à peça, será 
+%utilizada uma placa de conexão interna de 90 graus, conforme \ref{fig:pconexao90p}Figura 3.3, que 
+unirá os cantos dos perfis por meio de parafusos Allen sem cabeça M5.
+
     
 % Figura 3.2
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.4]{figuras/3-2}
-\caption{Dimensões do perfil 20x40mm.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{figp20x40d}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.4]{figuras/3-2}
+%\caption{Dimensões do perfil 20x40mm.}
+%\caption*{Fonte: www.forsetisolucoes.com.br}
+%\label{fig:p20x40d}
+%\end{figure}
     
 % Figura 3.3
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.4]{figuras/3-3}
-\caption{Placa de conexão interna de 90º.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{figpconexao90p}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.4]{figuras/3-3}
+%\caption{Placa de conexão interna de 90º.}
+%\caption*{Fonte: www.forsetisolucoes.com.br}
+%\label{fig:pconexao90p}
+%\end{figure}
     
 % Figura 3.4
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.4]{figuras/3-4}
-\caption{Dimensões da placa de conexão interna de 90º.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{figpconexao90d}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.4]{figuras/3-4}
+%\caption{Dimensões da placa de conexão interna de 90º.}
+%\caption*{Fonte: www.forsetisolucoes.com.br}
+%\label{fig:pconexao90d}
+%\end{figure}
     
 % Figura 3.5
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.3]{figuras/3-5}
-\caption{Estrutura da mesa cartesiana.}
-\caption*{Fonte: Próprio autor}
-\label{figestruturamesa}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.3]{figuras/3-5}
+%\caption{Estrutura da mesa cartesiana.}
+%\caption*{Fonte: Próprio autor}
+%\label{fig:estruturamesa}
+%\end{figure}
     
 % Figura 3.6
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.25]{figuras/3-6}
-\caption{Detalhe do encaixe a 45° da base da estrutura.}
-\caption*{Fonte: Próprio autor}
-\label{figdetalhe45}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.25]{figuras/3-6}
+%\caption{Detalhe do encaixe a 45° da base da estrutura.}
+%\caption*{Fonte: Próprio autor}
+%\label{fig:detalhe45}
+%\end{figure}
     
-O pórtico será feito com o perfil v\_slot de 20x20 mm em alumínio conforme apresenta a Figura XX, 
-e terá as dimensões de 500x480 mm. Sua função é sustentar e estabilizar o sistema de transmissão. 
-Para fixação do pórtico à base será utilizada uma placa T simples de aço. Na montagem da parte 
-superior do pórtico a união se dará por meio de parafusos M6 diretamente nos perfis.
+%O pórtico será feito com o perfil v\_slot de 20x20 mm em alumínio conforme apresenta a \ref{fig:p20x20p}
+Figura XX, e terá as dimensões de 500x480 mm. Sua função é sustentar e estabilizar o sistema 
+de transmissão. Para fixação do pórtico à base será utilizada uma placa T simples de aço. 
+Na montagem da parte superior do pórtico a união se dará por meio de parafusos M6 diretamente nos perfis.
 
 % Figura 3.7
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.5]{figuras/3-7}
-\caption{Perfil v\_slot 20x20 mm em alumínio.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{figp20x20p}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.5]{figuras/3-7}
+%\caption{Perfil v\_slot 20x20 mm em alumínio.}
+%\caption*{Fonte: www.forsetisolucoes.com.br}
+%\label{fig:p20x20p}
+%\end{figure}
     
 % Figura 3.8
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.5]{figuras/3-8}
-\caption{Dimensões do perfil 20x20mm.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{figp20x20d}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.5]{figuras/3-8}
+%\caption{Dimensões do perfil 20x20mm.}
+%\caption*{Fonte: www.forsetisolucoes.com.br}
+%\label{fig:p20x20d}
+%\end{figure}
     
 % Figura 3.9
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.40]{figuras/3-9}
-\caption{Placa T simples de aço.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{figplacatp}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.40]{figuras/3-9}
+%\caption{Placa T simples de aço.}
+%\caption*{Fonte: www.forsetisolucoes.com.br}
+%\label{fig:placatp}
+%\end{figure}
     
 % Figura 3.10
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.35]{figuras/3-10}
-\caption{Dimensões da placa T simples.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{figplacatd}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.35]{figuras/3-10}
+%\caption{Dimensões da placa T simples.}
+%\caption*{Fonte: www.forsetisolucoes.com.br}
+%\label{fig:placatd}
+%\end{figure}
     
-\subsection{Sistema de transmissão}
+\subsection{Sistema de transmissão}\label{subsec:mettransmissao}
 
-%PRECISA COLOCAR REFERENCIA
+%PRECISA COLOCAR REFERENCIA \cite{budynas2016elementos}
 Segundo (Budynas,Richard G. 2016)  o parafuso de potência é um dispositivo usado para transformar 
 o movimento angular em movimento linear e, usualmente, para transmitir potência. Para fazer o movimento 
 dos carros do eixo X e do eixo Y, componentes que farão o efetivo deslocamento do equipamento de medição 
@@ -142,7 +143,7 @@ Será utilizado uma guia para o deslocamento horizontal, para o deslocamento ver
 um fuso acoplado ao motor é uma guia no lado oposto, apenas para dar suporte ao elemento que fixará 
 o fuso horizontal 
 
-\subsection{Acionador}
+\subsection{Acionador}\label{subsec:metacionador}
 
 Os motores elétricos são máquinas capazes de transformar energia elétrica em energia mecânica, 
 essa energia se dá em forma de movimento angular. São equipamentos versáteis, muito eficientes 
@@ -154,7 +155,7 @@ fazê-lo funcionar, por outro lado apresenta uma grande precisão no seu movimen
 serão acoplados aos perfis da estrutura de modo a possibilitar o movimento dos fusos e consequentemente 
 o equipamento de medição, que estará preso a ele por meio de uma guia com roldana. 
 
-\section{Sistema eletrônico}
+\section{Sistema eletrônico}\label{sec:metsisele}
 
 O sistema eletrônico de uma mesa cartesiana foi dividido em módulos para um melhor detalhamento: 
 placa de prototipagem eletrônica Arduino, drivers de potência, atuadores elétricos, fonte de alimentação, 
@@ -162,15 +163,15 @@ optoacopladores, encoders e um computador. É importante lembrar que para menor 
 pela criação de dispositivos.
 
 % Figura 3.11
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.4]{figuras/3-11}
-\caption{Fluxograma do sistema eletrônico.}
-\caption*{Fonte: Próprio autor.}
-\label{figfluxogramaeletronico}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.4]{figuras/3-11}
+%\caption{Fluxograma do sistema eletrônico.}
+%\caption*{Fonte: Próprio autor.}
+%\label{fig:fluxogramaeletronico}
+%\end{figure}
     
-\subsection{Placa de prototipagem eletrônica Arduino}
+\subsection{Placa de prototipagem eletrônica Arduino}\label{subsec:metarduino}
 
 A placa de prototipagem eletrônica Arduino é responsável pela recepção e tratamento dos dados provenientes 
 da interface computacional. O controle dos motores está fundamentado na programação do microcontrolador 
@@ -199,13 +200,13 @@ A placa Arduino é programada via IDE (Integrated Development Environment, ou Am
 Integrado), utilizando uma linguagem baseada em C/C++.
 
 % Figura 3.12
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.5]{figuras/3-12}
-\caption{Descrição dos componentes da placa Arduino.}
-\caption*{Fonte: Próprio autor.}
-\label{figplacaarduino}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.5]{figuras/3-12}
+%\caption{Descrição dos componentes da placa Arduino.}
+%\caption*{Fonte: Próprio autor.}
+%\label{fig:placaarduino}
+%\end{figure}
     
 \begin{itemize}
 \item \textbf{Botão reset:} o botão reset serve para reiniciar a placa arduino.
@@ -227,7 +228,7 @@ Integrado), utilizando uma linguagem baseada em C/C++.
 \item \textbf{Cristal para clock:} serve para gerar o clock.
 \end{itemize}
 
-\subsection{Drivers de potência}
+\subsection{Drivers de potência}\label{subsec:metdriver}
 
 Os drivers de potência são dispositivos que conservam sinais fundamentais de entrada em suas saídas, 
 potencializando e fornecendo maior corrente elétrica para equipamentos atuadores. Os drivers de potência 
@@ -244,25 +245,25 @@ A construção dos drivers que controlam os motores de passo da mesa cartesiana 
 circuito eletrônico para motores que trabalham com tensão de 12 V DC e até 10 A de corrente elétrica. 
 
 % Figura 3.13
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.2]{figuras/3-13}
-\caption{Driver fabricado pela equipe do projeto.}
-\caption*{Fonte: Próprio autor.}
-\label{figdriver}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.2]{figuras/3-13}
+%\caption{Driver fabricado pela equipe do projeto.}
+%\caption*{Fonte: Próprio autor.}
+%\label{fig:driver}
+%\end{figure}
     
-O driver criado foi utilizado para controlar motores de passo e pode operar com tensões entre 8 V e 35 V e e
-ntregar até 35 V por bobina. A \ref{figdriverportas} mostra o driver com os respectivos componentes.
+O driver criado foi utilizado para controlar motores de passo e pode operar com tensões entre 8 V e 35 V e 
+%entregar até 35 V por bobina. A \ref{fig:driverportas} mostra o driver com os respectivos componentes.
 
 % Figura 3.14
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.2]{figuras/3-14}
-\caption{Portas do driver fabricado pela equipe do projeto.}
-\caption*{Fonte: Próprio autor.}
-\label{figdriverportas}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.2]{figuras/3-14}
+%\caption{Portas do driver fabricado pela equipe do projeto.}
+%\caption*{Fonte: Próprio autor.}
+%\label{fig:driverportas}
+%\end{figure}
     
 AQUI EMBAIXO UMA EXPLICAÇÃO DA IMAGEM DAS PORTAS, EXPLICANDO PARA QUE SERVE CADA PORTA COMO SE 
 FOSSE UM DATASHEET DO DRIVER CRIADO
@@ -287,7 +288,7 @@ FOSSE UM DATASHEET DO DRIVER CRIADO
     \label{tab:pdriver}
 \end{table}
 
-\subsection{Atuadores}
+\subsection{Atuadores}\label{subsec:metatuadores}
 
 Atuadores são equipamentos ou dispositivos elétricos que convertem energia hidráulica, pneumática ou elétrica em energia 
 mecânica. A energia gerada nos atuadores é transformada em movimento em vários tipos de processos.
@@ -312,18 +313,18 @@ O atributo que distingue o motor de passo dos demais motores elétricos é a cap
 rotações discretas incrementais e precisas. Os passos são definidos por um número fixo de pólos magnéticos de dente 
 de engrenagens do motor determinando assim, a precisão de ângulo de rotação do motor de passo. Para que haja um 
 controle de quantos passos serão dados, o motor necessita de largura de pulso a fim de enviar a corrente adequada 
-para cada passo. A Figura 3.15 é um exemplo para melhor entendimento do conceito de passo.
+%para cada passo. A \ref{fig:didaticopasso} Figura 3.15 é um exemplo para melhor entendimento do conceito de passo.
 
 % Figura 3.15
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.4]{figuras/3-15}
-\caption{Conceito didático do motor de passo.}
-\caption*{Fonte: https://www.fernandok.com.}
-\label{figdidaticopasso}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.4]{figuras/3-15}
+%\caption{Conceito didático do motor de passo.}
+%\caption*{Fonte: https://www.fernandok.com.}
+%\label{fig:didaticopasso}
+%\end{figure}
     
-A \ref{figdidaticopasso} mostra um motor de passo com cinquenta dentes de precisão, portanto combinando 
+%A \ref{fig:didaticopasso} mostra um motor de passo com cinquenta dentes de precisão, portanto combinando 
 o número de dentes com as quatro fases de um motor bipolar temos duzentos passos.
 
 %escrever equação
@@ -349,15 +350,16 @@ de excitação que pode ser por passo completo, meio passo e micropasso explicad
 sistemas capazes de  dividir um passo em milhares de vezes.
 
 % Figura 3.16
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.2]{figuras/3-16}
-\caption{Esquema elétrico do motor de passo.}
-\caption*{Fonte: Próprio autor.}
-\label{figesquemaeletrico}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.2]{figuras/3-16}
+%\caption{Esquema elétrico do motor de passo.}
+%\caption*{Fonte: Próprio autor.}
+%\label{fig:esquemaeletrico}
+%\end{figure}
     
-As Tabelas 2, 3 e 4 mostram a sequência de polaridades aplicadas no motor no movimento de sentido horário.
+%As Tabelas \ref{tab:wavestephorario},\ref{tab:fullstepantihorario} e \ref{tab:halfstepantihorario} 
+2, 3 e 4 mostram a sequência de polaridades aplicadas no motor no movimento de sentido horário.
 
 % Tabela 2
 \begin{table}
@@ -417,11 +419,10 @@ As Tabelas 2, 3 e 4 mostram a sequência de polaridades aplicadas no motor no mo
     \label{tab:halfstephorario}
 \end{table}
 
-As Tabelas 5, 6 e 7 mostram a sequência de polaridades aplicadas no motor no movimento de sentido anti-horário.
+%As Tabelas \ref{tab:wavestepantihorario},\ref{tab:fullstepantihorario} e \ref{tab:halfstepantihorario}
+5, 6 e 7 mostram a sequência de polaridades aplicadas no motor no movimento de sentido anti-horário.
 
 % Tabela 5
-% Sequência de passos com uma fase (wavestep) para movimentação no sentido anti-horário.
-% (Fonte: Próprio autor.)
 \begin{table}
     \centering
     \caption{Sequência de passos com uma fase (wavestep) para movimentação no sentido anti-horário.}
@@ -479,7 +480,7 @@ As Tabelas 5, 6 e 7 mostram a sequência de polaridades aplicadas no motor no mo
     \label{tab:halfstepantihorario}
 \end{table}
 
-A Tabela 8 apresenta alguns parâmetros dos motores de passo.
+%A \ref{tab:pmotordepasso} Tabela 8 apresenta alguns parâmetros dos motores de passo.
 
 % Tabela 8
 \begin{table}
@@ -499,14 +500,14 @@ A Tabela 8 apresenta alguns parâmetros dos motores de passo.
     \label{tab:pmotordepasso}
 \end{table}
 
-\subsection{Fonte de alimentação}
+\subsection{Fonte de alimentação}\label{subsec:metfonte}
 
 A fonte de alimentação projetada para transformar a tensão elétrica alternada em corrente contínua.
 
 Para a escolha correta da fonte de alimentação é necessário definir a demanda de energia elétrica 
 que os dispositivos que são alimentados pela fonte necessitam.
 
-A Tabela 9 apresenta a demanda de energia elétrica de cada dispositivo.
+%A \ref{tab:demandafonte} Tabela 9 apresenta a demanda de energia elétrica de cada dispositivo.
 
 % Tabela 9
 \begin{table}
@@ -527,12 +528,12 @@ A Tabela 9 apresenta a demanda de energia elétrica de cada dispositivo.
     \label{tab:demandafonte}
 \end{table}
 
-A Tabela 9 indica que a placa controladora Arduino opera no intervalo de tensão de 7 V a 12 V, 
+%A \ref{tab:demandafonte} Tabela 9 indica que a placa controladora Arduino opera no intervalo de tensão de 7 V a 12 V, 
 os drivers de potência no intervalo de 8 V a 35 V, os motores de passo no intervalo de 5 V a 36 V 
 e o optoacoplador no intervalo de 5V a 35 V.A tensão de saída de 12 V foi determinada como melhor 
 opção para o projeto.
 
-Outro parâmetro que a Tabela 7 apresenta é a corrente elétrica mínima para a operação do circuito. 
+%Outro parâmetro que a \ref{tab:demandafonte} Tabela 9 apresenta é a corrente elétrica mínima para a operação do circuito. 
 A placa controladora necessita de 800 mA, os drivers de potência necessitam de 2 A cada, como são 2 drivers, 
 4 A são necessários, os motores de passo consomem 2 amperes cada, como o projeto contém 2 motores, 4 Amperes 
 são necessários e os optoacopladores necessitam de 10 mA cada, como o projeto contém 2 optoacopladores, 
@@ -545,15 +546,15 @@ Conforme a determinação da tensão de saída e o cálculo de corrente necessá
 é possível determinar que a fonte deve ter 12 V e 10,64 A.
 
 % Figura 3.17
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.2]{figuras/3-17}
-\caption{Fonte do sistema.}
-\caption*{Fonte: Próprio autor.}
-\label{figfonte}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.2]{figuras/3-17}
+%\caption{Fonte do sistema.}
+%\caption*{Fonte: Próprio autor.}
+%\label{fig:fonte}
+%\end{figure}
     
-\subsection{Acopladores ópticos}
+\subsection{Acopladores ópticos}\label{subsec:metacoplador}
 
 Os acopladores ópticos ou optoacopladores são dispositivos que realizam a transferência de 
 sinais de um circuito para outro por meio de um feixe de luz sem a ligação elétrica.
@@ -563,13 +564,13 @@ os circuitos de controle de potência, protegendo os circuitos sensíveis a uma 
 como a placa controladora Arduino.
 
 % Figura 3.18
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.7]{figuras/3-18}
-\caption{Funcionamento do acoplador no sistema.}
-\caption*{Fonte: Próprio autor.}
-\label{figacoplador}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.7]{figuras/3-18}
+%\caption{Funcionamento do acoplador no sistema.}
+%\caption*{Fonte: Próprio autor.}
+%\label{fig:acoplador}
+%\end{figure}
     
 A sua composição contém uma fonte emissora de luz (LED) e um sensor fototransistor sensível às variações 
 espectrais da fonte emissora. Seu funcionamento é baseado no efeito fotoelétrico, onde o diodo LED produz 
@@ -578,7 +579,7 @@ um feixe de luz infravermelha polarizando a base do fototransistor impondo uma c
 O optoacoplador escolhido para o projeto foi o PC 817 por já estar disponível no Laboratório de Sistemas 
 Térmicos.
 
-\subsection{Encoders}
+\subsection{Encoders}\label{subsec:metencoder}
 
 Geradores de pulsos ou encoders são sensores/transdutores eletromecânicos responsáveis pelo sistema de 
 controle de posição transformando a medida de posição de algum objeto, seja linear ou angular, em sinal 
@@ -603,7 +604,7 @@ E o encoder absoluto utiliza várias faixas de saídas com leitura em paralelo e
 Os dados podem ser recuperados, se uma falha no sistema ocorrer, devido a representação binária da posição 
 angular do eixo.
 
-\subsection{Chaves fim de curso}
+\subsection{Chaves fim de curso}\label{subsec:metchaves}
 
 %PRECISA COLOCAR REFERENCIA
 As chaves fim de curso são dispositivos eletromecânicos usados para limitação de campo de movimento de eixos, 
@@ -621,11 +622,11 @@ Uma chave fim de curso é composta basicamente por três elementos, sendo eles:
     \item Atuador: Recebe a força externa exercida para o acionamento da troca de estado.
 \end{alineas}
 
-\section{Sistema de software}
+\section{Sistema de software}\label{sec:metsissof}
 
 A seguir será descrito o desenvolvimento do sistema de software.
 
-\subsection{Plataforma de prototipação Arduino IDE}
+\subsection{Plataforma de prototipação Arduino IDE}\label{subsec:metide}
 
 A plataforma de prototipação Arduino IDE (Integrated development environment ou ambiente de desenvolvimento 
 integrado) é um software que permite o desenvolvimento e envio de códigos compilados direto para o 
@@ -634,15 +635,15 @@ e foi desenvolvida na linguagem Java oferecendo suporte de desenvolvimento na li
 O download da plataforma foi realizado através do link: https://www.arduino.cc/en/software
 
 % Figura 3.19
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.5]{figuras/3-19}
-\caption{Ambiente de desenvolvimento integrado Arduino.}
-\caption*{Fonte: Próprio autor.}
-\label{figidearduino}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.5]{figuras/3-19}
+%\caption{Ambiente de desenvolvimento integrado Arduino.}
+%\caption*{Fonte: Próprio autor.}
+%\label{fig:idearduino}
+%\end{figure}
     
-\subsection{Logica de programação}
+\subsection{Logica de programação}\label{subsec:metlogica}
 
 O desenvolvimento da lógica de programação da placa controladora foi organizado de maneira modular 
 usando orientação a objetos para uma manutenção facilitada e um entendimento mais claro do código.
@@ -650,15 +651,15 @@ usando orientação a objetos para uma manutenção facilitada e um entendimento
 As operações que o software deve executar foram apresentadas no fluxograma abaixo.
 
 % Figura 3.20
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.7]{figuras/3-20}
-\caption{Fluxo de execução do software.}
-\caption*{Fonte: Próprio autor.}
-\label{figfluxoexecucao}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.7]{figuras/3-20}
+%\caption{Fluxo de execução do software.}
+%\caption*{Fonte: Próprio autor.}
+%\label{fig:fluxoexecucao}
+%\end{figure}
     
-A Figura 3.20 apresenta um fluxograma simplificado da lógica de programação presente na placa controladora 
+%A \ref{fig:fluxoexecucao} Figura 3.20 apresenta um fluxograma simplificado da lógica de programação presente na placa controladora 
 Arduino que inicialmente tem como primeiro comando ficar esperando o envio de dados pela porta Serial, 
 se caso há esse envio, então o programa faz a leitura da porta serial, armazenando os dados em variáveis 
 para em seguida realizar o tratamento de dados. Após o tratamento de dados o software dará o comando de 
@@ -667,7 +668,7 @@ eixo X parar sua rotação, o comando de movimentação do motor do eixo vertica
 Finalmente, após o fim da execução do motor que controla o eixo Y, o software volta a analisar se é enviado 
 dados pela porta serial.
 
-\subsection{Diagrama de classes}
+\subsection{Diagrama de classes}\label{subsec:metdiagrama}
 
 Diagrama de classe é uma representação da estrutura e relações entre classes que um software possui 
 facilitando e servindo de modelo para criação de objetos. Esse diagrama permite modelar classes com seus 
@@ -675,16 +676,16 @@ atributos e métodos além da relação entre objetos.
 
 Para o desenvolvimento do software da placa controladora cuja linguagem é C++ que é fundamentada em 
 orientação a objetos, foi definido que seria a melhor opção realizar um diagrama de classes antes do 
-desenvolvimento do código. Sendo assim a Figura 3.21 apresentada abaixo é o resultado do que foi modelado.
+%desenvolvimento do código. Sendo assim a \ref{fig:diagramaclasses} Figura 3.21 apresentada abaixo é o resultado do que foi modelado.
 
 % Figura 3.21
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.5]{figuras/3-21}
-\caption{Diagrama de classes do sistema de software presente no Arduino.}
-\caption*{Fonte: Próprio autor.}
-\label{figdiagramaclasses}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.5]{figuras/3-21}
+%\caption{Diagrama de classes do sistema de software presente no Arduino.}
+%\caption*{Fonte: Próprio autor.}
+%\label{fig:diagramaclasses}
+%\end{figure}
     
 A seguir será explicado este diagrama classe a classe.
 
@@ -694,7 +695,7 @@ da mesa cartesiana houve a preocupação dos projetistas em configurar os motore
 variável para maior vida útil dos equipamentos, já que com aceleração constante pode causar forças 
 desnecessárias durante o processo de rotação.
 
-A tabela 10 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Sigmoidal”.
+%A \ref{tab:classesigmoidal} tabela 10 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Sigmoidal”.
 
 % Tabela 10
 \begin{table}
@@ -737,7 +738,7 @@ da classe “Eixo”.
 necessário a utilização dos pinos, foi definido que seria melhor a criação de uma classe para facilitar 
 as operações com pinos. 
 
-A tabela 11 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Pino”.
+%A \ref{tab:classepino} tabela 11 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Pino”.
 
 % Tabela 11
 \begin{table}
@@ -767,45 +768,45 @@ tem os métodos de acesso getters e setters que acessam os atributos privados ci
 o modo do passo dos motores, executar o pulso que dará movimento ao motor de passo, ligar e desligar 
 o driver, deixá-lo no modo “sleep” e também “reseta-lo”.
 
-A tabela 12 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Driver”
+%A \ref{tab:classedriver} tabela 12 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Driver”
 
 % Tabela 12
-\begin{table}
-    \centering
-    \caption{Declaração e funcionalidade dos atributos e métodos da classe Driver.}
-    \begin{tabular}{lp{6cm}}
-        \hline
-        \textbf{Declaração} & \textbf{Funcionalidade}\\
-        \hline
-        - pinoEnable: Pino & Ativar e desativar o driver.\\
-        - pinoReset: Pino & Resetar o driver.\\
-        - pinoSleep: Pino & Ativar e desativar o modo sleep do driver.\\
-        - pinoM0: Pino & Pino M0 do modo de passo do driver.\\
-        - pinoM1: Pino & Pino M1 do modo de passo do driver.\\
-        - pinoM2: Pino & Pino M2 do modo de passo do driver.\\
-        - pinoPasso: Pino & Pino de execução do passo do driver.\\
-        - pinoDirecao: Pino & Pino de configuração da direção do driver.\\
-        - pinoIN1: Pino & Pino IN1 do motor de passo.\\
-        - pinoIN2: Pino & Pino IN2 do motor de passo.\\
-        - pinoIN3: Pino & Pino IN3 do motor de passo.\\
-        - pinoIN4: Pino & Pino IN4 do motor de passo.\\
-        - tipoAcionamento: TipoAcionamento & Tipo de acionamento do driver: (SOFTWARE, HARDWARE).\\
-        - tipoPasso: TipoPasso & Tipo do passo do driver: (WAVESTEP, FULLSTEP, HALFSTEP).\\
-        - direcao: Direcao & Configuração da direção do driver: (ANTIHORARIO, HORARIO).\\
-        - passoAtual: int & PassoAtual é o indice de acesso as informações do vetor de passos.\\
-        - modoPasso: int & Pino do modo de passo do driver.\\
-        - passosPorVolta: int & Quantidade de passos a cada volta do motor de passo.\\
-        - vetorPasso: byte & Vetor de bytes de sequência dos passos.\\
-        - setarEstadoModo(pM0:bool, pM1:bool, pM2:bool): void & Definir o modo de passo do driver passando como parâmetro os estados dos pinos M0, M1, M2.\\
-        - setarEstados(b: byte):void & Definir estados dos pinos IN1, IN2, IN3, IN4 do motor de passo.\\
-        - passo():void & Executar um passo do motor.\\
-        + executarPasso(cont:int, linf:int, lsup:int):void & Executar um passo do motor com a lógica de sequência dos passos.\\
-        + setarModoPasso(mp:int, b:byte):void & Definir o modo de passo do driver.\\
-        \hline       
-    \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
-    \label{tab:classedriver}
-\end{table}
+%\begin{table}
+%    \centering
+%    \caption{Declaração e funcionalidade dos atributos e métodos da classe Driver.}
+%    \begin{tabular}{lp{6cm}}
+%        \hline
+%        \textbf{Declaração} & \textbf{Funcionalidade}\\
+%        \hline
+%        - pinoEnable: Pino & Ativar e desativar o driver.\\
+%        - pinoReset: Pino & Resetar o driver.\\
+%        - pinoSleep: Pino & Ativar e desativar o modo sleep do driver.\\
+%        - pinoM0: Pino & Pino M0 do modo de passo do driver.\\
+%        - pinoM1: Pino & Pino M1 do modo de passo do driver.\\
+%        - pinoM2: Pino & Pino M2 do modo de passo do driver.\\
+%        - pinoPasso: Pino & Pino de execução do passo do driver.\\
+%        - pinoDirecao: Pino & Pino de configuração da direção do driver.\\
+%        - pinoIN1: Pino & Pino IN1 do motor de passo.\\
+%        - pinoIN2: Pino & Pino IN2 do motor de passo.\\
+%        - pinoIN3: Pino & Pino IN3 do motor de passo.\\
+%        - pinoIN4: Pino & Pino IN4 do motor de passo.\\
+%        - tipoAcionamento: TipoAcionamento & Tipo de acionamento do driver: (SOFTWARE, HARDWARE).\\
+%        - tipoPasso: TipoPasso & Tipo do passo do driver: (WAVESTEP, FULLSTEP, HALFSTEP).\\
+%        - direcao: Direcao & Configuração da direção do driver: (ANTIHORARIO, HORARIO).\\
+%        - passoAtual: int & PassoAtual é o indice de acesso as informações do vetor de passos.\\
+%        - modoPasso: int & Pino do modo de passo do driver.\\
+%        - passosPorVolta: int & Quantidade de passos a cada volta do motor de passo.\\
+%        - vetorPasso: byte & Vetor de bytes de sequência dos passos.\\
+%        - setarEstadoModo(pM0:bool, pM1:bool, pM2:bool): void & Definir o modo de passo do driver passando como parâmetro os estados dos pinos M0, M1, M2.\\
+%        - setarEstados(b: byte):void & Definir estados dos pinos IN1, IN2, IN3, IN4 do motor de passo.\\
+%        - passo():void & Executar um passo do motor.\\
+%        + executarPasso(cont:int, linf:int, lsup:int):void & Executar um passo do motor com a lógica de sequência dos passos.\\
+%        + setarModoPasso(mp:int, b:byte):void & Definir o modo de passo do driver.\\
+%        \hline       
+%    \end{tabular}
+%    \caption*{Fonte: Próprio Autor, 2021.}
+%    \label{tab:classedriver}
+%\end{table}
 
 A classe “Driver” possui os atributos privados: “pinoEnable”, que permite ligar ou desligar o driver, 
 “pinoReset”, que reinicia o driver, “pinoSleep”, que ativa o modo sleep do driver, “pinoM0”, “pinoM1” 
@@ -828,7 +829,7 @@ do driver e “executarPasso”, executa um passo do motor com a lógica de conf
 possível rotacionar definindo a coordenada cartesiana de preferência, verificar se a posição do eixo 
 está ativando a chave de fim de curso.
 
-A tabela 13 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Eixo”.
+%A \ref{tab:classeeixo} tabela 13 apresenta a declaração e funcionalidade dos atributos e métodos da classe “Eixo”.
 
 % Tabela 13
 \begin{table}
@@ -868,34 +869,34 @@ eixo tendo como parâmetros de entrada uma coordenada cartesiana.
 Além das classes utilizadas, o software possui a sketch principal que é responsável pela configuração das 
 informações iniciais, criação dos objetos na memória, configuração dos atributos de cada objeto, execução 
 da leitura pela porta serial, tratamento de dados recebidos e a movimentação dos motores.
-A Figura 3.22 apresenta um diagrama geral da organização do software.
+%A \ref{fig:orgsoftware} Figura 3.22 apresenta um diagrama geral da organização do software.
 
 % Figura 3.22
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.85]{figuras/3-22}
-\caption{Diagrama da organização geral do software.}
-\caption*{Fonte: Próprio autor.}
-\label{figorgsoftware}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.85]{figuras/3-22}
+%\caption{Diagrama da organização geral do software.}
+%\caption*{Fonte: Próprio autor.}
+%\label{fig:orgsoftware}
+%\end{figure}
     
 O arquivo MesaCartesiana.ino é o principal, ele instancia os objetos das classes: “Pino”, “Sigmoidal”, 
 “Driver” e “Eixo” e também tem a responsabilidade de receber às coordenadas através da comunicação serial 
 e às enviar para o objeto da classe “Eixo” que fará a rotação dos motores.
 
-\section{Integração dos sistemas}
+\section{Integração dos sistemas}\label{subsec:metintegracao}
 
 Nesta seção será descrito como os sistemas são integrados mostrando como os três sistemas se comunicam. 
-A Figura 3.23 é um fluxograma que descreve de maneira gráfica a integração dos sistemas.
+%A \ref{fig:integracao} Figura 3.23 é um fluxograma que descreve de maneira gráfica a integração dos sistemas.
 
 % Figura 3.23
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale = 0.9]{figuras/3-23}
-\caption{Fluxograma para apresentar a integração sistemas.}
-\caption*{Fonte: Próprio autor.}
-\label{figintegracao}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale = 0.9]{figuras/3-23}
+%\caption{Fluxograma para apresentar a integração sistemas.}
+%\caption*{Fonte: Próprio autor.}
+%\label{fig:integracao}
+%\end{figure}
     
 O sistema de software se comunica com o sistema eletrônico através do envio de dados pela comunicação 
 Serial presente no Arduino IDE para o software presente no microcontrolador ATMEGA da placa Arduino. 

@@ -1,45 +1,43 @@
-\chapter{Referencial teórico}
-\label{chap:referencial}
+\chapter{Referencial teórico}\label{ch:referencial}
 
 Esta seção dispõe de uma breve revisão bibliográfica de assuntos referentes ao tema do projeto, que são 
 os seguintes: túneis de vento, tubos de Pitot e mesas de posicionamento. Por fim, apresenta trabalhos 
 relacionados que envolvem estes assuntos.
 
-\section{Túnel de vento}
+\section{Túnel de vento}\label{sec:tunel}
 
 Os túneis de vento são estruturas que propiciam a simulação para o desenvolvimento de estudos que relacionam 
 o efeito do movimento de ar em torno de objetos, como turbinas, aviões, carros e edificações. Sua estrutura 
 é composta por um duto de diâmetro adequado onde o ar é empurrado ou succionado por um ventilador. No 
 interior do duto, o ar é analisado através de instrumentos de medição.
 
-%PRECISA COLOCAR A REFERENCIA
+%PRECISA COLOCAR A REFERENCIA \cite{carminatti2019desenvolvimento} não achei o goreck esse cita gorek
 O primeiro túnel de vento foi construído na Inglaterra em 1871 por Frank H. Wenham (1824-1908), engenheiro 
 naval britânico e membro da Sociedade Aeronáutica da Grã-Bretanha, esse túnel era de circuito fechado e 
 acionado por uma máquina a vapor. Os estudos de Wenham permitiram avanços no alongamento de uma asa 
-relacionado à força de sustentação.(GORECKI apud SANTOS et al, 2014). [ACHAR O ARTIGO - N TEM REF]
+relacionado à força de sustentação.\cite{carminatti2019desenvolvimento}
+(GORECKI apud SANTOS et al, 2014). [ACHAR O ARTIGO - N TEM REF]
 
-%PRECISA COLOCAR A REFERENCIA
+%PRECISA COLOCAR A REFERENCIA \cite{joglekar2014design}
 Em 1897 foi construído por Konstantin Tsiolkovsky o primeiro túnel de vento Russo que era de circuito 
 aberto com um ventilador centrífugo e determinou os coeficientes de arrasto de placas planas, cilindros 
-e esferas (JOGLEKAR; MOURYA, 2014). [ACHAR O ARTIGO - TEM REF]
+e esferas (JOGLEKAR; MOURYA, 2014). 
 
-%PRECISA COLOCAR A REFERENCIA
+%PRECISA COLOCAR A REFERENCIA \cite{de2014adalberto}
 Devido às guerras, a produção de túneis de vento teve uma demanda aumentada, pois era necessário a execução 
 de ensaios em aeronaves militares. Já após o período de guerras, os túneis de vento ganharam relevância 
 quando o objetivo foi aumentar a eficiência na aerodinâmica dos carros (SANTOS, 2009). 
-[ARTIGO ENCONTRADO - TEM REF].
 
-%PRECISA COLOCAR A REFERENCIA
+%PRECISA COLOCAR A REFERENCIA \cite{pritchard2016fox}
 Os túneis de vento podem ser classificados  quanto ao circuito que pode ser aberto ou fechado,  quanto a velocidade 
 de escoamento em relação à velocidade do som que é chamada de  número de Mach (Ma) definindo os escoamentos como sônico, 
 subsônico, supersônico e hipersônico e quanto ao sentido do escoamento que nos túneis de vento de circuito aberto podem 
 ser soprador e sugador, sendo definido pela condição de trabalho do  ventilador. (FOX, 2016) 
-[ACHAR LINK DO LIVRO]  TEM REFERENCIA
 
 O túnel de vento tratado neste trabalho está situado junto ao Laboratório de Sistemas Térmicos da Universidade Federal 
 do Rio Grande e é de característica subsônica, circuito aberto e do tipo soprador.
 
-\section{Tubo de Pitot}
+\section{Tubo de Pitot}\label{sec:tubo}
 
 O tubo de Pitot foi um equipamento criado por Henri Pitot em 1732 para medição da vazão do rio Sena. 
 Pitot de maneira intuitiva apresentou que a altura de uma coluna de líquido conectada ao seu tubo era 
@@ -51,7 +49,7 @@ desde o regime subsônico ou supersônico, sendo possível a obtenção de veloc
 No entanto apresenta desvantagens de falta de precisão em baixas velocidade, impossibilidade de medição 
 em escoamentos reversos e dificuldade de obtenção de medições em alta frequência.
 
-%PRECISA COLOCAR A REFERENCIA
+%PRECISA COLOCAR A REFERENCIA \cite{pritchard2016fox}
 Com essa técnica, Pitot obteve a velocidade em um escoamento incompressível em uma área pontual, sendo que 
 é necessário o tubo ser posicionado de modo a ficar alinhado com o escoamento. Com isso se mede a pressão 
 estática e a pressão total ou de estagnação. A subtração da pressão total da estática resulta na pressão 
@@ -63,10 +61,10 @@ dinâmica do escoamento (FOX, 2016).
 \includegraphics[scale = 0.7]{figuras/2-1}
 \caption{Funcionamento das pressões dentro do tubo de Pitot.}
 \caption*{Fonte: Próprio autor.}
-\label{figpestagnacao}
+\label{fig:pestagnacao}
 \end{figure}
 
-%PRECISA COLOCAR A REFERENCIA
+%PRECISA COLOCAR A REFERENCIA \cite{pritchard2016fox}
 Seu princípio de funcionamento está baseado na conhecida equação de Bernoulli onde  a pressão dinâmica (pd) 
 é igual a pressão total (pt) menos a pressão estática (pe) (FOX, 2016).
 
@@ -80,7 +78,7 @@ Bernoulli para regime permanente, incompressível e sem atrito (EQ.2). Percebe-s
 função da condição de estado do ar durante os testes sendo determinada a partir da Equação 5 (EQ.5). 
 Onde Raré  … Taré
 
-\section{Mesa de posicionamento }
+\section{Mesa de posicionamento}\label{sec:mesa}
 
 Utilizada para várias finalidades como, posicionamento de peças que serão usinadas em máquinas de Controle 
 Numérico Computadorizada (CNC’s), automação de laboratórios, armazenamento de cargas, impressões 3D entre 
@@ -92,7 +90,7 @@ de liberdade que permite o posicionamento da peça ou da ferramenta em algum lug
 Podem ser classificadas em dois tipos com relação a sua transmissão:  as mesas acionadas por fusos conforme 
 apresenta a Figura 2.2 e as acionadas por correias sincronizadas demonstradas na Figura 2.3..
 
-%PRECISA COLOCAR A REFERENCIA
+%PRECISA COLOCAR A REFERENCIA \cite{rocha2015retrofitting} \cite{kassouf2003mesa} não encontrei o kassouf
 As mesas de posicionamentos de fuso possuem um alto rendimento, próximo de 95\%, um baixo desgaste e uma 
 velocidade máxima de 3 m/s, já as mesas acionadas por correias sincronizadas podem desenvolver velocidades 
 de até 5 m/s, conseguindo altas acelerações  devido a sua inércia (KASSOUF, 2003).
@@ -103,7 +101,7 @@ de até 5 m/s, conseguindo altas acelerações  devido a sua inércia (KASSOUF, 
 \includegraphics[scale = 0.3]{figuras/2-2}
 \caption{Mesa acionada por fuso.}
 \caption*{Fonte: https://www.kalatec.com.br/mesa-de-coordenada-xy/}
-\label{figmfuso}
+\label{fig:mfuso}
 \end{figure}
     
 %FIGURA 2.3
@@ -112,10 +110,10 @@ de até 5 m/s, conseguindo altas acelerações  devido a sua inércia (KASSOUF, 
 \includegraphics[scale = 1]{figuras/2-3}
 \caption{Mesa acionada por correias.}
 \caption*{Fonte: https://www.ccmrails.com/2019/01/26/packing-automation/}
-\label{figmcorreia}
+\label{fig:mcorreia}
 \end{figure}
     
-%PRECISA COLOCAR A REFERENCIA
+%PRECISA COLOCAR A REFERENCIA não encontrei
 Outro componente importante nesse mecanismo é o acionador, que pode ser um motor de passo ou um servomotor. 
 Os motores  de passo são máquinas que exercem um papel muito importante atualmente, são utilizados em 
 aplicações onde é requerido um alto grau de precisão no movimento e que este movimento seja feito em passos 
@@ -131,21 +129,22 @@ pelo sistema de controle para o motor, que gira com grande precisão conforme se
 marcante, os motores com ímãs permanentes apresentam um torque estático quando não submetidos à tensão devido 
 a força magnética entre os ímãs e o estator, servindo como freio para o sistema.
  
-\section{Trabalhos relacionados}
+\section{Trabalhos relacionados}\label{sec:trabalhos}
 
 Nesta seção serão apresentados trabalhos relacionados ao tema deste projeto apresentando os objetivos e resultados 
 de cada um.
 
-%PRECISA COLOCAR A REFERENCIA
+%PRECISA COLOCAR A REFERENCIA \cite{butignol2017adequaccao}
 O trabalho realizado por Butignol (2017), tinha o objetivo de desenvolver uma adequação de uma mesa XYZ didática 
 acionada por motores de passo para o estudo de programação em em microcontroladores e seu posicionamento em duas 
 dimensões.
 
+%PRECISA COLOCAR A REFERENCIA \cite{butignol2017adequaccao}
 Como resultado do trabalho, Butignol (2017) desenvolveu um aparato eletromecânico de posicionamento de dois eixos 
 e um atuador no terceiro eixo capaz de auxiliar no ensino de microcontroladores. Por fim, o projeto está disponível 
 em <https://mesaxydidatica.blogspot.com.br> para sua montagem em outras instituições de ensino.
 
-%PRECISA COLOCAR A REFERENCIA
+%PRECISA COLOCAR A REFERENCIA \cite{camargo1988mesa}
 O trabalho realizado por Camargo (1998), tinha o objetivo de desenvolver um sistema posicionador de baixo custo 
 com comando numérico (CNC), utilizando componentes nacionalizados e com uma complexidade mínima no sistema de comando.
 
@@ -154,21 +153,23 @@ natural amortecida, amplitude média da curva de resposta, perdas de passo, erro
 outros a fim de demonstrar que a concepção projetada e executada para a mesa de coordenadas XY presente em seu estudo, 
 se justifica com os resultados obtidos.
 
-%PRECISA COLOCAR A REFERENCIA
+%PRECISA COLOCAR A REFERENCIA \cite{ramos2018desenvolvimento}
 O trabalho realizado por Ramos (2018), tinha o objetivo de projetar e construir uma mesa cartesiana para ser colocada 
 nos túneis aerodinâmicos existentes no Departamento de Engenharia Mecânica e Industrial da Faculdade de Ciências e 
 Tecnologia Universidade Nova de Lisboa, para assim, dar a capacidade de deslocamento de sensores como: tubo de Pitot, 
 anemômetro de fio quente, anemômetro laser-Doppler para qualquer ponto na seção escolhida.
 
+%PRECISA COLOCAR A REFERENCIA \cite{ramos2018desenvolvimento}
 Como resultado do trabalho, Ramos (2018) construiu uma mesa cartesiana funcional com capacidade de efetuar medições 
 de velocidade em uma malha de cem posições, podendo inserir coordenadas através da porta serial do Arduino. Ainda 
 comprovou por testes experimentais a precisão dos motores de passo ao comprovar que não existe diferença mensurável 
 entre o valores medidos com os ideais.
 
-%PRECISA COLOCAR A REFERENCIA
+%PRECISA COLOCAR A REFERENCIA \cite{hoss2018implantaccao}
 O trabalho realizado por Hoss (2018),tinha o objetivo a instrumentação e desenvolvimento do sistema de controle de 
 velocidade do vento de um túnel de vento com propulsão por motor a combustão interna, existente no laboratório de 
 Conformação do IFSC Campus Chapecó.
 
+%PRECISA COLOCAR A REFERENCIA \cite{hoss2018implantaccao}
 Como resultado do trabalho, Hoss (2018) alcançou o objetivo permitindo medir variáveis de forma confiável com 
 incertezas pequenas dentro dos requisitos estabelecidos, mesmo com emprego de sensores de baixo custo e média precisão.

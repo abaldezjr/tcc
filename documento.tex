@@ -1,4 +1,4 @@
-\documentclass[
+\documentclass{abntex2}[
 	a4paper,          % Tamanho da folha A4
     12pt,             % Tamanho da fonte 12pt
     chapter=TITLE,    % Todos os capitulos devem ter caixa alta
@@ -7,14 +7,37 @@
     english,          % Hifenizacoes em ingles
     spanish,          % Hifenizacoes em espanhol
     brazil            % Ultimo idioma eh o idioma padrão do documento
-]{abntex2}
+	openright,
+	twoside
+]
 
 \input{lib/usepackages}
 
-\begin{document}	
-\input{elementos-textuais/introducao}
-\input{elementos-textuais/fundamentacao-teorica}
-\input{elementos-textuais/metodologia}
-\input{elementos-textuais/resultados}
-\input{elementos-textuais/conclusao}
+\begin{document}
+	%pretextual
+	%FAZER A CAPA \input{elementos-pre-textuais/....}
+	%FAZER A FOLHA DE ROSTO \input{elementos-pre-textuais/....}
+	%FAZER A FOLHA CIP \input{elementos-pre-textuais/....}
+	%FAZER A FOLHA DE APROVAÇÃO \input{elementos-pre-textuais/....}
+	%FAZER A DEDICATORIA \input{elementos-pre-textuais/dedicatoria}
+	%FAZER O RESUMO \input{elementos-pre-textuais/resumo}
+	%FAZER A ABSTRACT \input{elementos-pre-textuais/abstract}
+	%FAZER OS AGRADECIMENTOS \input{elementos-pre-textuais/agradecimentos}
+	%FAZER A EPIGRAFE \input{elementos-pre-textuais/epigrafe}
+	%FAZER A LISTA DE ILUSTRAÇÕES \input{elementos-pre-textuais/....}
+	%FAZER A LISTA DE TABELAS \input{elementos-pre-textuais/....}
+	%FAZER A LISTA DE ABREVIATURAS \input{elementos-pre-textuais/lista-de-abreviaturas-e-siglas}
+	%FAZER A LISTA DE SIMBOLOS \input{elementos-pre-textuais/lista-de-simbolos}
+	%FAZER O SUMARIO
+
+	%textual
+	%\input{elementos-textuais/introducao}
+	\input{elementos-textuais/fundamentacao-teorica}
+	%\input{elementos-textuais/metodologia}
+	%\input{elementos-textuais/resultados}
+	%\input{elementos-textuais/conclusao}
+
+	%postextual
+	\bibliography{elementos-pos-textuais/referencias}
+	%FAZER OS APENDICES \input{elementos-pos-textuais/apendices/}
 \end{document}
