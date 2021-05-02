@@ -213,10 +213,16 @@
 % Determina o tipo do trabalho apresentado
 % Definicao das variaveis
 \provideboolean{uecetex2@ehtccgraduacao}
+\provideboolean{uecetex2@ehtccespecializacao}
+\provideboolean{uecetex2@ehdissertacao}
+\provideboolean{uecetex2@ehtese}
 
 % Valores Iniciais
 \setboolean{uecetex2@ehtccgraduacao}{false}
-
+\setboolean{uecetex2@ehtccespecializacao}{false}
+\setboolean{uecetex2@ehdissertacao}{false}
+\setboolean{uecetex2@ehtese}{false}
+	
 \newcommand{\trabalhoacademico}[1]{
 	\setboolean{uecetex2@ehtccgraduacao}{false}
 	\setboolean{uecetex2@ehtccespecializacao}{false}
@@ -311,6 +317,7 @@
 \newcommand{\dataaprovacao}{\def \@dataaprovacao}
 \newcommand{\epigrafee}{\def \@epigrafee}
 \newcommand{\autordaepigrafe}{\def \@autordaepigrafe}
+\newcommand{\profissao}{\def \@profissao}
 \newcommand{\graduacaoem}{\def \@graduacaoem}
 \newcommand{\especializacaoem}{\def \@especializacaoem}
 \newcommand{\habilitacao}{\def \@habilitacao}
@@ -350,6 +357,7 @@
 \newcommand{\imprimirdataaprovacao}{\@dataaprovacao}
 \newcommand{\imprimirepigrafee}{\@epigrafee}
 \newcommand{\imprimirautordaepigrafe}{\@autordaepigrafe}
+\newcommand{\imprimirprofissao}{\@profissao}
 \newcommand{\imprimirgraduacaoem}{\@graduacaoem}
 \newcommand{\imprimirespecializacaoem}{\@especializacaoem}
 \newcommand{\imprimirhabilitacao}{\@habilitacao}
@@ -378,6 +386,7 @@
 \ies{Universidade Federal do Rio Grande}
 \iessigla{FURG}
 \centro{}
+\profissao{}
 \graduacaoem{}
 \habilitacao{} % Pode colocar tambem 'licenciada'
 \especializacaoem{}
@@ -428,12 +437,11 @@
 }
 
 \newcommand{\preambulotccgraduacao}{
-	Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
+	Monografia apresentada à \imprimiries  como requisito parcial para obtenção de título de \imprimirprofissao.
 }
 
 \newcommand{\preambulotccespecializacao}{
 	Trabalho de Conclusão de Curso apresentado ao Curso de Especialização em \imprimirespecializacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção da certificação de especialista em \imprimirespecializacaoem.
-%Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
 }
 
 \preambulo{
@@ -510,16 +518,18 @@
 		\center % Todos os elementos da capa devem esta centralizado
 		\bfseries % Todos os elementos da capa devem esta em negrito
 
-        \includegraphics[scale=0.12]{lib/doiss} \\
+        %\includegraphics[scale=0.12]{lib/doiss} \\
         \vspace{0.1cm}
 		\MakeUppercase{\imprimiries} \\
-		\MakeUppercase{\imprimircentro} \\
-		\MakeUppercase{Curso de #1 em \imprimirgraduacaoem} \\
+		\MakeUppercase{\imprimircentro}\par
+		\vspace{5cm}\par
+		%\MakeUppercase{Curso de #1 em \imprimirgraduacaoem} \\
 		\vspace{\onelineskip}
-		\MakeUppercase{\imprimirautor}
-		\vspace{5cm}
+		\MakeUppercase{\imprimirautor}\par
+		\vspace{3cm}\par
 		\MakeUppercase{\imprimirtitulo}
 		\vfill
+		\vspace{5cm}
 		\normalsize\MakeUppercase\imprimirlocal\par	
 		\normalsize\imprimirdata
 	\end{capa}	
