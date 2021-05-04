@@ -64,49 +64,34 @@ dinâmica do escoamento \cite{pritchard2005fox}.
 \end{figure}
 
 %PRECISA COLOCAR A REFERENCIA \cite{pritchard2005fox}
-Seu princípio de funcionamento está baseado na conhecida equação de Bernoulli onde  a pressão dinâmica (pd) 
-é igual a pressão total (pt) menos a pressão estática (pe) \cite{pritchard2005fox}.
+Seu princípio de funcionamento está baseado na conhecida equação de Bernoulli onde 
+a pressão dinâmica ($p_{d}$) é igual a pressão total ($p_{t}$) menos a pressão estática ($p_{e}$) \cite{pritchard2005fox}.
 
-% INSERIR A TABELA COM AS EQUAÇÕES
-\begin{table}
-    \centering
-    \caption{Equações da pressão estática, dinâmica,total e Bernoulli.}
-    \begin{tabular}{l}
-        \hline
-        \begin{equation}
-            F = ma
-        \end{equation}\\
-        \hline   
-        \begin{equation}
-            E = mc^2  
-        \end{equation}\\
-        \hline   
-        \begin{equation}
-            V = d / t
-        \end{equation}\\
-        \hline   
-        \begin{equation}
-            f(x) = (x+y)^2
-        \end{equation}\\
-        \hline   
-        \begin{equation}
-            f(x) = (x+y)/(x-y)
-        \end{equation}\\
-        \hline       
-    \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
-    \label{tab:equacoes}
-\end{table}
+\begin{equation}\label{eq:pdinamica}
+    pd = pt - pe
+\end{equation}
+\begin{equation}\label{eq:bernoulli}
+    \frac{p_{1}}{\rho} + \frac{1}{2} \cdot (V_{1})^{2} + g \cdot z_{1} = \frac{p_{2}}{\rho} + \frac{1}{2} \cdot (V_{2})^{2} + g \cdot z_{2} = cte  
+\end{equation}
+\begin{equation}\label{eq:binicial}
+    p_{e} + \frac{1}{2} \cdot \rho \cdot (V)^{2} + \rho \cdot g \cdot z_{e} = p_{t} + \frac{1}{2} \cdot \rho \cdot (0)^{2} + \rho \cdot g \cdot z_{t} = cte  
+\end{equation}
+\begin{equation}\label{eq:velocidade}
+    V = \sqrt{\frac{2 \cdot (p_{t} - p_{e})}{\rho}}
+\end{equation}
+\begin{equation}\label{eq:roar}
+    \rho_{ar} = \frac{P_{atm}}{R_{ar} \cdot T_{ar}}
+\end{equation}
 
-
-Sendo que P1  é a pressão estática no ponto 1, V1 é a velocidade do fluído no ponto 1, é a massa  específica do fluido 
-e g é a força gravitacional, P2 é a pressão total.
+Sendo que $p_{1}$ é a pressão estática no ponto 1, $V_{1}$ é a velocidade do fluído no ponto 1, $\rho$ 
+é a massa específica do fluido, $g$ é a força gravitacional e $p_{2}$ é a pressão total.
 
 % ARRUMAR SIMBOLOS
-A equação quatro (EQ.4) serve para obter a velocidade a partir da pressão e é obtida a partir da equação de 
-Bernoulli para regime permanente, incompressível e sem atrito (EQ.2). Percebe-se que a massa específica é 
-função da condição de estado do ar durante os testes sendo determinada a partir da Equação 5 (EQ.5). 
-Onde Raré  … Taré
+A equação \ref{eq:velocidade} serve para obter a velocidade a partir da pressão e é obtida 
+através da equação de Bernoulli para regime permanente, incompressível e sem atrito 
+conforme a equação \ref{eq:bernoulli}. Percebe-se que a massa específica é função da condição 
+de estado do ar durante os testes sendo determinada a partir da Equação \ref{eq:roar}. 
+Onde $R_{ar}$ é e $T_{ar}$ é...
 
 \section{Mesa de posicionamento}\label{sec:mesa}
 
@@ -138,7 +123,7 @@ de até 5 m/s, conseguindo altas acelerações  devido a sua inércia \cite{roch
 %FIGURA 2.3
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 1]{figuras/2-3}
+\includegraphics[scale = 0.065]{figuras/2-3}
 \caption{Mesa acionada por correias.}
 \caption*{Fonte: https://www.ccmrails.com/2019/01/26/packing-automation/}
 \label{fig:mcorreia}

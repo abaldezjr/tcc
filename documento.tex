@@ -11,13 +11,27 @@
 
 \input{lib/preambulo}
 
-\begin{document}	
+\begin{document}
+    \imprimircapa
+    %\imprimirfolhaderosto{}
+    %\imprimirfolhadeaprovacao
+    \imprimirresumo{elementos-pre-textuais/resumo}
+	\imprimirabstract{elementos-pre-textuais/abstract}
+    
+    \imprimirlistadeilustracoes
+    \imprimirlistadetabelas
+    %\imprimirlistadeabreviaturasesiglas	
+	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
+    \imprimirsumario
 
+    \textual
 	\input{elementos-textuais/introducao}
 	\input{elementos-textuais/fundamentacao-teorica}
 	\input{elementos-textuais/metodologia}
 	\input{elementos-textuais/resultados}
 	\input{elementos-textuais/conclusao}
-	
-	\bibliography{elementos-pos-textuais/referencias}
+    \bibliography{elementos-pos-textuais/referencias}
+    \imprimirapendices
+	\input{elementos-pos-textuais/apendices/codigos}
+	\input{elementos-pos-textuais/apendices/desenhos}
 \end{document}

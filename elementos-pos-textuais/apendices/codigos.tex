@@ -1,0 +1,98 @@
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{codeblack}{rgb}{0.0,0.0,0.0}
+\definecolor{backcolour}{rgb}{1.00,1.00,1.00}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor     = \color{backcolour},   
+    basicstyle          = \footnotesize,
+    breakatwhitespace   = false,         
+    breaklines          = true,                 
+    captionpos          = b,                    
+    commentstyle        = \color{codeblack},
+    frame               = single,	
+    keepspaces          = true,                 
+    keywordstyle        = \textbf,
+    language            = C++,
+    numberstyle         = \tiny\color{codeblack},
+    numbers             = left,                    
+    numbersep           = 5pt,                  
+    showspaces          = false,                
+    showstringspaces    = false,
+    showtabs            = false,                  
+    stringstyle         = \color{codeblack},    
+    tabsize             = 2
+}
+
+\apendice{CÓDIGO PRINCIPAL PRESENTE NO ARDUINO PARA O CONTROLE DA MESA CARTESIANA}
+\label{ap:MesaCartesiana}
+
+\lstset{
+    caption         = {Código principal presente no arduino para o controle da mesa cartesiana.}, 
+    label           = code:MesaCartesiana,
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/MesaCartesiana.txt}
+
+\apendice{CÓDIGO DA CLASSE EIXO PRESENTE NO ARDUINO PARA O CONTROLE DO EIXO}
+\label{ap:Eixo}
+
+\lstset{
+    caption         = {Código da classe driver presente no arduino para o controle do eixo.},
+    label           = code:Eixo,
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Eixo.txt}
+
+\apendice{CÓDIGO DA CLASSE DRIVER PRESENTE NO ARDUINO PARA O CONTROLE DO DRIVER DE POTÊNCIA.}
+\label{ap:Driver}
+
+\lstset{
+    caption         = {Código da classe driver presente no arduino para o controle do driver de potência},
+    label           = code:Driver,
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Driver.txt}
+
+\apendice{CÓDIGO DA CLASSE PINO PRESENTE NO ARDUINO PARA O CONTROLE DOS PINOS}
+\label{ap:Pino}
+
+\lstset{
+    caption         = {Código da classe Pino presente no arduino para o controle dos pinos.},
+    label           = code:Pino,
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Pino.txt}
+
+\apendice{CÓDIGO DA CLASSE SIGMOIDAL PRESENTE NO ARDUINO PARA O CONTROLE DA ACELERAÇÃO DOS MOTORES DE PASSO}
+\label{ap:Sigmoidal}
+
+\lstset{
+    caption         = {Código da classe Sigmoidal presente no arduino para o controle da aceleração dos motores de passo.},
+    label           = code:Sigmoidal,
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Sigmoidal.txt}
+
+\apendice{CÓDIGO DO HEADER STDRIVER PRESENTE NO ARDUINO PARA O INCLUDE DE CLASSES}
+\label{ap:StepperDriver}
+
+\lstset{
+    caption         = {Código do header StDriver presente no arduino para o include de classes.},
+    label           = code:StDriver,
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/StDriver.txt}

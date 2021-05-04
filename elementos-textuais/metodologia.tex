@@ -682,15 +682,17 @@ orientação a objetos, foi definido que seria a melhor opção realizar um diag
 desenvolvimento do código. Sendo assim a Figura \ref{fig:diagramaclasses} apresentada abaixo é 
 o resultado do que foi modelado.
 
+\begin{landscape}
 % Figura 3.21
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 0.5]{figuras/3-21}
+\includegraphics[scale = 0.8]{figuras/3-21}
 \caption{Diagrama de classes do sistema de software presente no Arduino.}
 \caption*{Fonte: Próprio autor.}
 \label{fig:diagramaclasses}
 \end{figure}
-    
+\end{landscape}
+
 A seguir será explicado este diagrama classe a classe.
 
 “Sigmoidal” é a classe responsável pela aceleração sigmóide nos motores de passo, essa classe utiliza 
@@ -703,7 +705,7 @@ A Tabela \ref{tab:classesigmoidal} apresenta a declaração e funcionalidade dos
 da classe “Sigmoidal”.
 
 % Tabela 10
-\begin{table}
+\begin{table}[!htb]
     \centering
     \caption{Declaração e funcionalidade dos atributos e métodos da classe Sigmoidal.}
     \begin{tabular}{lp{9cm}}
@@ -747,7 +749,7 @@ A Tabela \ref{tab:classepino} apresenta a declaração e funcionalidade dos atri
 classe “Pino”.
 
 % Tabela 11
-\begin{table}
+\begin{table}[!htb]
     \centering
     \caption{Declaração e funcionalidade dos atributos e métodos da classe Pino.}
     \begin{tabular}{lp{9cm}}
@@ -778,10 +780,10 @@ A Tabela \ref{tab:classedriver} apresenta a declaração e funcionalidade dos at
 classe “Driver”
 
 % Tabela 12
-\begin{table}
+\begin{table}[!htb]
     \centering
     \caption{Declaração e funcionalidade dos atributos e métodos da classe Driver.}
-    \begin{tabular}{lp{6cm}}
+    \begin{tabular}{p{8cm}p{6cm}}
         \hline
         \textbf{Declaração} & \textbf{Funcionalidade}\\
         \hline
@@ -797,14 +799,14 @@ classe “Driver”
         - pinoIN2: Pino & Pino IN2 do motor de passo.\\
         - pinoIN3: Pino & Pino IN3 do motor de passo.\\
         - pinoIN4: Pino & Pino IN4 do motor de passo.\\
-        - tipoAcionamento: TipoAcionamento & Tipo de acionamento do driver: (SOFTWARE, HARDWARE).\\
+        - tipoAcionamento: TipoAcionamento & Tipo de acionamento do~driver:~(SOFTWARE,~HARDWARE).\\
         - tipoPasso: TipoPasso & Tipo do passo do driver: (WAVESTEP, FULLSTEP, HALFSTEP).\\
         - direcao: Direcao & Configuração da direção do driver: (ANTIHORARIO, HORARIO).\\
         - passoAtual: int & PassoAtual é o indice de acesso as informações do vetor de passos.\\
         - modoPasso: int & Pino do modo de passo do driver.\\
         - passosPorVolta: int & Quantidade de passos a cada volta do motor de passo.\\
         - vetorPasso: byte & Vetor de bytes de sequência dos passos.\\
-        - setarEstadoModo(pM0:bool, pM1:bool, pM2:bool): void & Definir o modo de passo do driver passando como parâmetro os estados dos pinos M0, M1, M2.\\
+        -~setarEstadoModo~(pM0:bool,~pM1:bool, pM2:bool):~void & Definir o modo de passo do driver passando como parâmetro os estados dos pinos M0, M1, M2.\\
         - setarEstados(b: byte):void & Definir estados dos pinos IN1, IN2, IN3, IN4 do motor de passo.\\
         - passo():void & Executar um passo do motor.\\
         + executarPasso(cont:int, linf:int, lsup:int):void & Executar um passo do motor com a lógica de sequência dos passos.\\
@@ -840,7 +842,7 @@ A Tabela \ref{tab:classeeixo} apresenta a declaração e funcionalidade dos atri
 classe “Eixo”.
 
 % Tabela 13
-\begin{table}
+\begin{table}[!htb]
     \centering
     \caption{Declaração e funcionalidade dos atributos e métodos da classe Eixo.}
     \begin{tabular}{lp{6cm}}
