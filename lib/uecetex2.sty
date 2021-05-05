@@ -437,7 +437,7 @@
 }
 
 \newcommand{\preambulotccgraduacao}{
-	Monografia apresentada à \imprimiries  como requisito parcial para obtenção de título de \imprimirprofissao.
+	Monografia apresentada à \imprimiries~como requisito parcial para obtenção de título de \imprimirprofissao.
 }
 
 \newcommand{\preambulotccespecializacao}{
@@ -516,22 +516,22 @@
 \newcommand{\imprimircapatcc}[1]{%
 	\begin{capa}
 		\center % Todos os elementos da capa devem esta centralizado
-		\bfseries % Todos os elementos da capa devem esta em negrito
+		%\bfseries % Todos os elementos da capa devem esta em negrito
 
         %\includegraphics[scale=0.12]{lib/doiss} \\
         \vspace{0.1cm}
-		\MakeUppercase{\imprimiries} \\
-		\MakeUppercase{\imprimircentro}\par
+		\begin{bfseries}\MakeUppercase{\imprimiries}\end{bfseries} \\
+		\begin{bfseries}\MakeUppercase{\imprimircentro}\end{bfseries}\par
 		\vspace{5cm}\par
 		%\MakeUppercase{Curso de #1 em \imprimirgraduacaoem} \\
 		\vspace{\onelineskip}
 		\MakeUppercase{\imprimirautor}\par
 		\vspace{3cm}\par
-		\MakeUppercase{\imprimirtitulo}
+		\begin{bfseries}\MakeUppercase{\imprimirtitulo}\end{bfseries}
 		\vfill
 		\vspace{5cm}
-		\normalsize\MakeUppercase\imprimirlocal\par	
-		\normalsize\imprimirdata
+		\begin{bfseries}\normalsize\MakeUppercase{\imprimirlocal}\end{bfseries}\par	
+		\begin{bfseries}\normalsize{\imprimirdata}\end{bfseries}
 	\end{capa}	
 }
 
@@ -752,6 +752,7 @@
 	\pagebreak
 }
 
+%FOLHAAPROVAÇÃOTCC
 \newcommand{\imprimirfolhadeaprovacaotcc}{
 
 	\begin{center}
@@ -965,7 +966,9 @@
 
 \newcommand{\imprimirresumo}[1]{ %
 	\begin{resumo} %
+		\begin{SingleSpace}
 		\input{#1} %
+		\end{SingleSpace}
 	\end{resumo} %
 }
 
@@ -975,7 +978,9 @@
 
 \newcommand{\imprimirabstract}[1]{ %
 	\begin{resumo}[Abstract] %
+		\begin{SingleSpace}
 		\input{#1} %
+		\end{SingleSpace}
 	\end{resumo} %
 }
 
