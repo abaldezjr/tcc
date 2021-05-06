@@ -328,10 +328,13 @@ para cada passo. A Figura \ref{fig:didaticopasso} é um exemplo para melhor ente
 \end{figure}
     
 A Figura \ref{fig:didaticopasso} mostra um motor de passo com cinquenta dentes de precisão, portanto combinando 
-o número de dentes com as quatro fases de um motor bipolar temos duzentos passos.
+o número de dentes com as quatro fases de um motor bipolar temos duzentos passos. 
 
-%escrever equação
-NÚMERO PASSOS = NÚMERO DENTES * NÚMERO FASES
+A equação \ref{eq:Npassos} calcula o número de passos de uma volta executada pelo motor onde,
+o número de passos ($n_{p}$) é igual ao número de dentes ($n_{d}$) mutiplicado pelo número de fases ($n_{f}$)
+\begin{equation}\label{eq:Npassos}
+    n_{p} = n_{d} \cdot n_{f}
+\end{equation}
 
 A precisão do motor é definida por trezentos e sessenta graus divididos pelo número de passos. Portanto, 
 trezentos e sessenta divididos por duzentos é igual a um vírgula oito graus de precisão. Já o segundo motor 
@@ -686,7 +689,7 @@ o resultado do que foi modelado.
 % Figura 3.21
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 0.8]{figuras/3-21}
+\includegraphics[scale = 0.73]{figuras/3-21}
 \caption{Diagrama de classes do sistema de software presente no Arduino.}
 \caption*{Fonte: Próprio autor.}
 \label{fig:diagramaclasses}
