@@ -437,7 +437,7 @@
 }
 
 \newcommand{\preambulotccgraduacao}{
-	Monografia apresentada à \imprimiries~como requisito parcial para obtenção de título de \imprimirprofissao.
+	Monografia apresentada à \imprimiries~como requisito parcial para obtenção de título de \imprimirprofissao. \\
 }
 
 \newcommand{\preambulotccespecializacao}{
@@ -567,15 +567,15 @@
 	%Retira o espaço do parágrafo
 	\hspace*{-2cm}
 	%Adiciona o espaço da margem
-	\hspace*{8cm}	
-	\begin{minipage}{8cm}
+	\hspace*{7cm}	
+	\begin{minipage}{9cm}
 		\begin{SingleSpace}
 			\imprimirpreambulo	
 			\newline
 			\artigoorientador: \ignorespaces\imprimirorientador \\
 			\abntex@ifnotempty{\imprimircoorientador}{
 				\newline
-				\artigocoorientador: \ignorespaces\imprimircoorientador				
+				\artigocoorientador: \ignorespaces \imprimircoorientador \\
 			}
 		\end{SingleSpace}		
 	\end{minipage}
@@ -771,6 +771,7 @@
 	\hspace*{8cm}	
 	\begin{minipage}{8cm}
 		\begin{SingleSpace}
+			\setlength{\parindent}{0cm}
 			\imprimirpreambulo \\			
 		\end{SingleSpace}		
 	\end{minipage}

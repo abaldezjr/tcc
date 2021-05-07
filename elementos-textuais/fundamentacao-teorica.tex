@@ -28,10 +28,10 @@ de ensaios em aeronaves militares. Já após o período de guerras, os túneis d
 quando o objetivo foi aumentar a eficiência na aerodinâmica dos carros \cite{de2014adalberto}. 
 
 %PRECISA COLOCAR A REFERENCIA \cite{pritchard2005fox}
-Os túneis de vento podem ser classificados  quanto ao circuito que pode ser aberto ou fechado,  quanto a velocidade 
-de escoamento em relação à velocidade do som que é chamada de  número de Mach (Ma) definindo os escoamentos como sônico, 
+Os túneis de vento podem ser classificados quanto ao circuito que pode ser aberto ou fechado, quanto a velocidade 
+de escoamento em relação à velocidade do som que é chamada de número de Mach (Ma) definindo os escoamentos como sônico, 
 subsônico, supersônico e hipersônico e quanto ao sentido do escoamento que nos túneis de vento de circuito aberto podem 
-ser soprador e sugador, sendo definido pela condição de trabalho do  ventilador \cite{pritchard2005fox}.
+ser soprador e sugador, sendo definido pela condição de trabalho do ventilador \cite{pritchard2005fox}.
 
 O túnel de vento tratado neste trabalho está situado junto ao Laboratório de Sistemas Térmicos da Universidade Federal 
 do Rio Grande e é de característica subsônica, circuito aberto e do tipo soprador.
@@ -54,10 +54,9 @@ Com essa técnica, Pitot obteve a velocidade em um escoamento incompressível em
 estática e a pressão total ou de estagnação. A subtração da pressão total da estática resulta na pressão 
 dinâmica do escoamento \cite{pritchard2005fox}.
 
-%FIGURA 2.1
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 0.7]{figuras/2-1}
+\includegraphics[scale = 0.7]{figuras/pestagnacao}
 \caption{Funcionamento das pressões dentro do tubo de Pitot.}
 \caption*{Fonte: Próprio autor.}
 \label{fig:pestagnacao}
@@ -103,27 +102,25 @@ ferramenta, para executar algum tipo de serviço.
 % PRECISA COLOCAR A REFERENCIA Figura 2.2 e Figura 2.3
 Também conhecidas como mesa de posicionamento XY, pois como o nome sugere, é uma estrutura com dois eixos 
 de liberdade que permite o posicionamento da peça ou da ferramenta em algum lugar de um plano pré-definido. 
-Podem ser classificadas em dois tipos com relação a sua transmissão:  as mesas acionadas por fusos conforme 
+Podem ser classificadas em dois tipos com relação a sua transmissão: as mesas acionadas por fusos conforme 
 apresenta a Figura \ref{fig:mfuso} e as acionadas por correias sincronizadas demonstradas na Figura \ref{fig:mcorreia}.
 
 %PRECISA COLOCAR A REFERENCIA \cite{rocha2015retrofitting} \cite{kassouf2003mesa} não encontrei o kassouf
 As mesas de posicionamentos de fuso possuem um alto rendimento, próximo de 95\%, um baixo desgaste e uma 
 velocidade máxima de 3 m/s, já as mesas acionadas por correias sincronizadas podem desenvolver velocidades 
-de até 5 m/s, conseguindo altas acelerações  devido a sua inércia \cite{rocha2015retrofitting}.
+de até 5 m/s, conseguindo altas acelerações devido a sua inércia \cite{rocha2015retrofitting}.
 
-%FIGURA 2.2
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 0.3]{figuras/2-2}
+\includegraphics[scale = 0.3]{figuras/mfuso}
 \caption{Mesa acionada por fuso.}
 \caption*{Fonte: https://www.kalatec.com.br/mesa-de-coordenada-xy/}
 \label{fig:mfuso}
 \end{figure}
     
-%FIGURA 2.3
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale = 0.065]{figuras/2-3}
+\includegraphics[scale = 0.065]{figuras/mcorreia}
 \caption{Mesa acionada por correias.}
 \caption*{Fonte: https://www.ccmrails.com/2019/01/26/packing-automation/}
 \label{fig:mcorreia}
@@ -131,14 +128,14 @@ de até 5 m/s, conseguindo altas acelerações  devido a sua inércia \cite{roch
     
 %PRECISA COLOCAR A REFERENCIA não encontrei
 Outro componente importante nesse mecanismo é o acionador, que pode ser um motor de passo ou um servomotor. 
-Os motores  de passo são máquinas que exercem um papel muito importante atualmente, são utilizados em 
+Os motores de passo são máquinas que exercem um papel muito importante atualmente, são utilizados em 
 aplicações onde é requerido um alto grau de precisão no movimento e que este movimento seja feito em passos 
 fixos, referentes a uma fração de ângulo. Empregados normalmente quando se deseja controlar uma combinação 
 entre a posição do rotor (ângulo), com a devida velocidade e o sincronismo (SILVA, Rafael Schincariol da, 2018).
 
 O funcionamento desse motor se dá através dos princípios do eletromagnetismo, com estatores bobinados e um rotor 
 formado por ímãs permanentes ligados ao eixo. Quando o estator é energizado cria um campo magnético e o rotor 
-move-se para alinhar os ímãs (pólos norte e sul) com as linhas de  fluxo magnético, formados pelo estator, 
+move-se para alinhar os ímãs (pólos norte e sul) com as linhas de fluxo magnético, formados pelo estator, 
 movendo o eixo em um ângulo pequeno chamado de passo e continua a girar conforme o incremento angular controlado 
 por circuitos eletrônicos. Esses circuitos digitais tem como função repassar a informação, um pulso, recebido 
 pelo sistema de controle para o motor, que gira com grande precisão conforme seu controle. Como característica 
@@ -151,9 +148,9 @@ Nesta seção serão apresentados trabalhos relacionados ao tema deste projeto a
 de cada um.
 
 %PRECISA COLOCAR A REFERENCIA \cite{butignol2017adequaccao}
-O trabalho realizado por \citeauthor{butignol2017adequaccao} (\citeyear{butignol2017adequaccao}), tinha o objetivo de desenvolver uma adequação de uma mesa XYZ didática 
-acionada por motores de passo para o estudo de programação em em microcontroladores e seu posicionamento em duas 
-dimensões.
+O trabalho realizado por \citeauthor{butignol2017adequaccao} (\citeyear{butignol2017adequaccao}), 
+tinha o objetivo de desenvolver uma adequação de uma mesa XYZ didática acionada por motores 
+de passo para o estudo de programação em em microcontroladores e seu posicionamento em duas dimensões.
 
 %PRECISA COLOCAR A REFERENCIA \cite{butignol2017adequaccao}
 Como resultado do trabalho, \citeauthor{butignol2017adequaccao} (\citeyear{butignol2017adequaccao}) 
@@ -162,31 +159,35 @@ capaz de auxiliar no ensino de microcontroladores. Por fim, o projeto está disp
 em~<https://mesaxydidatica.blogspot.com.br> para sua montagem em outras instituições de ensino.
 
 %PRECISA COLOCAR A REFERENCIA \cite{camargo1988mesa}
-O trabalho realizado por \citeauthor{camargo1988mesa} (\citeyear{camargo1988mesa}), tinha o objetivo de desenvolver um sistema posicionador de baixo custo 
-com comando numérico (CNC), utilizando componentes nacionalizados e com uma complexidade mínima no sistema de comando.
+O trabalho realizado por \citeauthor{camargo1988mesa} (\citeyear{camargo1988mesa}), tinha o objetivo de 
+desenvolver um sistema posicionador de baixo custo com comando numérico (CNC), utilizando componentes 
+nacionalizados e com uma complexidade mínima no sistema de comando.
 
-Como resultado do trabalho, \citeauthor{camargo1988mesa} (\citeyear{camargo1988mesa}) fez uma análise comparando diversos parâmetros como: massa, frequência 
-natural amortecida, amplitude média da curva de resposta, perdas de passo, erros de posicionamento, vibração entre 
-outros a fim de demonstrar que a concepção projetada e executada para a mesa de coordenadas XY presente em seu estudo, 
-se justifica com os resultados obtidos.
+Como resultado do trabalho, \citeauthor{camargo1988mesa} (\citeyear{camargo1988mesa}) fez uma análise 
+comparando diversos parâmetros como: massa, frequência natural amortecida, amplitude média da curva de 
+resposta, perdas de passo, erros de posicionamento, vibração entre outros a fim de demonstrar que a 
+concepção projetada e executada para a mesa de coordenadas XY presente em seu estudo, se 
+justifica com os resultados obtidos.
 
 %PRECISA COLOCAR A REFERENCIA \cite{ramos2018desenvolvimento}
-O trabalho realizado por \citeauthor{ramos2018desenvolvimento} (\citeyear{ramos2018desenvolvimento}), tinha o objetivo de projetar e construir uma mesa cartesiana para ser colocada 
-nos túneis aerodinâmicos existentes no Departamento de Engenharia Mecânica e Industrial da Faculdade de Ciências e 
+O trabalho realizado por \citeauthor{ramos2018desenvolvimento} (\citeyear{ramos2018desenvolvimento}), 
+tinha o objetivo de projetar e construir uma mesa cartesiana para ser colocada nos túneis 
+aerodinâmicos existentes no Departamento de Engenharia Mecânica e Industrial da Faculdade de Ciências e 
 Tecnologia Universidade Nova de Lisboa, para assim, dar a capacidade de deslocamento de sensores como: tubo de Pitot, 
 anemômetro de fio quente, anemômetro laser-Doppler para qualquer ponto na seção escolhida.
 
 %PRECISA COLOCAR A REFERENCIA \cite{ramos2018desenvolvimento}
-Como resultado do trabalho, \citeauthor{ramos2018desenvolvimento} (\citeyear{ramos2018desenvolvimento}) construiu uma mesa cartesiana funcional com capacidade de efetuar medições 
-de velocidade em uma malha de cem posições, podendo inserir coordenadas através da porta serial do Arduino. Ainda 
-comprovou por testes experimentais a precisão dos motores de passo ao comprovar que não existe diferença mensurável 
-entre o valores medidos com os ideais.
+Como resultado do trabalho, \citeauthor{ramos2018desenvolvimento} (\citeyear{ramos2018desenvolvimento}) construiu 
+uma mesa cartesiana funcional com capacidade de efetuar medições de velocidade em uma malha de cem posições, 
+podendo inserir coordenadas através da porta serial do Arduino. Ainda comprovou por testes experimentais a 
+precisão dos motores de passo ao comprovar que não existe diferença mensurável entre o valores medidos com os ideais.
 
 %PRECISA COLOCAR A REFERENCIA \cite{hoss2018implantaccao}
-O trabalho realizado por \citeauthor{hoss2018implantaccao} (\citeyear{hoss2018implantaccao}), tinha o objetivo a instrumentação e desenvolvimento do sistema de controle de 
-velocidade do vento de um túnel de vento com propulsão por motor a combustão interna, existente no laboratório de 
-Conformação do IFSC Campus Chapecó.
+O trabalho realizado por \citeauthor{hoss2018implantaccao} (\citeyear{hoss2018implantaccao}), tinha o objetivo 
+a instrumentação e desenvolvimento do sistema de controle de velocidade do vento de um túnel de vento com 
+propulsão por motor a combustão interna, existente no laboratório de Conformação do IFSC Campus Chapecó.
 
 %PRECISA COLOCAR A REFERENCIA \cite{hoss2018implantaccao}
-Como resultado do trabalho, Hoss (2018) alcançou o objetivo permitindo medir variáveis de forma confiável com 
-incertezas pequenas dentro dos requisitos estabelecidos, mesmo com emprego de sensores de baixo custo e média precisão.
+Como resultado do trabalho, \citeauthor{hoss2018implantaccao} (\citeyear{hoss2018implantaccao}) alcançou o objetivo 
+permitindo medir variáveis de forma confiável com incertezas pequenas dentro dos requisitos estabelecidos, mesmo 
+com emprego de sensores de baixo custo e média precisão.
