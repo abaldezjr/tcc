@@ -13,35 +13,30 @@
 \input{info}
 
 \begin{document}
-    %\imprimircapa
-    %\imprimirfolhaderosto{}
-    %\imprimirfolhadeaprovacao
-    
-    % 2 erros
-        %\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
-        %\imprimirresumo{elementos-pre-textuais/resumo}
-        %\imprimirabstract{elementos-pre-textuais/abstract}
-        \imprimirlistadeilustracoes
-        %\imprimirlistadetabelas
-        \imprimirlistadeabreviaturasesiglas	
-        %\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
-        %\imprimirsumario
-    %-------
 
-    %\textual
+    \imprimircapa
+    \imprimirfolhaderosto
+    \pagebreak
+    \imprimirfichacatalografica{elementos-pre-textuais/ficha-catalografica}
+    \imprimirfolhadeaprovacao
+    \imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
+    \imprimirresumo{elementos-pre-textuais/resumo}
+    \imprimirabstract{elementos-pre-textuais/abstract}
+    \imprimirlistadeilustracoes
+    \imprimirlistadetabelas
+    \imprimirlistadeabreviaturasesiglas	
+    \imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
+    \imprimirsumario
+    \textual
     \input{elementos-textuais/introducao}
-
-    % bbl com 7 erros de \hbox full no title
-	\input{elementos-textuais/fundamentacao-teorica}
-	
-    % 3 erros de \hbox nas tabelas
+    \input{elementos-textuais/fundamentacao-teorica}
     \input{elementos-textuais/metodologia}
     \input{elementos-textuais/resultados}
 	\input{elementos-textuais/conclusao}
-    
-    \bibliography{elementos-pos-textuais/referencias}
+    \imprimirreferencias{elementos-pos-textuais/referencias}
+    \imprimirglossario
     \imprimirapendices
 	\input{elementos-pos-textuais/apendices/codigos}
 	\input{elementos-pos-textuais/apendices/desenhos}
-    \imprimirindice
+    %\imprimirindice
 \end{document}

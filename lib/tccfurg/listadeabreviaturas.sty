@@ -1,0 +1,14 @@
+% Lista de Abreviaturas e Siglas 
+
+%Largura da lista de abreviaturas
+\setlength{\glsdescwidth}{\linewidth}
+
+\newcommand{\imprimirlistadeabreviaturasesiglas}{ %
+	\printglossary[
+		type=\acronymtype,
+		style=long,
+		nonumberlist,
+		title={Lista de Abreviaturas e Siglas\vspace{-0.3cm}}
+	] %
+	\pagebreak %
+}

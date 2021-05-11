@@ -588,8 +588,6 @@
 \makeatother
 
 %Folha de Aprovação
-
-
 \setlength{\ABNTEXsignwidth}{12cm} % Define o comprimento da linha das assinaturas na Folha de Aprovacao
 \setlength{\ABNTEXsignthickness}{1pt} % Largura da linha da assinatura
 \setlength{\ABNTEXsignskip}{\onelineskip} % Espaço entre uma assintura e outra
@@ -1140,7 +1138,12 @@
 \setlength{\glsdescwidth}{\linewidth}
 
 \newcommand{\imprimirlistadeabreviaturasesiglas}{ %
-	\printglossary[type=\acronymtype,style=long,nonumberlist,title={Lista de Abreviaturas e Siglas\vspace{-0.3cm}}] %
+	\printglossary[
+		type=\acronymtype,
+		style=long,
+		nonumberlist,
+		title={Lista de Abreviaturas e Siglas\vspace{-0.3cm}}
+	] %
 	\pagebreak %
 }
 
@@ -1156,7 +1159,7 @@
 %%              Glossário              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Glossario desenvolvido para a UECE
+% Glossario desenvolvido para a UECE
 \setlist{nosep}
 \newglossarystyle{glossario-uece}{%
 	%
@@ -1179,11 +1182,11 @@
 }
 
 \newcommand{\imprimirglossario}{ %
-	\setglossarystyle{glossario-uece} %	
+%	\setglossarystyle{glossario-uece} %	
+	\setglossarystyle{long} %	
 	\printglossary[title=GLOSSÁRIO,toctitle=GLOSSÁRIO] %
 	\addcontentsline{toc}{chapter}{GLOSSÁRIO}
 }
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%               Referências           %%
