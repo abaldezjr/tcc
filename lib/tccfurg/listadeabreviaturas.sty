@@ -4,11 +4,8 @@
 \setlength{\glsdescwidth}{\linewidth}
 
 \newcommand{\imprimirlistadeabreviaturasesiglas}{ %
-	\printglossary[
-		type=\acronymtype,
-		style=long,
-		nonumberlist,
-		title={Lista de Abreviaturas e Siglas\vspace{-0.3cm}}
-	] %
-	\pagebreak %
+\newpage
+\begin{center}\textbf{LISTA DE ABREVIATURAS E SIGLAS}\end{center}
+\input{elementos-pre-textuais/lista-de-abreviaturas-e-siglas}
+\pagebreak
 }

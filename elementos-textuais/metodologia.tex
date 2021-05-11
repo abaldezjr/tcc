@@ -172,22 +172,26 @@ o arduino foi criado por um grupo de pesquisadores na Itália em 2005. Na sua co
 flexibilidade a diversos tipos de projetos, isto é, para que qualquer projetista pudesse personalizá-lo, 
 foi adotado o conceito de hardware livre.
 
+%ABREVIATURA DE RISC, PWM, RAM e EEPROM
 Em sua composição, a placa Arduino UNO contém um microcontrolador ATMEL ATMEGA328, que é um dispositivo 
-de 8 bits da família AVR com arquitetura RISC avançada e com encapsulamento DIP28, além de quatorze portas 
-digitais de entrada e saída, sendo que seis delas com capacidade de PWM (Pulse Width Modulation), seis 
-entradas analógicas e 32 KB de memória flash, 2 KB de RAM e 1 KB de EEPROM. 
+de 8 bits da família AVR com arquitetura \ac{RISC} avançada e com encapsulamento DIP28, além de quatorze portas 
+digitais de entrada e saída, sendo que seis delas com capacidade de \ac{PWM}, seis 
+entradas analógicas e 32 KB de memória flash, 2 KB de \ac{RAM} e 1 KB de \ac{EEPROM}. 
 
-A alimentação é via porta USB ou por conector tipo Jack de alimentação externa que trabalha entre os 
+%ABREVIATURA DE USB
+A alimentação é via porta \ac{USB} ou por conector tipo Jack de alimentação externa que trabalha entre os 
 limites de 6 V e 20 V sendo recomendável o uso de 7 V a 12 V para não danificar. Para o fornecimento 
-de tensão contínua para alimentação dos circuitos e Shields, a placa Arduino UNO tem um regulador de tensão de 3,3 V.
+de tensão contínua para alimentação dos circuitos e Shields, a placa Arduino UNO tem um regulador 
+de tensão de 3,3 V.
 
-Além de alimentar, a porta USB é a via de comunicação com o computador para o envio do código de máquina 
+%ABREVIATURA DE USB
+Além de alimentar, a porta \ac{USB} é a via de comunicação com o computador para o envio do código de máquina 
 gerado pelo compilador. O código compilado é enviado pelo microcontrolador ATMEL ATMEGA16U2 que está 
 conectado a dois LEDs chamados de TX e RX cuja função é a indicação do envio e recepção dos dados da 
 placa para o computador.
 
-A placa Arduino é programada via IDE (Integrated Development Environment, ou Ambiente de Desenvolvimento 
-Integrado), utilizando uma linguagem baseada em C/C++.
+%ABREVIATURA DE IDE
+A placa Arduino é programada via \ac{IDE}, utilizando uma linguagem baseada em C/C++.
 
 \begin{figure}[!htb]
 \centering
@@ -199,19 +203,19 @@ Integrado), utilizando uma linguagem baseada em C/C++.
     
 \begin{itemize}
 \item \textbf{Botão reset:} o botão reset serve para reiniciar a placa arduino.
-\item \textbf{Conector USB tipo B:} o conector USB tipo B serve para conectar a placa Arduino ao computador.
+\item \textbf{Conector \ac{USB} tipo B:} o conector \ac{USB} tipo B serve para conectar a placa Arduino ao computador.
 \item \textbf{Conector DC:} o conector DC serve para alimentação externa do Arduino.
-\item \textbf{Portas digitais:} são às portas que trabalham com os sinais digitais que são sinais com valores discretos, no arduino temos às constantes LOW que significa 0 V e também HIGH que significa 5 V, no código são 0 e 1 respectivamente. Dentro das portas digitais temos às portas PWM (Pulse Width Modulation) que são portas que modulam o sinal pela largura do pulso, no arduino podemos variar de 0 a 255. Resumidamente, a placa Arduino possui quatorze portas digitais, sendo que seis delas são portas PWM como dito anteriormente, os pinos delas são 3, 5, 6, 9, 10 e 11.
+\item \textbf{Portas digitais:} são às portas que trabalham com os sinais digitais que são sinais com valores discretos, no arduino temos às constantes LOW que significa 0 V e também HIGH que significa 5 V, no código são 0 e 1 respectivamente. Dentro das portas digitais temos às portas \ac{PWM} que são portas que modulam o sinal pela largura do pulso, no arduino podemos variar de 0 a 255. Resumidamente, a placa Arduino possui quatorze portas digitais, sendo que seis delas são portas \ac{PWM} como dito anteriormente, os pinos delas são 3, 5, 6, 9, 10 e 11.
 \item \textbf{Portas analógicas:} são às portas que trabalham com os sinais analógicos que são sinais com valores contínuos, no arduino podemos variar de 0 a 1023.
 \item \textbf{Portas de alimentação:} são às portas de saída de tensão do arduino, temos três portas: porta 3,3 V cuja saída trabalha em 3,3 V, porta 5 V cuja saída trabalha em 5 V e a porta Vin cuja saída trabalha com a tensão de entrada do arduino.
 \item \textbf{Led porta 13:} led conectado a porta 13 do arduino.
 \item \textbf{Leds das portas RX TX:} leds conectados às portas RX TX, sendo que o led TX serve para indicar a transmissão de dados e o RX para indicar a recepção de dados.
 \item \textbf{Processador ATMEGA328:} o processador é responsável pelo processamento da lógica de programação.
 \item \textbf{Led de power:} led que acende quando o arduino está ligado.
-\item \textbf{Conector ICSP:} o conector ICSP, é o conector in circuit system programmer, que se refere a capacidade de programar Arduinos diretamente dos seus microcontroladores. 
-\item \textbf{Conjunto microcontrolador e cristal para USB:} esse conjunto possui um microcontrolador ATMEGA16U2 e um cristal externo de 16 MHz, e é responsável pelo gerenciamento da porta USB.
-\item \textbf{Circuito de proteção de sobretensão na USB:} responsável por proteger a entrada USB de sobretensão.
-\item \textbf{Controlador de tensão de alimentação:} esse controlador é responsável por verificar se a tensão DC está presente, se não estiver, deixa que a tensão da USB alimente o circuito. 
+\item \textbf{Conector \ac{ICSP}:} o conector \ac{ICSP}, que se refere a capacidade de programar Arduinos diretamente dos seus microcontroladores. 
+\item \textbf{Conjunto microcontrolador e cristal para \ac{USB}:} esse conjunto possui um microcontrolador ATMEGA16U2 e um cristal externo de 16 MHz, e é responsável pelo gerenciamento da porta \ac{USB}.
+\item \textbf{Circuito de proteção de sobretensão na \ac{USB}:} responsável por proteger a entrada \ac{USB} de sobretensão.
+\item \textbf{Controlador de tensão de alimentação:} esse controlador é responsável por verificar se a tensão DC está presente, se não estiver, deixa que a tensão da \ac{USB} alimente o circuito. 
 \item \textbf{Regulador de tensão de 5 V:} serve para regular a tensão em 5 V.
 \item \textbf{Regulador de tensão de 3,3 V:} serve para regular a tensão em 3,3 V.
 \item \textbf{Cristal para clock:} serve para gerar o clock.
@@ -263,12 +267,12 @@ FOSSE UM DATASHEET DO DRIVER CRIADO
         \hline
         \textbf{Parâmetro} & \textbf{Magnitude}\\
         \hline
-        Tensão lógica mínima & 3v\\
-        Tensão lógica máxima & 5,5v\\
-        Corrente contínua por fase & 1A\\
-        Corrente máxima por fase & 2A\\
-        Tensão de operação mínima & 8v\\
-        Tensão de operação máxima & 35v\\ 
+        Tensão lógica mínima & 3 V\\
+        Tensão lógica máxima & 5,5 V\\
+        Corrente contínua por fase & 1 A\\
+        Corrente máxima por fase & 2 A\\
+        Tensão de operação mínima & 8 V\\
+        Tensão de operação máxima & 35 V\\ 
         \hline       
     \end{tabular}
     \caption*{Fonte: Próprio Autor, 2021.}
@@ -293,16 +297,18 @@ recebidos em movimento de rotação incremental do eixo do motor. Sua aplicaçã
 rotativos com alta precisão que necessitam de controle de posição e velocidade. A sua escolha foi definida 
 pela precisão, baixo custo de aquisição e manutenção.
 
-A composição de um motor de passo contém um rotor e um estator que é a parte fixa do gerador elétrico, nessa está 
-situado um conjunto de bobinas responsáveis pelo giro do rotor. Para que haja o movimento, as bobinas estão ligadas 
-aos terminais do motor, organizadas em pares, interligadas entre si e posicionadas em sentidos opostos para que 
-quando forem energizadas, der o movimento de rotação do motor devido às interações magnéticas.
+A composição de um motor de passo contém um rotor e um estator que é a parte fixa do gerador elétrico,
+nessa está situado um conjunto de bobinas responsáveis pelo giro do rotor. Para que haja o movimento, 
+as bobinas estão ligadas aos terminais do motor, organizadas em pares, interligadas entre si e 
+posicionadas em sentidos opostos para que quando forem energizadas, der o movimento de rotação 
+do motor devido às interações magnéticas.
 
-O atributo que distingue o motor de passo dos demais motores elétricos é a capacidade de realizar passos, que são 
-rotações discretas incrementais e precisas. Os passos são definidos por um número fixo de pólos magnéticos de dente 
-de engrenagens do motor determinando assim, a precisão de ângulo de rotação do motor de passo. Para que haja um 
-controle de quantos passos serão dados, o motor necessita de largura de pulso a fim de enviar a corrente adequada 
-para cada passo. A Figura \ref{fig:didaticopasso} é um exemplo para melhor entendimento do conceito de passo.
+O atributo que distingue o motor de passo dos demais motores elétricos é a capacidade de realizar passos, 
+que são rotações discretas incrementais e precisas. Os passos são definidos por um número fixo de 
+pólos magnéticos de dente de engrenagens do motor determinando assim, a precisão de ângulo de rotação 
+do motor de passo. Para que haja um controle de quantos passos serão dados, o motor necessita de 
+largura de pulso a fim de enviar a corrente adequada para cada passo. A Figura \ref{fig:didaticopasso} 
+é um exemplo para melhor entendimento do conceito de passo.
 
 \begin{figure}[!htb]
 \centering
@@ -338,7 +344,7 @@ Os motores de passo utilizados no projeto da mesa cartesiana possuem 5 kgf.cm de
 corrente máxima de 2 Ampères por fase. O incremento de rotação e o torque são definidos conforme o modo 
 de excitação que pode ser por passo completo, meio passo e micropasso explicadas anteriormente. O passo 
 é dividido em quatro, oito ou dezesseis na maioria das vezes, mas também, atualmente se encontra 
-sistemas capazes de  dividir um passo em milhares de vezes.
+sistemas capazes de dividir um passo em milhares de vezes.
 
 \begin{figure}[!htb]
 \centering
@@ -510,7 +516,7 @@ A Tabela \ref{tab:demandafonte} apresenta a demanda de energia elétrica de cada
         Arduino & 1 & 7 a 12 V & 800 mA & 800 mA\\
         Driver & 2 & 8 a 35 V & 2 A & 4 A\\
         Motor de passo & 2 & 5 a 36 V & 2 A & 4 A\\
-        Optoacoplador & 2 & 5 a 35 V & 5mA & 10 mA\\
+        Optoacoplador & 2 & 5 a 35 V & 5 mA & 10 mA\\
         Resultado & - & 12 V & - & 8,18 A\\
         \hline       
     \end{tabular}
@@ -518,17 +524,17 @@ A Tabela \ref{tab:demandafonte} apresenta a demanda de energia elétrica de cada
     \label{tab:demandafonte}
 \end{table}
 
-A Tabela \ref{tab:demandafonte} indica que a placa controladora Arduino opera no intervalo de tensão de 7 V a 12 V, 
-os drivers de potência no intervalo de 8 V a 35 V, os motores de passo no intervalo de 5 V a 36 V 
+A Tabela \ref{tab:demandafonte} indica que a placa controladora Arduino opera no intervalo de tensão de 7 V 
+a 12 V, os drivers de potência no intervalo de 8 V a 35 V, os motores de passo no intervalo de 5 V a 36 V 
 e o optoacoplador no intervalo de 5V a 35 V. A tensão de saída de 12 V foi determinada como melhor 
 opção para o projeto.
 
-Outro parâmetro que a Tabela \ref{tab:demandafonte} apresenta é a corrente elétrica mínima para a operação do circuito. 
-A placa controladora necessita de 800 mA, os drivers de potência necessitam de 2 A cada, como são 2 drivers, 
-4 A são necessários, os motores de passo consomem 2 amperes cada, como o projeto contém 2 motores, 4 Amperes 
-são necessários e os optoacopladores necessitam de 10 mA cada, como o projeto contém 2 optoacopladores, 
-20mA são necessários. Decidiu-se acrescentar uma margem de segurança adicional de 30\% na corrente, 
-então, considerou-se uma corrente mínima necessária de 10,64 A.
+Outro parâmetro que a Tabela \ref{tab:demandafonte} apresenta é a corrente elétrica mínima para a operação 
+do circuito. A placa controladora necessita de 800 mA, os drivers de potência necessitam de 2 A cada, 
+como são 2 drivers, 4 A são necessários, os motores de passo consomem 2 amperes cada, como o projeto 
+contém 2 motores, 4 Amperes são necessários e os optoacopladores necessitam de 10 mA cada, como o 
+projeto contém 2 optoacopladores, 20mA são necessários. Decidiu-se acrescentar uma margem de 
+segurança adicional de 30\% na corrente, então, considerou-se uma corrente mínima necessária de 10,64 A.
 
 A equação \ref{eq:CorrenteNecessaria} calcula a demanda total de 
 corrente elétrica mínima para a operação do circuito onde:
@@ -621,13 +627,14 @@ Uma chave fim de curso é composta basicamente por três elementos, sendo eles:
 
 A seguir será descrito o desenvolvimento do sistema de software.
 
+%ABREVIATURA DE IDE
 \subsection{Plataforma de prototipação Arduino IDE}\label{subsec:metide}
 
-A plataforma de prototipação Arduino IDE (Integrated development environment ou ambiente de desenvolvimento 
-integrado) é um software que permite o desenvolvimento e envio de códigos compilados direto para o 
-microcontrolador. Essa plataforma tem a flexibilidade de ser utilizada em vários sistemas operacionais 
-e foi desenvolvida na linguagem Java oferecendo suporte de desenvolvimento na linguagem C e C++. 
-O download da plataforma foi realizado através do link: https://www.arduino.cc/en/software
+A plataforma de prototipação Arduino \ac{IDE} é um software que permite o desenvolvimento e envio 
+de códigos compilados direto para o microcontrolador. Essa plataforma tem a flexibilidade de 
+ser utilizada em vários sistemas operacionais e foi desenvolvida na linguagem Java oferecendo 
+suporte de desenvolvimento na linguagem C e C++. O download da plataforma foi realizado 
+através do link: https://www.arduino.cc/en/software
 
 % Figura 3.19
 \begin{figure}[!htb]
