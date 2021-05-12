@@ -22,7 +22,7 @@ operação se torne prática a mesa deve ser leve e resistente.
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale = 0.4]{figuras/p20x40p}
-\caption{Perfil v\_slot  20x40mm em alumínio.}
+\caption{Perfil v\_slot  20x40~mm em alumínio.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{fig:p20x40p}
 \end{figure}
@@ -41,7 +41,7 @@ meio de parafusos Allen sem cabeça M5.
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale = 0.4]{figuras/p20x40d}
-\caption{Dimensões do perfil 20x40mm.}
+\caption{Dimensões do perfil 20x40~mm.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{fig:p20x40d}
 \end{figure}
@@ -87,7 +87,7 @@ se dará por meio de parafusos M6 diretamente nos perfis.
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale = 0.5]{figuras/p20x20p}
-\caption{Perfil v\_slot 20x20 mm em alumínio.}
+\caption{Perfil v\_slot 20x20~mm em alumínio.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{fig:p20x20p}
 \end{figure}
@@ -95,7 +95,7 @@ se dará por meio de parafusos M6 diretamente nos perfis.
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale = 0.5]{figuras/p20x20d}
-\caption{Dimensões do perfil 20x20mm.}
+\caption{Dimensões do perfil 20x20~mm.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{fig:p20x20d}
 \end{figure}
@@ -129,7 +129,7 @@ Acoplados aos motores de passo, por meio de acopladores de eixo e na outra extre
 de 8~mm, os fusos farão o transporte dos carros horizontal e vertical. 
 
 Para que se tenha um deslocamento mais rápido das castanhas, elemento que estarão em contato 
-direto com o fuso e o carro, foi selecionado o fuso trapezoidal de 8 mm de diâmetro e 8~mm de passo. 
+direto com o fuso e o carro, foi selecionado o fuso trapezoidal de 8~mm de diâmetro e 8~mm de passo. 
 Será utilizado uma guia para o deslocamento horizontal, para o deslocamento vertical será utilizado 
 um fuso acoplado ao motor é uma guia no lado oposto, apenas para dar suporte ao elemento que fixará 
 o fuso horizontal.
@@ -180,9 +180,9 @@ entradas analógicas e 32 KB de memória flash, 2 KB de \ac{RAM} e 1 KB de \ac{E
 
 %ABREVIATURA DE USB
 A alimentação é via porta \ac{USB} ou por conector tipo Jack de alimentação externa que trabalha entre os 
-limites de 6 V e 20 V sendo recomendável o uso de 7 V a 12 V para não danificar. Para o fornecimento 
+limites de 6~V e 20~V sendo recomendável o uso de 7~V a 12~V para não danificar. Para o fornecimento 
 de tensão contínua para alimentação dos circuitos e Shields, a placa Arduino UNO tem um regulador 
-de tensão de 3,3 V.
+de tensão de 3,3~V.
 
 %ABREVIATURA DE USB
 Além de alimentar, a porta \ac{USB} é a via de comunicação com o computador para o envio do código de máquina 
@@ -207,7 +207,7 @@ A placa Arduino é programada via \ac{IDE}, utilizando uma linguagem baseada em 
 \item \textbf{Conector DC:} o conector DC serve para alimentação externa do Arduino.
 \item \textbf{Portas digitais:} são às portas que trabalham com os sinais digitais que são sinais com valores discretos, no arduino temos às constantes LOW que significa 0 V e também HIGH que significa 5 V, no código são 0 e 1 respectivamente. Dentro das portas digitais temos às portas \ac{PWM} que são portas que modulam o sinal pela largura do pulso, no arduino podemos variar de 0 a 255. Resumidamente, a placa Arduino possui quatorze portas digitais, sendo que seis delas são portas \ac{PWM} como dito anteriormente, os pinos delas são 3, 5, 6, 9, 10 e 11.
 \item \textbf{Portas analógicas:} são às portas que trabalham com os sinais analógicos que são sinais com valores contínuos, no arduino podemos variar de 0 a 1023.
-\item \textbf{Portas de alimentação:} são às portas de saída de tensão do arduino, temos três portas: porta 3,3 V cuja saída trabalha em 3,3 V, porta 5 V cuja saída trabalha em 5 V e a porta Vin cuja saída trabalha com a tensão de entrada do arduino.
+\item \textbf{Portas de alimentação:} são às portas de saída de tensão do arduino, temos três portas: porta 3,3~V cuja saída trabalha em 3,3~V, porta 5~V cuja saída trabalha em 5~V e a porta Vin cuja saída trabalha com a tensão de entrada do arduino.
 \item \textbf{Led porta 13:} led conectado a porta 13 do arduino.
 \item \textbf{Leds das portas RX TX:} leds conectados às portas RX TX, sendo que o led TX serve para indicar a transmissão de dados e o RX para indicar a recepção de dados.
 \item \textbf{Processador ATMEGA328:} o processador é responsável pelo processamento da lógica de programação.
@@ -216,8 +216,8 @@ A placa Arduino é programada via \ac{IDE}, utilizando uma linguagem baseada em 
 \item \textbf{Conjunto microcontrolador e cristal para \ac{USB}:} esse conjunto possui um microcontrolador ATMEGA16U2 e um cristal externo de 16 MHz, e é responsável pelo gerenciamento da porta \ac{USB}.
 \item \textbf{Circuito de proteção de sobretensão na \ac{USB}:} responsável por proteger a entrada \ac{USB} de sobretensão.
 \item \textbf{Controlador de tensão de alimentação:} esse controlador é responsável por verificar se a tensão DC está presente, se não estiver, deixa que a tensão da \ac{USB} alimente o circuito. 
-\item \textbf{Regulador de tensão de 5 V:} serve para regular a tensão em 5 V.
-\item \textbf{Regulador de tensão de 3,3 V:} serve para regular a tensão em 3,3 V.
+\item \textbf{Regulador de tensão de 5~V:} serve para regular a tensão em 5~V.
+\item \textbf{Regulador de tensão de 3,3~V:} serve para regular a tensão em 3,3~V.
 \item \textbf{Cristal para clock:} serve para gerar o clock.
 \end{itemize}
 
@@ -235,7 +235,7 @@ A equipe do projeto optou por desenvolver para a mesa cartesiana que necessita d
 (motores de passo), drivers individuais para cada motor devido ao custo que seria menor.
 
 A construção dos drivers que controlam os motores de passo da mesa cartesiana foi baseada em um 
-circuito eletrônico para motores que trabalham com tensão de 12 V DC e até 10 A de corrente elétrica. 
+circuito eletrônico para motores que trabalham com tensão de 12~V DC e até 10~A de corrente elétrica. 
 
 \begin{figure}[!htb]
 \centering
@@ -245,8 +245,8 @@ circuito eletrônico para motores que trabalham com tensão de 12 V DC e até 10
 \label{fig:driver}
 \end{figure}
     
-O driver criado foi utilizado para controlar motores de passo e pode operar com tensões entre 8 V e 35 V e 
-entregar até 35 V por bobina. A Figura \ref{fig:driverportas} mostra o driver com os respectivos componentes.
+O driver criado foi utilizado para controlar motores de passo e pode operar com tensões entre 8~V e 35~V e 
+entregar até 35~V por bobina. A Figura \ref{fig:driverportas} mostra o driver com os respectivos componentes.
 
 \begin{figure}[!htb]
 \centering
@@ -267,12 +267,12 @@ FOSSE UM DATASHEET DO DRIVER CRIADO
         \hline
         \textbf{Parâmetro} & \textbf{Magnitude}\\
         \hline
-        Tensão lógica mínima & 3 V\\
-        Tensão lógica máxima & 5,5 V\\
-        Corrente contínua por fase & 1 A\\
-        Corrente máxima por fase & 2 A\\
-        Tensão de operação mínima & 8 V\\
-        Tensão de operação máxima & 35 V\\ 
+        Tensão lógica mínima & 3~V\\
+        Tensão lógica máxima & 5,5~V\\
+        Corrente contínua por fase & 1~A\\
+        Corrente máxima por fase & 2~A\\
+        Tensão de operação mínima & 8~V\\
+        Tensão de operação máxima & 35~V\\ 
         \hline       
     \end{tabular}
     \caption*{Fonte: Próprio Autor, 2021.}
@@ -487,8 +487,8 @@ A Tabela \ref{tab:pmotordepasso} apresenta alguns parâmetros dos motores de pas
         \textbf{Parâmetros} & \textbf{Magnitude}\\
         \hline
         Número de passos por revolução & 200 (1,8 graus por passo)\\
-        Corrente de operação & 800 mA\\
-        Tensão de alimentação & 12 V\\
+        Corrente de operação & 800~mA\\
+        Tensão de alimentação & 12~V\\
         Configuração das bobinas & Bipolar (4 fios)\\
         \hline       
     \end{tabular}
@@ -513,28 +513,28 @@ A Tabela \ref{tab:demandafonte} apresenta a demanda de energia elétrica de cada
         \hline
         \textbf{Componente} & \textbf{Quantidade} & \textbf{Tensão} & \textbf{Consumo} & \textbf{Consumo Total}\\
         \hline
-        Arduino & 1 & 7 a 12 V & 800 mA & 800 mA\\
-        Driver & 2 & 8 a 35 V & 2 A & 4 A\\
-        Motor de passo & 2 & 5 a 36 V & 2 A & 4 A\\
-        Optoacoplador & 2 & 5 a 35 V & 5 mA & 10 mA\\
-        Resultado & - & 12 V & - & 8,18 A\\
+        Arduino & 1 & 7 a 12~V & 800~mA & 800~mA\\
+        Driver & 2 & 8 a 35~V & 2~A & 4~A\\
+        Motor de passo & 2 & 5 a 36~V & 2~A & 4~A\\
+        Optoacoplador & 2 & 5 a 35~V & 5~mA & 10~mA\\
+        Resultado & - & 12~V & - & 8,18~A\\
         \hline       
     \end{tabular}
     \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:demandafonte}
 \end{table}
 
-A Tabela \ref{tab:demandafonte} indica que a placa controladora Arduino opera no intervalo de tensão de 7 V 
-a 12 V, os drivers de potência no intervalo de 8 V a 35 V, os motores de passo no intervalo de 5 V a 36 V 
-e o optoacoplador no intervalo de 5V a 35 V. A tensão de saída de 12 V foi determinada como melhor 
+A Tabela \ref{tab:demandafonte} indica que a placa controladora Arduino opera no intervalo de tensão de 7~V 
+a 12~V, os drivers de potência no intervalo de 8~V a 35~V, os motores de passo no intervalo de 5~V a 36~V 
+e o optoacoplador no intervalo de 5~V a 35~V. A tensão de saída de 12~V foi determinada como melhor 
 opção para o projeto.
 
 Outro parâmetro que a Tabela \ref{tab:demandafonte} apresenta é a corrente elétrica mínima para a operação 
-do circuito. A placa controladora necessita de 800 mA, os drivers de potência necessitam de 2 A cada, 
-como são 2 drivers, 4 A são necessários, os motores de passo consomem 2 amperes cada, como o projeto 
-contém 2 motores, 4 Amperes são necessários e os optoacopladores necessitam de 10 mA cada, como o 
-projeto contém 2 optoacopladores, 20mA são necessários. Decidiu-se acrescentar uma margem de 
-segurança adicional de 30\% na corrente, então, considerou-se uma corrente mínima necessária de 10,64 A.
+do circuito. A placa controladora necessita de 800~mA, os drivers de potência necessitam de 2~A cada, 
+como são 2 drivers, 4~A são necessários, os motores de passo consomem 2 amperes cada, como o projeto 
+contém 2 motores, 4 Amperes são necessários e os optoacopladores necessitam de 10~mA cada, como o 
+projeto contém 2 optoacopladores, 20~mA são necessários. Decidiu-se acrescentar uma margem de 
+segurança adicional de 30\% na corrente, então, considerou-se uma corrente mínima necessária de 10,64~A.
 
 A equação \ref{eq:CorrenteNecessaria} calcula a demanda total de 
 corrente elétrica mínima para a operação do circuito onde:
@@ -546,7 +546,7 @@ demanda do motor de passo ($d_{motor}$) e demanda do optoacoplador ($d_{opto}$).
 \end{equation}
 
 Conforme a determinação da tensão de saída e o cálculo de corrente necessária, 
-é possível determinar que a fonte deve ter 12 V e 10,64 A.
+é possível determinar que a fonte deve ter 12~V e 10,64~A.
 
 \begin{figure}[!htb]
 \centering

@@ -1,10 +1,8 @@
-%\input{elementos-pre-textuais/lista-de-abreviaturas-e-siglas}
-
 %importando arquivos
 \input{lib/tccfurg/metadados.sty}
 \input{lib/tccfurg/variaveis.sty}
 \input{lib/tccfurg/capa.sty}
-%\input{lib/folhaderosto.sty}
+\input{lib/tccfurg/folhaderosto.sty}
 \input{lib/tccfurg/fichacatalografica.sty}
 \input{lib/tccfurg/folhadeaprovacao.sty}
 \input{lib/tccfurg/dedicatoria.sty}
@@ -197,6 +195,10 @@
 % Cabecalho do inicio do capitulo
 \makepagestyle{abntchapfirst}
 \makeoddhead{abntchapfirst}{}{}{\ABNTEXfontereduzida\thepage}
+
+\newcommand{\imprimirindice}{ %
+	\printindex
+}
 
 % Configuração do Sumário
 \renewcommand{\contentsname}{}

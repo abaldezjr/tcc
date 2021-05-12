@@ -1,6 +1,7 @@
 %Folha de Rosto
-\makeatletter
-\renewcommand{\folhaderostocontent}{
+
+\renewcommand{\imprimirfolhaderosto}{
+	\begin{folhaderosto}
 	\begin{center}
 		\normalsize\MakeUppercase\imprimirautor\par
 		\vspace{6.5cm}\par
@@ -8,22 +9,19 @@
 	\end{center}	
 	\vspace{2.5cm}
 	\hspace*{-2cm}
-	\hspace*{7cm}	
+	\hspace*{8cm}	
 	\begin{minipage}{9cm}
 		\begin{SingleSpace}
 			\imprimirpreambulo	
 			\newline
 			\artigoorientador: \ignorespaces\imprimirorientador \\
-			\abntex@ifnotempty{\imprimircoorientador}{
-				\newline
-				\artigocoorientador: \ignorespaces \imprimircoorientador \\
-			}
+			\newline
+			\artigocoorientador: \ignorespaces \imprimircoorientador \\
 		\end{SingleSpace}		
 	\end{minipage}	
 	\vfill
 	\centering
 	\normalsize\MakeUppercase\imprimirlocal \par
-	\normalsize\imprimirdata	
+	\normalsize\imprimirdata
+\end{folhaderosto}
 }
-\makeatother
-\pagebreak
