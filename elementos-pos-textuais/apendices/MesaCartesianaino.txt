@@ -1,0 +1,7 @@
+void inicializarEixos(Driver::TipoAcionamento tp);
+void interpretarComandos(String comando);
+void movimentarMesa(String coordenada);
+void escolherModoPasso(Eixo *e, String modoPasso);
+void setup();
+void loop();
+void serialEvent();

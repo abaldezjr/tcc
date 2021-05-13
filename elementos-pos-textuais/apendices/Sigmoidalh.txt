@@ -1,0 +1,26 @@
+#ifndef SIGMOIDAL_H_INCLUDED
+#define SIGMOIDAL_H_INCLUDED
+#define E 2.71828182845904523536
+class Sigmoidal {
+public:
+~Sigmoidal(void){}
+Sigmoidal(double pmax, double pmin, double de);
+double calculoDoXMedio();
+void setVetorAceleracao();
+void setPeriodoMaximo(double pmax);
+void setPeriodoMinimo(double pmin);
+void setDeclividade(double de);
+double getPeriodoMaximo();
+double getPeriodoMinimo();
+int getVetorAceleracao();
+double getAmplitude();
+double getDeclividade();
+double getXMedio();
+double calculoDoInstante();
+private:
+double periodoMaximo = 600, periodoMinimo = 100,
+amplitude = this->periodoMaximo - this->periodoMinimo,
+declividade = 0, xMedio = 0;
+int vetorAceleracao = 1;
+};
+#endif

@@ -1,0 +1,15 @@
+byte vetorPassos [8] = {9, 1, 3, 2, 6, 4, 12, 8};
+Pino *pinoEnableX, *pinoResetX, *pinoSleepX, *pinoM0X, *pinoM1X, *pinoM2X, pinoIN1X, pinoIN2X, pinoIN3X, pinoIN4X;
+Driver *driverX;
+pinoEnableX = new Pino(Pino::DIGITAL, PINO_ENABLE_X, OUTPUT, LOW);
+pinoResetX  = new Pino(Pino::DIGITAL, PINO_RESET_X, OUTPUT, LOW);
+pinoSleepX  = new Pino(Pino::DIGITAL, PINO_SLEEP_X, OUTPUT, LOW);
+pinoM0X     = new Pino(Pino::DIGITAL, PINO_M0_X, OUTPUT, LOW);
+pinoM1X     = new Pino(Pino::DIGITAL, PINO_M1_X, OUTPUT, LOW);
+pinoM2X     = new Pino(Pino::DIGITAL, PINO_M2_X, OUTPUT, LOW);
+pinoIN1X    = new Pino(Pino::DIGITAL, PINO_IN1_X, OUTPUT, LOW);
+pinoIN2X    = new Pino(Pino::DIGITAL, PINO_IN2_X, OUTPUT, LOW);
+pinoIN3X    = new Pino(Pino::DIGITAL, PINO_IN3_X, OUTPUT, LOW);
+pinoIN4X    = new Pino(Pino::DIGITAL, PINO_IN4_X, OUTPUT, LOW);
+Driver *driverX;
+driverX     = new Driver(Driver::WAVESTEP, pinoEnableX, pinoResetX, pinoSleepX, pinoM0X, pinoM1X, pinoM2X, pinoIN1X, pinoIN2X, pinoIN3X, pinoIN4X, vetorPassos);

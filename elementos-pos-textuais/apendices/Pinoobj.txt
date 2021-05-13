@@ -1,0 +1,2 @@
+Pino *pinoEnableX;
+pinoEnableX  = new Pino(Pino::DIGITAL, PINO_ENABLE_X, OUTPUT, LOW);

@@ -7,7 +7,7 @@ com a metodologia (seção 3). Ou seja, primeiramente é apresentado os resultad
 posteriormente os resultados do sistema eletrônico, em seguida é mostrado os resultados da programação 
 do sistema de software. Por fim, é realizada uma análise dos testes experimentais.
 
-\section{Sistema mecânico}
+\section{Sistema mecânico}\label{sec:resmecanico}
 
 A Figura X mostra uma fotografia da mesa cartesiana possibilitando uma melhor compreensão do funcionamento 
 dos seus componentes.
@@ -16,7 +16,7 @@ dos seus componentes.
 %
 %COLOCAR IMAGEM DA MESA CARTESIANA
 
-\section{Sistema eletrônico}
+\section{Sistema eletrônico}\label{sec:ressisele}
 
 A Figura X mostra um esquema elétrico que comanda os motores de passos presentes na estrutura  da mesa 
 cartesiana possibilitando uma melhor compreensão do funcionamento dos seus componentes.
@@ -26,56 +26,167 @@ cartesiana possibilitando uma melhor compreensão do funcionamento dos seus comp
 %COLOCAR A IMAGEM DO ESQUEMA ELÉTRICO AQUI QUE DA PARA FAZER PELO TINKERCAD.COM
 
 
-\section{Sistema de software}
+\section{Sistema de software}\label{sec:ressissof}
 
-O sistema de software do projeto foi fundamentado na metodologia, sendo assim para o desenvolvimento do código 
-foi utilizado a plataforma de prototipação Arduino IDE respeitando o diagrama de classes mostrado na seção 3.3.3.
+O sistema de software do projeto foi fundamentado na metodologia, sendo assim para o desenvolvimento 
+do código foi utilizado a plataforma de prototipação Arduino IDE respeitando o diagrama de classes 
+mostrado na seção 3.3.3.
 
+A seguir serão mostrados os arquivos header de cada classe presente no sistema a fim de resumir 
+o código fonte da sua versão completa. Esta versão se encontra nos apêndices do trabalho.
 
-%\section{Análise dos testes experimentais}
+%HEADER DA CLASSE PINO
+\subsection{Código header da classe Pino}\label{subsec:respino}
 
-%Os testes experimentais foram divididos em etapas. Primeiramente foi verificado o funcionamento dos sistemas 
-%separadamente. Sendo assim, foi verificado se a estrutura mecânica estava bem montada. Posteriormente foi verificado 
-%o funcionamento dos componentes eletrônicos, em seguida foi desenvolvido um código fonte simplificado para verificar 
-%os movimentos dos eixos. Por fim, o código fonte desenvolvido foi carregado no Arduino para que testes de desempenho 
-%fossem realizados.
-%Assim, para testar o desempenho da mesa cartesiana desenvolvida, foram definidos testes ao posicionamento e a 
-%aceleração para validação do projeto. No teste ao posicionamento, a mesa percorre alguns pontos distintos e em 
-%seguida é verificado o deslocamento nos dois eixos com um paquímetro. Já no teste a aceleração, ……………...
+Segue abaixo o arquivo header (Pino.h) da classe “Pino”.
 
-%\subsection{Teste ao posicionamento}
+\lstset{
+    caption         = {Pino.h}, 
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Pinoh.txt}
 
-%Os motores de passo não possuem a capacidade de quantização de distâncias, dessa forma para garantir que a
-%posição da mesa corresponde a posição pretendida se faz o uso do encoder.
-%A origem é o único ponto da mesa conhecido pelo software, pois é possível através das chaves 
-%fim de curso impedir a movimentação dos motores, essa lógica de chaves fim de curso é aproveitada 
-%na inicialização do programa para a setagem da coordenada (0,0). Após a inicialização é possível que 
-%alguns erros aconteçam como: algum erro no software ou falha no hardware ocorrendo uma descalibração da mesa.
-%Assim, para validar a funcionalidade do software e hardware foi efetuado o seguinte teste:
+%OBJETO DA CLASSE PINO
+Assim para se utilizar as funções presentes na classe “Pino” é criado um objeto 
+através do comando abaixo com seus devidos parâmetros de entrada.
 
-%\begin{alineas}
-%    \item Cinco coordenadas (x,y) foram estipuladas incluindo a coordenada mínima e máxima da mesa onde estavam 
-%    presentes as chaves de início e fim de curso.
-%    \item A medida que uma coordenada foi executada pela mesa, o deslocamento foi verificado pelo paquímetro.
-%    \item Após o teste terminar, o regresso a coordenada (0,0) foi efetuado para repetição do processo.
-%\end{alineas}
+\lstset{
+    caption         = {Objeto da classe Pino.}, 
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Pinoobj.txt}
 
-% Tabela z
-% Resultados das medições executadas
-% (Fonte: Próprio autor.)
+%HEADER DA CLASSE SIGMOIDAL
+\subsection{Código header da classe Sigmoidal}\label{subsec:ressigmoidal}
 
-%A tabela X mostra que não existe diferença mensurável entre a posição pretendida e a medida comprovando 
-%a funcionalidade do sistema, bem como a precisão dos motores de passo.
+Segue abaixo o arquivo header (Sigmoidal.h) da classe “Sigmoidal”.
 
-%\subsection{Teste a aceleração}
-%Os motores de passo funcionam através do envio de pulsos em um determinado intervalo de tempo, sendo assim 
-%conforme o intervalo de tempo que é enviado esse pulso elétrico, a velocidade do motor é modificada. Então, 
-%se conclui que:
+\lstset{
+    caption         = {Sigmoidal.h}, 
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Sigmoidalh.txt}
 
-%\begin{alineas}
-%    \item Para um intervalo de tempo fixo, a velocidade do motor é constante.
-%    \item Para um intervalo de tempo que diminui ao longo do tempo, a velocidade aumenta. (Aceleração). 
-%    \item Para um intervalo de tempo que aumenta ao longo do tempo, a velocidade diminui. (Desaceleração).
-%    \item Para realizar a variação no intervalo de tempo para o envio de pulsos elétricos, foi escolhida 
-%    uma curva sigmóide que é desenhada em um gráfico de Período x Iterações
-%\end{alineas}
+%OBJETO DA CLASSE SIGMOIDAL
+Assim para se utilizar as funções presentes na classe “Sigmoidal” é criado um objeto 
+através do comando abaixo com seus devidos parâmetros de entrada.
+
+\lstset{
+    caption         = {Objeto da classe Sigmoidal.}, 
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Sigmoidalobj.txt}
+
+%HEADER DA CLASSE DRIVER
+\subsection{Código header da classe Driver}\label{subsec:resdriver}
+Segue abaixo o arquivo header (Driver.h) da classe “Driver”.
+
+\lstset{
+    caption         = {Driver.h}, 
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Driverh.txt}
+
+%OBJETO DA CLASSE DRIVER
+Para flexibilização na utilização de diferentes tipos de drivers, foi desenvolvido 
+duas construções diferentes para utilizar as funções da classe “Driver”.
+
+%OBJETO 1 CLASSE DRIVER
+A primeira é passando como parâmetros o pino do passo e da direção como no código abaixo.
+Essa construção é para drivers que se responsabilizam pelo controle do estado 
+das bobinas através do seu hardware.
+
+\lstset{
+    caption         = {Objeto da classe Driver.}, 
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Driverobj.txt}
+
+%OBJETO 2 CLASSE DRIVER
+Já a segunda é passando como parâmetros os pinos das bobinas como no código abaixo.
+Essa construção é para drivers que terceirizam para o software o controle
+do estado das bobinas.
+
+\lstset{
+    caption         = {Objeto da classe Driver.}, 
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Driverobj2.txt}
+
+%HEADER DA CLASSE EIXO
+\subsection{Código header da classe Eixo}\label{subsec:reseixo}
+
+Segue abaixo o arquivo header (Eixo.h) da classe “Eixo”.
+
+\lstset{
+    caption         = {Eixo.h}, 
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Eixoh.txt}
+
+%OBJETO DA CLASSE EIXO
+Assim para se utilizar as funções presentes na classe “Eixo” é criado um objeto 
+através do comando abaixo com seus devidos parâmetros de entrada.
+
+\lstset{
+    caption         = {Objeto da classe Eixo.}, 
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Eixoobj.txt}
+
+%EXPLICANDO COMO A MESACARTESIANA.INO FUNCIONA
+\subsection{Detalhamento do arquivo principal (MesaCartesiana.ino)}\label{subsec:resmesa}
+
+O arquivo principal tem a responsabilidade de gerenciar toda aplicação, neste arquivo 
+serão construídos todos objetos necessários. Segue abaixo um resumo com todas 
+funcionalidades que este possui.
+
+\lstset{
+    caption         = {MesaCartesiana.ino}, 
+    language        = C++,
+    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
+    style           = mystyle,
+}
+{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/MesaCartesianaino.txt}
+
+O método “incializarEixos” é responsável por construir os objetos necessários para controle dos 
+eixos da aplicação, neste é possível escolher se o tipo de acionamento do driver 
+é via software ou hardware.
+
+O método “interpretarComandos” é responsável pela interpretação de qual comando foi enviado pelo usuário,
+como por exemplo o comando “MOVER 2,4” que movimenta o eixo X para a ordenada 2 e o eixo Y para a ordenada 4.
+Outros comandos necessários para uma aplicação como a mudança de estados de algumas configurações 
+devem ser interpretadas por este método.
+
+O método “movimentarMesa” é responsável pela chamada da funcionalidade de rotação presente na classe “Eixo” 
+para isso recebe como parâmetro a coordenada enviada pelo usuário.
+
+O método “escolherModoPasso” é responsável por setar qual o modo do passo que o eixo irá operar.
+
+O método “setup” é responsável pela inicialização de toda aplicação estando nele uma chamada 
+para o método de inicialização dos eixos.
+
+O método “serialEvent” é responsável pela recepção dos dados enviados pelo usuário estando nele uma chamada 
+para o método de interpretação de comandos.
+
+O método “loop” é responsável pela execução da aplicação de forma que ela nunca acabe, já que é necessário 
+que o método “serialEvent” esteja sempre em operação para quando o usuário solicitar alguma ação no sistema 
+esta seja executada.

@@ -1,0 +1,18 @@
+Pino *pinoEnableX, *pinoResetX, *pinoSleepX, *pinoM0X, *pinoM1X, *pinoM2X, *pinoPassoX, *pinoDirecao;
+pinoEnableX  = new Pino(Pino::DIGITAL, PINO_ENABLE_X, OUTPUT, LOW);
+pinoResetX   = new Pino(Pino::DIGITAL, PINO_RESET_X, OUTPUT, LOW);
+pinoSleepX   = new Pino(Pino::DIGITAL, PINO_SLEEP_X, OUTPUT, LOW);
+pinoM0X      = new Pino(Pino::DIGITAL, PINO_M0_X, OUTPUT, LOW);
+pinoM1X      = new Pino(Pino::DIGITAL, PINO_M1_X, OUTPUT, LOW);
+pinoM2X      = new Pino(Pino::DIGITAL, PINO_M2_X, OUTPUT, LOW);
+pinoPassoX   = new Pino(Pino::DIGITAL, PINO_PASSO_X, OUTPUT, LOW);
+pinoDirecaoX = new Pino(Pino::DIGITAL, PINO_DIRECAO_X, OUTPUT, LOW);			
+Driver *driverX;
+driverX = new Driver(pinoEnableX, pinoResetX, pinoSleepX, pinoM0X, pinoM1X, pinoM2X, pinoPassoX, pinoDirecaoX);
+Pino *cursoMaximoX, *cursoMinimoX;
+Sigmoidal *sigmoidalX;
+cursoMaximoX = new Pino(Pino::DIGITAL, PINO_CURSOMAXIMO_X, INPUT, HIGH);
+cursoMinimoX = new Pino(Pino::DIGITAL, PINO_CURSOMINIMO_X, INPUT, HIGH);
+sigmoidalX   = new Sigmoidal(SIG_PERIODO_MAXIMO_X, SIG_PERIODO_MINIMO_X, SIG_DECLIVIDADE_X);
+Eixo *eixoX;
+eixoX = new Eixo(driverX, MILIMETROS_POR_VOLTA_X, ESTADO_FIM_DE_CURSO_X, cursoMaximoX, cursoMinimoX, sigmoidalX);

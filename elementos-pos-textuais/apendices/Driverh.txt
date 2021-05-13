@@ -1,0 +1,43 @@
+#ifndef DRIVER_H_INCLUDED
+#define DRIVER_H_INCLUDED
+class Driver {
+public:
+enum TipoAcionamento {
+SOFTWARE = 0,
+HARDWARE = 1
+};
+enum TipoPasso {
+WAVESTEP = 0,
+FULLSTEP = 1,
+HALFSTEP = 2
+};
+enum Direcao {
+ANTIHORARIO = -1,
+HORARIO     =  1
+};
+~Driver(void){}
+Driver(Pino* pinoIN1, Pino* pinoIN2, Pino* pinoIN3, Pino* pinoIN4, byte* vetorPassos);
+Driver(Pino *pinoEnable, Pino *pinoReset, Pino *pinoSleep, Pino *pinoM0, Pino *pinoM1, Pino *pinoM2, Pino *pinoPasso, Pino *pinoDirecao);
+Driver(TipoPasso tipoPasso, Pino* pinoEnable, Pino* pinoReset, Pino* pinoSleep, Pino* pinoM0, Pino* pinoM1, Pino* pinoM2, Pino* pinoIN1, Pino* pinoIN2, Pino* pinoIN3, Pino* pinoIN4, byte *vetorPassos);
+void setDirecao(Direcao d);
+Pino* getPinoEnable();
+Pino* getPinoReset();
+Pino* getPinoSleep();
+Pino* getPinoPasso();
+Pino* getPinoDirecao();
+Direcao getDirecao();
+int getModoPasso();
+int getPassosPorVolta();
+void setarModoPasso(int mp,byte b);
+void passo(void);
+private:
+Pino *pinoEnable, *pinoReset, *pinoSleep, *pinoM0, *pinoM1, *pinoM2, *pinoPasso, *pinoDirecao, *pinoIN1, *pinoIN2, *pinoIN3, *pinoIN4;
+TipoAcionamento tipoAcionamento = TipoAcionamento::SOFTWARE;
+TipoPasso tipoPasso = TipoPasso::WAVESTEP;
+Direcao direcao = Direcao::HORARIO;
+int passoAtual = 0, modoPasso = 1, passosPorVolta = 200;
+byte *vetorPassos;
+void setarEstados(byte b);
+void executarPasso(int contador, int limiteInferior, int limiteSuperior);
+};
+#endif

@@ -1,0 +1,25 @@
+#ifndef PINO_H_INCLUDED
+#define PINO_H_INCLUDED
+class Pino {
+public:
+enum TipoPino {
+ANALOGICO = 0,
+DIGITAL = 1,
+};
+~Pino(void){}
+Pino(TipoPino t, byte n, byte m, unsigned int e);
+void setModo(byte m);
+void setEstado(unsigned int e);
+TipoPino getTipo();
+byte getNumero();
+byte getModo();
+unsigned int getEstado();
+private:
+TipoPino tipo = TipoPino::DIGITAL;
+byte numero = 0;
+byte modo = OUTPUT;
+unsigned int estado = LOW;
+void setTipo(TipoPino t);
+void setNumero(byte n);
+};
+#endif

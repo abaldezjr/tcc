@@ -1,0 +1,28 @@
+#ifndef EIXO_H_INCLUDED
+#define EIXO_H_INCLUDED
+class Eixo {
+public:
+~Eixo(void){}
+Eixo(Driver *driver, Pino *pinoCursoMaximo, Pino *pinoCursoMinimo, Sigmoidal *sigmoidal);
+Eixo(Driver *driver, byte milimetrosPorVolta, bool estadoFimDeCurso, Pino *pinoCursoMaximo, Pino *pinoCursoMinimo, Sigmoidal *sigmoidal);
+void setPosicao(double p);
+Driver* getDriver();
+Pino* getPinoCursoMaximo();
+Pino* getPinoCursoMinimo();
+bool getEstadoFimDeCurso();
+double getPosicao();
+Sigmoidal* getSigmoidal();
+void rotacionarPara(int coordenada);
+void calibrar();
+private:
+Driver *driver;
+Pino *pinoCursoMaximo, *pinoCursoMinimo;
+Sigmoidal *sigmoidal;
+int posicao = 0;
+int micrometrosPorVolta = 8000;
+bool estadoFimDeCurso = LOW;
+unsigned long previousMillis = 0;
+bool podeMovimentar();
+void rotacionarPasso(Driver::Direcao direcao,int passos);
+};
+#endif

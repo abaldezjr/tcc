@@ -318,8 +318,8 @@ largura de pulso a fim de enviar a corrente adequada para cada passo. A Figura \
 \label{fig:didaticopasso}
 \end{figure}
     
-A Figura \ref{fig:didaticopasso} mostra um motor de passo com cinquenta dentes de precisão, portanto combinando 
-o número de dentes com as quatro fases de um motor bipolar temos duzentos passos. 
+A Figura \ref{fig:didaticopasso} mostra um motor de passo com 50 dentes de precisão, portanto combinando 
+o número de dentes com as 4 fases de um motor bipolar temos 200 passos. 
 
 A equação \ref{eq:Npassos} calcula o número de passos de uma volta executada pelo motor onde,
 o número de passos ($n_{p}$) é igual ao número de dentes ($n_{d}$) mutiplicado pelo número de fases ($n_{f}$)
@@ -327,10 +327,10 @@ o número de passos ($n_{p}$) é igual ao número de dentes ($n_{d}$) mutiplicad
     n_{p} = n_{d} \cdot n_{f}
 \end{equation}
 
-A precisão do motor é definida por trezentos e sessenta graus divididos pelo número de passos. Portanto, 
-trezentos e sessenta divididos por duzentos é igual a um vírgula oito graus de precisão. Já o segundo motor 
-de passo possui cem dentes de precisão, portanto a precisão é de zero vírgula nove graus, o que indica que 
-é um motor com maior precisão que o de cinquenta dentes.
+A precisão do motor é definida por 360° divididos pelo número de passos. Portanto, 
+360 divididos por 200 é igual a 1,8° de precisão. Já o segundo motor 
+de passo possui 100 dentes de precisão, portanto a precisão é de 0,9°, o que indica que 
+é um motor com maior precisão que o de 50 dentes.
 
 Para aumentar a precisão dos motores é possível subdividir o passo de um motor em menores passos fornecendo 
 ao mesmo tempo corrente elétrica em duas fases. Essa forma de trabalho é chamada de micropassos.
@@ -766,7 +766,7 @@ classe “Pino”.
 A classe “Pino” possui como atributos privados: “tipo”, que é o tipo de entrada do pino que pode ser 
 analogico ou digital, “numero”, que é o número de uma determinada porta na placa, “modo” que define se 
 a porta é de entrada ou saída de dados, e “estado”, que pode estar ligado ou desligado nas portas digitais, 
-ter valores de 0 a 255 nas portas PWM e de 0 a 1023 nas portas analogicas. Como operações, a classe Pino 
+ter valores de 0 a 255 nas portas \ac{PWM} e de 0 a 1023 nas portas analogicas. Como operações, a classe “Pino” 
 tem os métodos de acesso getters e setters que acessam os atributos privados citados acima.
 
 “Driver” é a classe responsável pelo controle digital do driver de potência, com ela é possível definir 
@@ -824,7 +824,7 @@ ou hardware conforme a necessidade de cada tipo de driver utilizado, “tipoPass
 de passo do driver que pode ser (wavestep, fullstep, halfstep), “direcao”, que define o sentido do movimento, 
 “passoAtual” que é o índice de acesso às informações do vetor de passos, “modoPasso”, que define o modo do 
 passo do driver, “passosPorVolta”, que define a quantidade de passos a cada volta do motor como por exemplo, 
-200 passos de 1,8 graus resultando em 360 graus. 
+200 passos de 1,8° resultando em 360°. 
 
 Como operações, a classe “Driver” tem os métodos: métodos de acesso getters e setters que acessam os 
 atributos privados da classe, os métodos: “setarEstados”, que define os estados dos pinos IN1, IN2, IN3, 
@@ -886,7 +886,7 @@ A Figura \ref{fig:orgsoftware} apresenta um diagrama geral da organização do s
 \label{fig:orgsoftware}
 \end{figure}
     
-O arquivo MesaCartesiana.ino é o principal, ele instancia os objetos das classes: “Pino”, “Sigmoidal”, 
+O arquivo “MesaCartesiana.ino” é o principal, ele instancia os objetos das classes: “Pino”, “Sigmoidal”, 
 “Driver” e “Eixo” e também tem a responsabilidade de receber às coordenadas através da comunicação serial 
 e às enviar para o objeto da classe “Eixo” que fará a rotação dos motores.
 
