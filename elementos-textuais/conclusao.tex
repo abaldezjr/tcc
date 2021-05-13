@@ -2,16 +2,24 @@
 \label{chap:conclusao}
 
 O objetivo geral do projeto que consiste na movimentação de instrumentos de medição em um sistema 
-de coordenadas cartesianas foi atendido. Nesse sentido, os objetivos específicos de projetar a mesa cartesiana, criar o sistema de comunicação “mesa-software” e desenvolver o software de comando foram contemplados.
+de coordenadas cartesianas foi atendido. Nesse sentido, os objetivos específicos de projetar a 
+mesa cartesiana, criar o sistema de comunicação “mesa-software” e desenvolver o software 
+de comando foram contemplados.
+
 Primeiramente, para a criação da mesa cartesiana foi projetada uma estrutura mecânica em formato TAL.
-Posteriormente, para a comunicação entre a mesa e o software foi desenvolvido TAL
-Por fim, para o software que comandará a mesa foi desenvolvido TAL
+
+Posteriormente, para a comunicação entre a mesa e o software foi desenvolvido TAL.
+
+Por fim, para o software que comandará a mesa foi desenvolvido TAL.
+
 Além disso, os testes experimentais de desempenho quanto ao posicionamento e aceleração mostraram que TAL
+
 A documentação deste trabalho foi realizada a fim de facilitar o entendimento para o desenvolvimento de 
 outros projetos parecidos e assim estender o impacto deste trabalho em outras instituições de ensino. 
 Isso permitirá que um maior número de pesquisadores possam realizar a captura de dados para experimentos 
 de forma automatizada em túneis de vento. O projeto está disponível para montagem em um repositório online 
 no endereço <https://github.com/abaldezjr/MesaCartesiana>.
+
 Com este trabalho, foi possível utilizar diversos dos conhecimentos adquiridos ao longo do curso de 
 Engenharia Mecânica utilizando-os de forma integrada, visto que envolveu a concepção de um sistema 
 mecânico movimentado por motores elétricos, além de aproveitar-se do desenvolvimento de software 
@@ -19,10 +27,21 @@ na integração do projeto como um todo.
 
 \section{Críticas e sugestões de trabalhos futuros}\label{sec:criticas}
 
+Algumas críticas podem ser levantadas sobre o protótipo do projeto como:
+
+\begin{itemize}
+    \item A versão do projeto ainda não possui um sistema completamente automatizado, sendo possível realizar somente a captura dos dados de uma coordenada por vez.
+    \item Os dados ainda não foram capturados através de algum sensor digital.
+    \item Os dados não são apresentados de forma gráfica.
+    \item O sistema eletrônico não tem um case para seu abrigo estando desprotegido, além de ter sido desenvolvido em uma versão de protótipo com a placa Arduino. 
+\end{itemize}
+
 Algumas melhorias podem ser sugeridas para uma próxima versão do projeto como:
 
 \begin{itemize}
-    \item LALALALA
-    \item LALALALA
-    \item LALALALA
+    \item Capturar os dados de forma digital através de um sensor.
+    \item Automatizar a captura de dados para que seja possível o usuário planejar uma rotina e saber o seu tempo estimado.
+    \item Integrar o sistema de software da mesa cartesiana a um aplicativo que faça geração de relatórios, para uma visualização dos dados de forma gráfica.
+    \item Desenvolver o circuito eletrônico em uma placa de circuito impresso com os devidos componentes.
+    \item Projetar um case (caixa) para abrigar os componentes do circuito eletrônico.
 \end{itemize}

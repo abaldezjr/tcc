@@ -32,52 +32,50 @@ O sistema de software do projeto foi fundamentado na metodologia, sendo assim pa
 foi utilizado a plataforma de prototipação Arduino IDE respeitando o diagrama de classes mostrado na seção 3.3.3.
 
 
-\section{Análise dos testes experimentais}
+%\section{Análise dos testes experimentais}
 
-Os testes experimentais foram divididos em etapas. Primeiramente foi verificado o funcionamento dos sistemas 
-separadamente. Sendo assim, foi verificado se a estrutura mecânica estava bem montada. Posteriormente foi verificado 
-o funcionamento dos componentes eletrônicos, em seguida foi desenvolvido um código fonte simplificado para verificar 
-os movimentos dos eixos. Por fim, o código fonte desenvolvido foi carregado no Arduino para que testes de desempenho 
-fossem realizados.
-Assim, para testar o desempenho da mesa cartesiana desenvolvida, foram definidos testes ao posicionamento e a 
-aceleração para validação do projeto. No teste ao posicionamento, a mesa percorre alguns pontos distintos e em 
-seguida é verificado o deslocamento nos dois eixos com um paquímetro. Já no teste a aceleração, ……………...
+%Os testes experimentais foram divididos em etapas. Primeiramente foi verificado o funcionamento dos sistemas 
+%separadamente. Sendo assim, foi verificado se a estrutura mecânica estava bem montada. Posteriormente foi verificado 
+%o funcionamento dos componentes eletrônicos, em seguida foi desenvolvido um código fonte simplificado para verificar 
+%os movimentos dos eixos. Por fim, o código fonte desenvolvido foi carregado no Arduino para que testes de desempenho 
+%fossem realizados.
+%Assim, para testar o desempenho da mesa cartesiana desenvolvida, foram definidos testes ao posicionamento e a 
+%aceleração para validação do projeto. No teste ao posicionamento, a mesa percorre alguns pontos distintos e em 
+%seguida é verificado o deslocamento nos dois eixos com um paquímetro. Já no teste a aceleração, ……………...
 
-\subsection{Teste ao posicionamento}
+%\subsection{Teste ao posicionamento}
 
-Os motores de passo não possuem a capacidade de quantização de distâncias, dessa forma para garantir que a
-posição da mesa corresponde a posição pretendida se faz o uso do encoder.
-A origem é o único ponto da mesa conhecido pelo software, pois é possível através das chaves 
-fim de curso impedir a movimentação dos motores, essa lógica de chaves fim de curso é aproveitada 
-na inicialização do programa para a setagem da coordenada (0,0). Após a inicialização é possível que 
-alguns erros aconteçam como: algum erro no software ou falha no hardware ocorrendo uma descalibração da mesa.
-Assim, para validar a funcionalidade do software e hardware foi efetuado o seguinte teste:
+%Os motores de passo não possuem a capacidade de quantização de distâncias, dessa forma para garantir que a
+%posição da mesa corresponde a posição pretendida se faz o uso do encoder.
+%A origem é o único ponto da mesa conhecido pelo software, pois é possível através das chaves 
+%fim de curso impedir a movimentação dos motores, essa lógica de chaves fim de curso é aproveitada 
+%na inicialização do programa para a setagem da coordenada (0,0). Após a inicialização é possível que 
+%alguns erros aconteçam como: algum erro no software ou falha no hardware ocorrendo uma descalibração da mesa.
+%Assim, para validar a funcionalidade do software e hardware foi efetuado o seguinte teste:
 
-\begin{alineas}
-    \item Cinco coordenadas (x,y) foram estipuladas incluindo a coordenada mínima e máxima da mesa onde estavam 
-    presentes as chaves de início e fim de curso.
-    \item A medida que uma coordenada foi executada pela mesa, o deslocamento foi verificado pelo paquímetro.
-    \item Após o teste terminar, o regresso a coordenada (0,0) foi efetuado para repetição do processo.
-\end{alineas}
+%\begin{alineas}
+%    \item Cinco coordenadas (x,y) foram estipuladas incluindo a coordenada mínima e máxima da mesa onde estavam 
+%    presentes as chaves de início e fim de curso.
+%    \item A medida que uma coordenada foi executada pela mesa, o deslocamento foi verificado pelo paquímetro.
+%    \item Após o teste terminar, o regresso a coordenada (0,0) foi efetuado para repetição do processo.
+%\end{alineas}
 
 % Tabela z
 % Resultados das medições executadas
 % (Fonte: Próprio autor.)
 
-A tabela X mostra que não existe diferença mensurável entre a posição pretendida e a medida comprovando 
-a funcionalidade do sistema, bem como a precisão dos motores de passo.
+%A tabela X mostra que não existe diferença mensurável entre a posição pretendida e a medida comprovando 
+%a funcionalidade do sistema, bem como a precisão dos motores de passo.
 
-\subsection{Teste a aceleração}
-Os motores de passo funcionam através do envio de pulsos em um determinado intervalo de tempo, sendo assim 
-conforme o intervalo de tempo que é enviado esse pulso elétrico, a velocidade do motor é modificada. Então, 
-se conclui que:
+%\subsection{Teste a aceleração}
+%Os motores de passo funcionam através do envio de pulsos em um determinado intervalo de tempo, sendo assim 
+%conforme o intervalo de tempo que é enviado esse pulso elétrico, a velocidade do motor é modificada. Então, 
+%se conclui que:
 
-\begin{alineas}
-    \item Para um intervalo de tempo fixo, a velocidade do motor é constante.
-    \item Para um intervalo de tempo que diminui ao longo do tempo, a velocidade aumenta. (Aceleração). 
-    \item Para um intervalo de tempo que aumenta ao longo do tempo, a velocidade diminui. (Desaceleração).
-    \item Para realizar a variação no intervalo de tempo para o envio de pulsos elétricos, foi escolhida 
-    uma curva sigmóide que é desenhada em um gráfico de Período x Iterações
-\end{alineas}
-
-CONTINUAR EXPLICANDO
+%\begin{alineas}
+%    \item Para um intervalo de tempo fixo, a velocidade do motor é constante.
+%    \item Para um intervalo de tempo que diminui ao longo do tempo, a velocidade aumenta. (Aceleração). 
+%    \item Para um intervalo de tempo que aumenta ao longo do tempo, a velocidade diminui. (Desaceleração).
+%    \item Para realizar a variação no intervalo de tempo para o envio de pulsos elétricos, foi escolhida 
+%    uma curva sigmóide que é desenhada em um gráfico de Período x Iterações
+%\end{alineas}
