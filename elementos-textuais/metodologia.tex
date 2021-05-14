@@ -244,9 +244,10 @@ circuito eletrônico para motores que trabalham com tensão de 12~V DC e até 10
 
 % Tabela 1
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Parâmetros do driver de potência.}
-    \begin{tabular}{lc}
+    \begin{tabular}{ll}
         \hline
         \textbf{Parâmetro} & \textbf{Magnitude}\\
         \hline
@@ -261,7 +262,7 @@ circuito eletrônico para motores que trabalham com tensão de 12~V DC e até 10
     \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:pdriver}
 \end{table}
-    
+
 O driver foi utilizado para controlar motores de passo e pode operar com tensões entre 8~V e 35~V e 
 entregar até 35~V por bobina. A Figura \ref{fig:driverportas} mostra o driver com os respectivos componentes.
 
@@ -275,6 +276,7 @@ entregar até 35~V por bobina. A Figura \ref{fig:driverportas} mostra o driver c
     
 % Tabela 1
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Lista de terminais do driver A4988.}
     \begin{tabular}{lcl}
@@ -394,6 +396,7 @@ mostram a sequência de polaridades aplicadas no motor no movimento de sentido h
 
 % Tabela 2
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Sequência de passos com uma fase (wavestep) para movimentação no sentido horário.}
     \begin{tabular}{cccccc}
@@ -412,6 +415,7 @@ mostram a sequência de polaridades aplicadas no motor no movimento de sentido h
 
 % Tabela 3
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Sequência de passos com duas fases (fullstep) para movimentação no sentido horário.}
     \begin{tabular}{cccccc}
@@ -430,6 +434,7 @@ mostram a sequência de polaridades aplicadas no motor no movimento de sentido h
 
 % Tabela 4
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Sequência de passos com meio passo (halfstep) para movimentação no sentido horário.}
     \begin{tabular}{cccccc}
@@ -455,6 +460,7 @@ mostram a sequência de polaridades aplicadas no motor no movimento de sentido a
 
 % Tabela 5
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Sequência de passos com uma fase (wavestep) para movimentação no sentido anti-horário.}
     \begin{tabular}{cccccc}
@@ -473,6 +479,7 @@ mostram a sequência de polaridades aplicadas no motor no movimento de sentido a
 
 % Tabela 6
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Sequência de passos com duas fases (fullstep) para movimentação no sentido anti-horário.}
     \begin{tabular}{cccccc}
@@ -491,6 +498,7 @@ mostram a sequência de polaridades aplicadas no motor no movimento de sentido a
 
 % Tabela 7
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Sequência de passos com meio passo (halfstep) para movimentação no sentido anti-horário.}
     \begin{tabular}{cccccc}
@@ -515,9 +523,10 @@ A Tabela \ref{tab:pmotordepasso} apresenta alguns parâmetros dos motores de pas
 
 % Tabela 8
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Parâmetros dos motores de passo.}
-    \begin{tabular}{lc}
+    \begin{tabular}{ll}
         \hline
         \textbf{Parâmetros} & \textbf{Magnitude}\\
         \hline
@@ -542,9 +551,10 @@ A Tabela \ref{tab:demandafonte} apresenta a demanda de energia elétrica de cada
 
 % Tabela 9
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Demanda de energia elétrica de cada componente do sistema.}
-    \begin{tabular}{lcccc}
+    \begin{tabular}{lclll}
         \hline
         \textbf{Componente} & \textbf{Quantidade} & \textbf{Tensão} & \textbf{Consumo} & \textbf{Consumo Total}\\
         \hline
@@ -738,6 +748,7 @@ da classe “Sigmoidal”.
 
 % Tabela 10
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Declaração e funcionalidade dos atributos e métodos da classe Sigmoidal.}
     \begin{tabular}{lp{9cm}}
@@ -782,6 +793,7 @@ classe “Pino”.
 
 % Tabela 11
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Declaração e funcionalidade dos atributos e métodos da classe Pino.}
     \begin{tabular}{lp{9cm}}
@@ -813,6 +825,7 @@ classe “Driver”
 
 % Tabela 12
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Declaração e funcionalidade dos atributos e métodos da classe Driver.}
     \begin{tabular}{p{8cm}p{6cm}}
@@ -838,7 +851,7 @@ classe “Driver”
         - modoPasso: int & Pino do modo de passo do driver.\\
         - passosPorVolta: int & Quantidade de passos a cada volta do motor de passo.\\
         - vetorPasso: byte & Vetor de bytes de sequência dos passos.\\
-        -~setarEstadoModo~(pM0:bool,~pM1:bool, pM2:bool):~void & Definir o modo de passo do driver passando como parâmetro os estados dos pinos M0, M1, M2.\\
+        - setarEstadoModo(pM0:bool, pM1:bool, pM2:bool):~void & Definir o modo de passo do driver passando como parâmetros o estado dos pinos M0, M1 e M2.\\
         - setarEstados(b: byte):void & Definir estados dos pinos IN1, IN2, IN3, IN4 do motor de passo.\\
         - passo():void & Executar um passo do motor.\\
         + executarPasso(cont:int, linf:int, lsup:int):void & Executar um passo do motor com a lógica de sequência dos passos.\\
@@ -875,6 +888,7 @@ classe “Eixo”.
 
 % Tabela 13
 \begin{table}[H]
+    \footnotesize
     \centering
     \caption{Declaração e funcionalidade dos atributos e métodos da classe Eixo.}
     \begin{tabular}{lp{6cm}}

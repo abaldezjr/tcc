@@ -40,62 +40,36 @@ o código fonte da sua versão completa. Esta versão se encontra nos apêndices
 
 Segue abaixo o arquivo header (Pino.h) da classe “Pino”.
 
-\lstset{
-    caption         = {Pino.h}, 
+{\lstinputlisting[
     language        = C++,
     morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
-    style           = mystyle,
-}
-{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Pinoh.txt}
+    style           = mystyle
+]{elementos-pos-textuais/apendices/Pinoh.txt}
 
 %OBJETO DA CLASSE PINO
 Assim para se utilizar as funções presentes na classe “Pino” é criado um objeto 
 através do comando abaixo com seus devidos parâmetros de entrada.
 
-\lstset{
-    caption         = {Objeto da classe Pino.}, 
-    language        = C++,
-    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
-    style           = mystyle,
-}
-{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Pinoobj.txt}
+\lstinputlisting[style = mystyle]{elementos-pos-textuais/apendices/Pinoobj.txt}
 
 %HEADER DA CLASSE SIGMOIDAL
 \subsection{Código header da classe Sigmoidal}\label{subsec:ressigmoidal}
 
 Segue abaixo o arquivo header (Sigmoidal.h) da classe “Sigmoidal”.
 
-\lstset{
-    caption         = {Sigmoidal.h}, 
-    language        = C++,
-    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
-    style           = mystyle,
-}
-{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Sigmoidalh.txt}
+\lstinputlisting[style = mystyle]{elementos-pos-textuais/apendices/Sigmoidalh.txt}
 
 %OBJETO DA CLASSE SIGMOIDAL
 Assim para se utilizar as funções presentes na classe “Sigmoidal” é criado um objeto 
 através do comando abaixo com seus devidos parâmetros de entrada.
 
-\lstset{
-    caption         = {Objeto da classe Sigmoidal.}, 
-    language        = C++,
-    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
-    style           = mystyle,
-}
-{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Sigmoidalobj.txt}
+\lstinputlisting[style = mystyle]{elementos-pos-textuais/apendices/Sigmoidalobj.txt}
 
 %HEADER DA CLASSE DRIVER
 \subsection{Código header da classe Driver}\label{subsec:resdriver}
 Segue abaixo o arquivo header (Driver.h) da classe “Driver”.
 
-\lstset{
-    caption         = {Driver.h}, 
-    language        = C++,
-    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
-    style           = mystyle,
-}
-{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Driverh.txt}
+\lstinputlisting[style = mystyle]{elementos-pos-textuais/apendices/Driverh.txt}
 
 %OBJETO DA CLASSE DRIVER
 Para flexibilização na utilização de diferentes tipos de drivers, foi desenvolvido 
@@ -106,51 +80,27 @@ A primeira é passando como parâmetros o pino do passo e da direção como no c
 Essa construção é para drivers que se responsabilizam pelo controle do estado 
 das bobinas através do seu hardware.
 
-\lstset{
-    caption         = {Objeto da classe Driver.}, 
-    language        = C++,
-    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
-    style           = mystyle,
-}
-{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Driverobj.txt}
+\lstinputlisting[style = mystyle]{elementos-pos-textuais/apendices/Driverobj.txt}
 
 %OBJETO 2 CLASSE DRIVER
 Já a segunda é passando como parâmetros os pinos das bobinas como no código abaixo.
 Essa construção é para drivers que terceirizam para o software o controle
 do estado das bobinas.
 
-\lstset{
-    caption         = {Objeto da classe Driver.}, 
-    language        = C++,
-    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
-    style           = mystyle,
-}
-{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Driverobj2.txt}
+\lstinputlisting[style = mystyle]{elementos-pos-textuais/apendices/Driverobj2.txt}
 
 %HEADER DA CLASSE EIXO
 \subsection{Código header da classe Eixo}\label{subsec:reseixo}
 
 Segue abaixo o arquivo header (Eixo.h) da classe “Eixo”.
 
-\lstset{
-    caption         = {Eixo.h}, 
-    language        = C++,
-    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
-    style           = mystyle,
-}
-{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Eixoh.txt}
+\lstinputlisting[style = mystyle]{elementos-pos-textuais/apendices/Eixoh.txt}
 
 %OBJETO DA CLASSE EIXO
 Assim para se utilizar as funções presentes na classe “Eixo” é criado um objeto 
 através do comando abaixo com seus devidos parâmetros de entrada.
 
-\lstset{
-    caption         = {Objeto da classe Eixo.}, 
-    language        = C++,
-    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
-    style           = mystyle,
-}
-{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/Eixoobj.txt}
+\lstinputlisting[style = mystyle]{elementos-pos-textuais/apendices/Eixoobj.txt}
 
 %EXPLICANDO COMO A MESACARTESIANA.INO FUNCIONA
 \subsection{Detalhamento do arquivo principal (MesaCartesiana.ino)}\label{subsec:resmesa}
@@ -159,13 +109,7 @@ O arquivo principal tem a responsabilidade de gerenciar toda aplicação, neste 
 serão construídos todos objetos necessários. Segue abaixo um resumo com todas 
 funcionalidades que este possui.
 
-\lstset{
-    caption         = {MesaCartesiana.ino}, 
-    language        = C++,
-    morekeywords    = {Driver, Eixo, Pino, Sigmoidal},
-    style           = mystyle,
-}
-{\lstinputlisting[language=C++]{elementos-pos-textuais/apendices/MesaCartesianaino.txt}
+\lstinputlisting[style = mystyle]{elementos-pos-textuais/apendices/MesaCartesianaino.txt}
 
 O método “incializarEixos” é responsável por construir os objetos necessários para controle dos 
 eixos da aplicação, neste é possível escolher se o tipo de acionamento do driver 
