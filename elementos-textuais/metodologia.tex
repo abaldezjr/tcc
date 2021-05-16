@@ -5,7 +5,7 @@ desenvolvimento do sistema de software e integração dos sistemas.
 
 \section{Sistema mecânico}\label{sec:metmecanico}
 
-Nessa sessão será desenvolvido o projeto de sistema mecânico que se divide em estrutura e componentes. 
+Nessa seção será desenvolvido o projeto de sistema mecânico que se divide em estrutura e componentes. 
 Para compreensão facilitada do projeto, os cálculos de resistência e equilíbrio foram desconsiderados, 
 já que o equipamento é de pequena escala.
 
@@ -21,7 +21,7 @@ operação se torne prática a mesa deve ser leve e resistente.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale = 0.3]{figuras/p20x40p}
+\includegraphics[scale = 0.3]{figuras/p20x40p2}
 \caption{Perfil v\_slot  20x40~mm em alumínio.}
 \caption*{Fonte: www.forsetisolucoes.com.br}
 \label{fig:p20x40p}
@@ -146,6 +146,48 @@ fazê-lo funcionar, por outro lado apresenta uma grande precisão no seu movimen
 serão acoplados aos perfis da estrutura de modo a possibilitar o movimento dos fusos e consequentemente 
 o equipamento de medição, que estará preso a ele por meio de uma guia com roldana. 
 
+\subsection{Calculos}\label{subsec:metcalculos}
+
+Considerando apoios simples com carga central.
+
+Dados: $E_{Aco} = 190~GPa$, $D_{fuso} = 7~mm$, $D_{haste} = 8~mm$, $L = 400~mm$.
+
+Onde:
+\begin{itemize}
+    \item $E_{Aco}$ é Modulo de elasticidade do Aço;
+    \item $D_{fuso}$ é o diametro do fuso;
+    \item $D_{haste}$ é o diametro da haste;
+    \item $L$ é o comprimento da haste.
+\end{itemize}
+
+A equação \ref{eq:momentodeinercia} calcula o momento de inercia.
+\begin{equation}\label{eq:momentodeinercia}
+    I = \frac{\pi \cdot d^{4}}{64}
+\end{equation}
+
+Utilizando a equação \ref{eq:momentodeinercia} se obtem o momento de inercia do fuso e da haste.
+
+$$I_{f} = \frac{\pi \cdot (7~mm)^{4}}{64} = 177,85~mm^{4}$$ 
+
+$$I_{h} = \frac{\pi \cdot (8~mm)^{4}}{64} = 201,06~mm^{4}$$   
+
+A equação \ref{eq:deflexao} calcula a deflexão.
+\begin{equation}\label{eq:deflexao}
+    Y_{max} = \frac{F \cdot L^{3}}{48 \cdot E \cdot I}
+\end{equation}
+
+Utilizando a equação \ref{eq:deflexao} se obtem a força considerando $Y_{max} = 0,001~mm$ e somente $I_{f}$:
+
+$$F = \frac{0,001~mm \cdot 48 \cdot 190 \cdot 10^{3}~\frac{N}{mm^{2}} \cdot 117,85~mm^{4}}{(450~mm)^{3}} = 0,0117955815~N$$
+
+Utilizando a equação \ref{eq:deflexao} se obtem a força considerando $Y_{max} = 0,001~mm$ e  $I_{f} + I_{h}$:
+
+$$F = \frac{0,001~mm \cdot 48 \cdot 190 \cdot 10^{3}~\frac{N}{mm^{2}} \cdot (117,85~mm + 201,06~mm)^{4}}{(450~mm)^{3}} = 0,03191832279~N$$
+
+Utilizando a equação \ref{eq:deflexao} se obtem a força considerando $Y_{max} = 0,001~mm$ e  $I_{f} + I_{h}$:
+
+$$F = \frac{0,5~mm \cdot 48 \cdot 190 \cdot 10^{3}~\frac{N}{mm^{2}} \cdot (117,85~mm + 201,06~mm)^{4}}{(450~mm)^{3}} = 15,9591614~N$$
+        
 \section{Sistema eletrônico}\label{sec:metsisele}
 
 O sistema eletrônico de uma mesa cartesiana foi dividido em módulos para um melhor detalhamento: 
@@ -283,8 +325,8 @@ entregar até 35~V por bobina. A Figura \ref{fig:driverportas} mostra o driver c
         \hline
         \textbf{Nome} & \textbf{Número} & \textbf{Descrição}\\
         \hline
-         CP1 & 4 & Terminal do capacitor da bomba de carga\\
-         CP2 & 5 & Terminal do capacitor da bomba de carga\\
+         CP1 & 4 & Terminal do capacitor do pulso de carga\\
+         CP2 & 5 & Terminal do capacitor do pulso de carga\\
          VCP & 6 & Terminal do capacitor do reservatório\\
          VREG & 8 & Terminal de desacoplamento regulador\\
          MS1 & 9 & Entrada lógica\\
@@ -308,7 +350,7 @@ entregar até 35~V por bobina. A Figura \ref{fig:driverportas} mostra o driver c
          OUT2B & 1 & DMOS ponte completa 2 saída B\\
          ENABLE & 2 & Entrada lógica\\
          NC & 7, 20, 25 & Sem conexão\\
-         PAD & - & Almofada exposta para dissipação térmica aprimorada\\
+         PAD & - & Pasta térmica para dissipação aprimorada\\
         \hline       
     \end{tabular}
     \caption*{Fonte: www.alldatasheet.com.}
