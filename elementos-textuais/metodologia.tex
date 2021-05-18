@@ -141,9 +141,6 @@ de 8~mm de diâmetro e 2~mm de passo com um avanço de 8~mm. A elevação do sis
 executada por dois fusos paralelos. Para o deslocamento horizontal será utilizado um fuso TR8~x~8~mm 
 acoplado a um motor de passo junto com uma haste guia para dar sustentação e evitar que o sistema 
 de medição gire em torno do eixo.
-%Será utilizado uma guia para o deslocamento horizontal, 
-%para o deslocamento vertical será utilizado um fuso acoplado ao motor é uma guia no lado oposto, 
-%apenas para dar suporte ao elemento que fixará o fuso horizontal.
 
 \subsection{Acionador}\label{subsec:metacionador}
 
@@ -159,14 +156,19 @@ o equipamento de medição, que estará preso a ele por meio de uma guia com rol
 
 \subsection{Calculos}\label{subsec:metcalculos}
 
+As forças envolvidas para erguer a carga e fazer o deslocamento do tubo de Pitot na horizontal 
+são baixas, não havendo necessidade de se fazer um cálculo estrutural, porém por se tratar de 
+um projeto mecânico, é inevitável de que se tenha a garantia de que a estrutura resista ao 
+esforços mecânicos. Para tanto será feito um cálculo para obter valores máximos de esforços 
+e compará-los com os valores admissíveis.
+
 Considerando apoios simples com carga central.
 
-Dados: $E_{Aco} = 190~GPa$, $D_{fuso} = 7~mm$, $D_{haste} = 8~mm$, $L = 400~mm$.
+Dados: $E_{Aco} = 190~GPa$, $D_{haste} = 16~mm$, $L = 400~mm$.
 
 Onde:
 \begin{itemize}
     \item $E_{Aco}$ é Modulo de elasticidade do Aço;
-    \item $D_{fuso}$ é o diametro do fuso;
     \item $D_{haste}$ é o diametro da haste;
     \item $L$ é o comprimento da haste.
 \end{itemize}
@@ -178,26 +180,24 @@ A equação \ref{eq:momentodeinercia} calcula o momento de inercia.
 
 Utilizando a equação \ref{eq:momentodeinercia} se obtem o momento de inercia do fuso e da haste.
 
-$$I_{f} = \frac{\pi \cdot (7~mm)^{4}}{64} = 177,85~mm^{4}$$ 
+$$I_{f} = \frac{\pi \cdot (7~mm)^{4}}{64} = 117,8588119~mm^{4}$$ 
 
-$$I_{h} = \frac{\pi \cdot (8~mm)^{4}}{64} = 201,06~mm^{4}$$   
+$$I_{h} = \frac{\pi \cdot (8~mm)^{4}}{64} = 3216,990877~mm^{4}$$   
 
 A equação \ref{eq:deflexao} calcula a deflexão.
 \begin{equation}\label{eq:deflexao}
     Y_{max} = \frac{F \cdot L^{3}}{48 \cdot E \cdot I}
 \end{equation}
 
-Utilizando a equação \ref{eq:deflexao} se obtem a força considerando $Y_{max} = 0,001~mm$ e somente $I_{f}$:
+%Utilizando a equação \ref{eq:deflexao} se obtem a força considerando $Y_{max} = 0,001~mm$ e somente $I_{f}$:
+%$$F = \frac{0,001~mm \cdot 48 \cdot 190 \cdot 10^{3}~\frac{N}{mm^{2}} \cdot 117,85~mm^{4}}{(450~mm)^{3}} = 0,0117955815~N$$
 
-$$F = \frac{0,001~mm \cdot 48 \cdot 190 \cdot 10^{3}~\frac{N}{mm^{2}} \cdot 117,85~mm^{4}}{(450~mm)^{3}} = 0,0117955815~N$$
+Utilizando a equação \ref{eq:deflexao} se obtem a força considerando $Y_{max} = 0,05~mm$ e $I_{h}$:
 
-Utilizando a equação \ref{eq:deflexao} se obtem a força considerando $Y_{max} = 0,001~mm$ e  $I_{f} + I_{h}$:
+$$F = \frac{0,05~mm \cdot 48 \cdot 190 \cdot 10^{3}~\frac{N}{mm^{2}} \cdot 3216,990877~mm^{4}}{(400~mm)^{3}} = 22,92106~N$$
 
-$$F = \frac{0,001~mm \cdot 48 \cdot 190 \cdot 10^{3}~\frac{N}{mm^{2}} \cdot (117,85~mm + 201,06~mm)^{4}}{(450~mm)^{3}} = 0,03191832279~N$$
-
-Utilizando a equação \ref{eq:deflexao} se obtem a força considerando $Y_{max} = 0,001~mm$ e  $I_{f} + I_{h}$:
-
-$$F = \frac{0,5~mm \cdot 48 \cdot 190 \cdot 10^{3}~\frac{N}{mm^{2}} \cdot (117,85~mm + 201,06~mm)^{4}}{(450~mm)^{3}} = 15,9591614~N$$
+%Utilizando a equação \ref{eq:deflexao} se obtem a força considerando $Y_{max} = 0,001~mm$ e  $I_{f} + I_{h}$:
+%$$F = \frac{0,5~mm \cdot 48 \cdot 190 \cdot 10^{3}~\frac{N}{mm^{2}} \cdot (117,85~mm + 201,06~mm)^{4}}{(450~mm)^{3}} = 15,9591614~N$$
         
 \section{Sistema eletrônico}\label{sec:metsisele}
 
