@@ -3,14 +3,14 @@
 
 Para apresentação dos resultados encontrados ao longo da implantação da mesa cartesiana no 
 laboratório de sistemas térmicos e uma posterior discussão, os temas foram divididos de acordo 
-com a metodologia (seção 3). Ou seja, primeiramente é apresentado os resultados do sistema mecânico, 
+com a metodologia (seção \ref{ch:metodologia}). Ou seja, primeiramente é apresentado os resultados do sistema mecânico, 
 em seguida é mostrado os resultados da programação do sistema de software.
 
 \section{Sistema mecânico}\label{sec:resmecanico}
 
 %PRECISA DE REFERENCIA PARA TABELA DA LISTA DE MATERIAIS
 Para o desenvolvimento da mesa cartesiana foi necessário adquirir componentes estruturais e 
-mecânicos de fornecedores, listado conforme a LISTA DE MATERIAIS, porém algumas peças terão 
+mecânicos de fornecedores, listado conforme a Tabela \ref{tab:listamateriais}, porém algumas peças terão 
 que ser impressas, com filamento de \ac{PLA}, conhecido 
 como \ac{PLA}, em impressora 3D. Essas peças serão discriminadas a seguir. 
 
@@ -199,6 +199,36 @@ A seguir está a lista de materiais utilizados para montagem da mesa cartesiana.
     \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:listamateriais}
 \end{table}
+
+\subsection{Discussão sobre os cálculos}
+
+Será discutido os resultados dos cálculos situados na seção \ref{subsec:metcalculos}, 
+
+De forma geral, os cálculos referentes as peças foram realizados de forma conservadora 
+com o objetivo de serem dimensionados para a situação de maior carregamento.
+
+Para a haste, foi estipulado uma deflexão máxima de $0,05~mm$ resultando em uma força de $22,92106~N$ 
+que equivale aproximadamente $2,3~kg$. Então, se comparar essa força ao peso da haste, que é de $619~g$ mais 
+o peso do tubo de Pitot, que é de aproximadamente $80~g$ e o peso suporte de serviço, que é de aproximadamente 
+$300~g$, se obtém aproximadamente $1~kg$. Sendo assim, a haste tem um fator de segurança de 2,3. 
+
+\begin{itemize}
+    \item massa específica ($\rho$) da haste é de $7,7~Mg/m^{3}$;
+    \item volume da haste que tem como área, $2,010 \cdot 10^{-4}~m^{2}$ e comprimento de $0,4~m$, é de $8,04 \cdot 10^{-5}~m^{3}$;
+    \item peso da haste de $619~g$. 
+\end{itemize}
+
+Para a parte do fuso calculou-se a força máxima que ele suportaria erguer, que é de 306,55~N ou 31,2~kg. 
+Através dos cálculos realizados na seção \ref{subsec:metcalculos}. Encontrou-se o valor da tensão máxima 
+que o fuso suporta, este valor é de 18,33~MPa.
+
+Como o fabricante do fuso não especifica o aço utilizado na fabricação, foi considerado um aço inox~303, 
+que é um dos aços com menor tensão de escoamento para validar o projeto. Considerando a tensão admissível 
+do aço inox~303 que é de 241~MPa com a máxima tensão suportada pelo fuso, na região da raiz do filete, 
+que é de 18~MPa, encontrou-se um fator de segurança igual a 13. 
+
+Através destes resultado, foi concluido que o peso do sistema junto aos equipamentos de medição estão bem 
+abaixo dos valores máximos de forças e tensões suportados pelo sistema de transmissão.
 
 \section{Sistema eletrônico}\label{sec:ressisele}
 
