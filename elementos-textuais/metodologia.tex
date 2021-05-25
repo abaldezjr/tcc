@@ -162,12 +162,11 @@ um projeto mecânico, é inevitável que se tenha a garantia de que a estrutura 
 esforços mecânicos. Para tanto serão feitos cálculos para obter valores máximos de esforços 
 e compará-los com os valores admissíveis.
 
-Os cálculos a seguir serão fundamentados nos livros Juvinall 5° edição e Shigley 8ª edição.
-
+Os cálculos a seguir serão fundamentados nos livros \citeauthor{juvinall2020fundamentals} (\citeyear{juvinall2020fundamentals}) e \citeauthor{budynas2016elementos} (\citeyear{budynas2016elementos}).
 \subsubsection{Cálculo da máxima deflexão}
 
 Dados: 
-$E_{Aco}~=~190~GPa$ de acordo com o apêndice C1 do Juvinall 5° edição,\\
+$E_{Aco}~=~190~GPa$ de acordo com o \citeauthor{juvinall2020fundamentals} (\citeyear{juvinall2020fundamentals}),\\
 $d_{haste}~=~16~mm$, $L~=~400~mm$.
 
 Onde:
@@ -183,7 +182,7 @@ Considerações:
     \item Deflexão máxima = 0,05~mm;
 \end{itemize}
 
-A equação \ref{eq:momentodeinercia} calcula o momento de inércia segundo o apêndice B1a do Juvinall 5° edição.
+A equação \ref{eq:momentodeinercia} calcula o momento de inércia segundo o \citeauthor{juvinall2020fundamentals} (\citeyear{juvinall2020fundamentals}).
 \begin{equation}\label{eq:momentodeinercia}
     I = \frac{\pi \cdot d^{4}}{64}
 \end{equation}
@@ -192,7 +191,7 @@ Utilizando a equação \ref{eq:momentodeinercia} se obtém o momento de inércia
 
 $$I_{h} = \frac{\pi \cdot (8~mm)^{4}}{64} = 3216,990877~mm^{4}$$   
 
-A equação \ref{eq:deflexao} calcula a deflexão segundo tabela A9 do Shigley 8ª edição.
+A equação \ref{eq:deflexao} calcula a deflexão segundo o \citeauthor{budynas2016elementos} (\citeyear{budynas2016elementos}).
 \begin{equation}\label{eq:deflexao}
     Y_{max} = \frac{F \cdot L^{3}}{48 \cdot E \cdot I}
 \end{equation}
@@ -210,11 +209,11 @@ Onde:
 \begin{itemize}
     \item $d_{m}$ é o diâmetro médio;
     \item $P$ é o passo;
-    \item $L$ é o avanço que é igual ao número de entradas do passo;
+    \item $L_{a}$ é o avanço que é igual ao número de entradas do passo;
     \item $T$ é o torque do motor (Datasheet);
 \end{itemize}
 
-A equação \ref{eq:dmedio} calcula o diâmetro médio segundo a tabela xx do Shigley 8ª edição.
+A equação \ref{eq:dmedio} calcula o diâmetro médio segundo o \citeauthor{budynas2016elementos} (\citeyear{budynas2016elementos}).
 \begin{equation}\label{eq:dmedio}
     d_{m} = d - \frac{P}{2}
 \end{equation}
@@ -225,17 +224,17 @@ $$d_{m} = 8~mm - \frac{2}{2}~mm = 8~mm - 1~mm = 7~mm$$
 
 A equação \ref{eq:avanco} calcula o avanço.
 \begin{equation}\label{eq:avanco}
-    L = Numero de entradas \cdot passo = 8~mm
+    L_{a} = Numero de entradas \cdot passo = 8~mm
 \end{equation}
 
 Utilizando a equação \ref{eq:avanco} se obtém o avanço considerando o número de entrada igual a 4 e o passo igual $2~mm$:
-$$L = 4 \cdot 2 = 8~mm$$ 
+$$L_{a} = 4 \cdot 2 = 8~mm$$ 
 
-Considerando o torque do motor conforme o datasheet.
-$$T = 5~kgf \cdot cm = 490,33 N \cdot mm$$
+Considerando o torque do motor conforme o \textit{datasheet}.
+$$T = 5~kgf \cdot cm = 490,33~N \cdot mm$$
 
 \begin{equation}\label{eq:torque}
-T = \frac{F \cdot d_{m}}{2} \cdot (\frac{L + \pi \cdot f \cdot d_{m}}{\pi \cdot d_{m} - f \cdot L}) + \frac{F \cdot f_{c} \cdot d_{c}}{2}
+T = \frac{F \cdot d_{m}}{2} \cdot (\frac{L_{a} + \pi \cdot f \cdot d_{m}}{\pi \cdot d_{m} - f \cdot L_{a}}) + \frac{F \cdot f_{c} \cdot d_{c}}{2}
 \end{equation}
 
 Admitindo um coeficiente de fricção e coeficiente de fricção no colar igual a 0,08.
@@ -333,7 +332,7 @@ Tensão Máxima:
 \sigma_{1-3} = \frac{\sigma_{1} - \sigma{3}}{2}
 \end{equation}
 
-$$\sigma_{1-3} = \frac{18,5 - -18,26}{2} = 18,33~MPa$$
+$$\sigma_{1-3} = \frac{18,5 - (-18,26)}{2} = 18,33~MPa$$
 
 \section{Sistema eletrônico}\label{sec:metsisele}
 
@@ -1111,7 +1110,7 @@ passo ou se já chegou ao fim do curso, “rotacionarPassos”, que rotaciona o 
 entrada uma direção e uma quantidade de passos a serem executadas e “rotacionarPara”, que rotaciona o 
 eixo tendo como parâmetros de entrada uma coordenada cartesiana.
 
-Além das classes utilizadas, o software possui a sketch principal que é responsável pela configuração das 
+Além das classes utilizadas, o software possui a \textit{sketch} principal que é responsável pela configuração das 
 informações iniciais, criação dos objetos na memória, configuração dos atributos de cada objeto, execução 
 da leitura pela porta serial, tratamento de dados recebidos e a movimentação dos motores.
 A Figura \ref{fig:orgsoftware} apresenta um diagrama geral da organização do software.
