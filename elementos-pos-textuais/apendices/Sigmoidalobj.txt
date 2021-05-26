@@ -1,2 +1,2 @@
-Sigmoidal sigmoidalX;
+Sigmoidal *sigmoidalX;
 sigmoidalX = new Sigmoidal(SIG_PERIODO_MAXIMO_X, SIG_PERIODO_MINIMO_X, SIG_DECLIVIDADE_X);

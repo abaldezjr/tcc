@@ -5,7 +5,7 @@ desenvolvimento do sistema de software e integração dos sistemas.
 
 \section{Sistema mecânico}\label{sec:metmecanico}
 
-Nessa seção será desenvolvido o projeto de sistema mecânico que se divide em estrutura e componentes. 
+Nesta seção será desenvolvido o projeto do sistema mecânico que se divide em estrutura e componentes. 
 Para compreensão facilitada do projeto, os cálculos de resistência e equilíbrio foram desconsiderados, 
 já que o equipamento é de pequena escala.
 
@@ -26,8 +26,8 @@ o componente que terá a função de dar estabilidade a mesa e evitar que esta v
 formato retangular de 500~x~400~mm e será feito com um perfil V-Slot de 20~x~40~mm em alumínio, conforme 
 apresentado na Figura \ref{fig:p20x40p}. 
 Para fazer a união dos perfis, que serão cortados em tamanho adequado com cantos esquadrejados em 
-ângulo de 45 graus, para dar um melhor acabamento à peça, será utilizada uma placa de conexão 
-interna de 90 graus, conforme Figura \ref{fig:pconexao90p}, que unirá os cantos dos perfis por 
+ângulo de 45°, para dar um melhor acabamento à peça, será utilizada uma placa de conexão 
+interna de 90°, conforme a Figura \ref{fig:pconexao90p}, que unirá os cantos dos perfis por 
 meio de parafusos Allen sem cabeça com rosca M5.
     
 \begin{figure}[H]
@@ -65,7 +65,7 @@ meio de parafusos Allen sem cabeça com rosca M5.
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 1]{figuras/estruturamesa}
-\caption{Estrutura da mesa cartesiana.}
+\caption{Esboço da mesa cartesiana.}
 \caption*{Fonte: Próprio autor}
 \label{fig:estruturamesa}
 \end{figure}
@@ -81,10 +81,10 @@ meio de parafusos Allen sem cabeça com rosca M5.
 O pórtico será feito com o perfil V-Slot de 20~x~20~mm em alumínio conforme apresenta 
 a Figura \ref{fig:p20x20p}, e terá as dimensões de 500~x~480~mm. Sua função é sustentar 
 e estabilizar o sistema de transmissão. Para fixação do pórtico à base será utilizada 
-uma placa T simples de aço,fixada com parafusos Allen cabeça abaulada com rosca M6~x~10~mm 
+uma placa T simples de aço, fixada com parafusos Allen cabeça abaulada com rosca M6~x~10~mm 
 e porca T reforçada com rosca M6. Na montagem da parte superior do pórtico a união 
 se dará por meio de parafusos com rosca M6~x~16~mm diretamente nos perfis, para tanto, 
-terá que ser feita uma rosca M6 nos furos dos perfis verticais V-Slot 20x40 para 
+terá que ser feita uma rosca M6 nos furos dos perfis verticais V-Slot 20~x~40~mm para 
 fixação dos parafusos e furos de 5~mm no perfil horizontal do pórtico para que se 
 possa acessar e realizar o aperto desses parafusos com chave Allen de 4~mm realizando 
 assim uma união resistente entre os perfis.
@@ -135,7 +135,7 @@ o movimento giratório do motor de passo em deslocamento linear na estrutura da 
 Acoplados aos motores de passo, por meio de acopladores de eixo e na outra extremidade por mancal para fuso 
 de 8~mm, os fusos farão o transporte dos carros horizontal e vertical. 
 
-Para que se tenha um deslocamento mais rápido das castanhas, elemento que estarão em contato 
+Para que se tenha um deslocamento mais rápido das castanhas, elemento que estará em contato 
 direto com o fuso e o carro, foi selecionado o fuso TR8~x~8~mm com 4 entradas que é um fuso trapezoidal 
 de 8~mm de diâmetro e 2~mm de passo com um avanço de 8~mm. A elevação do sistema de medição será 
 executada por dois fusos paralelos. Para o deslocamento horizontal será utilizado um fuso TR8~x~8~mm 
@@ -158,12 +158,16 @@ o equipamento de medição, que estará preso a ele por meio de uma guia com rol
 
 As forças envolvidas para erguer a carga e fazer o deslocamento do tubo de Pitot na direção horizontal 
 são baixas, não havendo necessidade de se fazer um cálculo estrutural, porém por se tratar de 
-um projeto mecânico, é inevitável que se tenha a garantia de que a estrutura resista ao 
+um projeto mecânico, é inevitável que se tenha a garantia de que a estrutura resista aos 
 esforços mecânicos. Para tanto serão feitos cálculos para obter valores máximos de esforços 
 e compará-los com os valores admissíveis.
 
 Os cálculos a seguir serão fundamentados nos livros \citeauthor{juvinall2020fundamentals} (\citeyear{juvinall2020fundamentals}) e \citeauthor{budynas2016elementos} (\citeyear{budynas2016elementos}).
+
 \subsubsection{Cálculo da máxima deflexão}
+
+Para os cálculos, foi considerado o Aço inoxidável 303, por segurança, pois o fabricante da haste e do fuso 
+não especifíca o material.
 
 Dados: 
 $E_{Aco}~=~190~GPa$ de acordo com o \citeauthor{juvinall2020fundamentals} (\citeyear{juvinall2020fundamentals}),\\
@@ -173,13 +177,13 @@ Onde:
 \begin{itemize}
     \item $E_{Aco}$ é o Módulo de elasticidade do Aço;
     \item $d_{haste}$ é o diâmetro da haste;
-    \item $L$ é o comprimento da haste;
+    \item $L$ é o comprimento da haste.
 \end{itemize}
 
 Considerações:
 \begin{itemize}
     \item Considerando apoios simples com carga central;
-    \item Deflexão máxima = 0,05~mm;
+    \item Deflexão máxima = 0,05~mm.
 \end{itemize}
 
 A equação \ref{eq:momentodeinercia} calcula o momento de inércia segundo o \citeauthor{juvinall2020fundamentals} (\citeyear{juvinall2020fundamentals}).
@@ -190,6 +194,16 @@ A equação \ref{eq:momentodeinercia} calcula o momento de inércia segundo o \c
 Utilizando a equação \ref{eq:momentodeinercia} se obtém o momento de inércia da haste.
 
 $$I_{h} = \frac{\pi \cdot (8~mm)^{4}}{64} = 3216,990877~mm^{4}$$   
+
+A Figura \ref{fig:diagramacorpolivre} mostra o diagrama de corpo livre da haste.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.4]{figuras/diagramcorpolivre}
+\caption{Diagrama de corpo livre da haste.}
+\caption*{Fonte: Próprio autor}
+\label{fig:diagramacorpolivre}
+\end{figure}
 
 A equação \ref{eq:deflexao} calcula a deflexão segundo o \citeauthor{budynas2016elementos} (\citeyear{budynas2016elementos}).
 \begin{equation}\label{eq:deflexao}
@@ -202,6 +216,18 @@ para isso foi utilizado o momento de inércia da haste.
 $$F = \frac{0,05~mm \cdot 48 \cdot 190 \cdot 10^{3}~\frac{N}{mm^{2}} \cdot 3216,990877~mm^{4}}{(400~mm)^{3}} = 22,92106~N$$
 
 \subsubsection{Cálculo da força máxima suportada pelo fuso}
+
+A Figura \ref{fig:esqforcafuso} mostra esquematicamente a força agindo sobre a castanha e consequentemente 
+sobre os dentes do fuso.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.25]{figuras/esqforcafuso}
+\caption{Força agindo sobre o fuso.}
+\caption*{Fonte: Próprio autor}
+\label{fig:esqforcafuso}
+\end{figure}
+    
 Dados:
 $d_{m} = 8~mm$, $P = 2~mm$
 
@@ -209,8 +235,8 @@ Onde:
 \begin{itemize}
     \item $d_{m}$ é o diâmetro médio;
     \item $P$ é o passo;
-    \item $L_{a}$ é o avanço que é igual ao número de entradas do passo;
-    \item $T$ é o torque do motor (Datasheet);
+    \item $L_{a}$ é o avanço que é igual ao número de entradas vezes o passo;
+    \item $T$ é o torque do motor (Datasheet).
 \end{itemize}
 
 A equação \ref{eq:dmedio} calcula o diâmetro médio segundo o \citeauthor{budynas2016elementos} (\citeyear{budynas2016elementos}).
@@ -224,8 +250,15 @@ $$d_{m} = 8~mm - \frac{2}{2}~mm = 8~mm - 1~mm = 7~mm$$
 
 A equação \ref{eq:avanco} calcula o avanço.
 \begin{equation}\label{eq:avanco}
-    L_{a} = Numero de entradas \cdot passo = 8~mm
+    L_{a} = n_{e} \cdot P = 8~mm
 \end{equation}
+
+Onde:
+\begin{itemize}
+    \item $L_{a}$ é o avanço;
+    \item $n_{e}$ é o número de entradas;
+    \item $P$ é o passo.
+\end{itemize}
 
 Utilizando a equação \ref{eq:avanco} se obtém o avanço considerando o número de entrada igual a 4 e o passo igual $2~mm$:
 $$L_{a} = 4 \cdot 2 = 8~mm$$ 
@@ -244,7 +277,7 @@ Onde:
 \begin{itemize}
     \item $f$ é o coeficiente de fricção;
     \item $f_{c}$ é o coeficiente de fricção no colar;
-    \item $d_{c}$ é o diametro do colar;
+    \item $d_{c}$ é o diametro do colar.
 \end{itemize}
 
 Considerando o $d_{c}$ = 0
@@ -254,6 +287,17 @@ $$490,33~N \cdot mm = \frac{F \cdot 7~mm}{2} \cdot (\frac{8~mm + \pi \cdot 0,08 
 $F = 306,55~N$
 
 \subsubsection{Tensões de corpo}
+
+A Figura \ref{fig:forcadente} mostra a força causando a flexão e o cisalhamento transversal na raiz da rosca.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.2]{figuras/forcadente}
+\caption{Força agindo sobre o dente.}
+\caption*{Fonte: Próprio autor}
+\label{fig:forcadente}
+\end{figure}
+
 Torcionais:
 
 Tensão de cisalhamento devido ao momento de torção no lado externo do corpo do fuso.
@@ -263,7 +307,7 @@ Tensão de cisalhamento devido ao momento de torção no lado externo do corpo d
 \end{equation}
 
 Onde:
-
+$d_{r}$ é o diâmetro menor.
 $$d_{r} = d - P = 8~mm - 2~mm = 6~mm$$
 
 $$\tau = \frac{16 \cdot 490,33~N \cdot mm}{\pi \cdot (6~mm)^{3}} = 11,56~MPa$$
@@ -393,9 +437,9 @@ A placa Arduino é programada via \ac{IDE}, utilizando uma linguagem baseada em 
 \item \textbf{Botão reset:} o botão reset serve para reiniciar a placa arduino.
 \item \textbf{Conector \ac{USB} tipo B:} o conector \ac{USB} tipo B serve para conectar a placa Arduino ao computador.
 \item \textbf{Conector DC:} o conector DC serve para alimentação externa do Arduino.
-\item \textbf{Portas digitais:} são às portas que trabalham com os sinais digitais que são sinais com valores discretos, no arduino temos às constantes LOW que significa 0 V e também HIGH que significa 5 V, no código são 0 e 1 respectivamente. Dentro das portas digitais temos às portas \ac{PWM} que são portas que modulam o sinal pela largura do pulso, no arduino podemos variar de 0 a 255. Resumidamente, a placa Arduino possui quatorze portas digitais, sendo que seis delas são portas \ac{PWM} como dito anteriormente, os pinos delas são 3, 5, 6, 9, 10 e 11.
-\item \textbf{Portas analógicas:} são às portas que trabalham com os sinais analógicos que são sinais com valores contínuos, no arduino podemos variar de 0 a 1023.
-\item \textbf{Portas de alimentação:} são às portas de saída de tensão do arduino, temos três portas: porta 3,3~V cuja saída trabalha em 3,3~V, porta 5~V cuja saída trabalha em 5~V e a porta Vin cuja saída trabalha com a tensão de entrada do arduino.
+\item \textbf{Portas digitais:} são as portas que trabalham com os sinais digitais que são sinais com valores discretos, no arduino temos às constantes LOW que significa 0 V e também HIGH que significa 5 V, no código são 0 e 1 respectivamente. Dentro das portas digitais temos às portas \ac{PWM} que são portas que modulam o sinal pela largura do pulso, no arduino podemos variar de 0 a 255. Resumidamente, a placa Arduino possui quatorze portas digitais, sendo que seis delas são portas \ac{PWM} como dito anteriormente, os pinos delas são 3, 5, 6, 9, 10 e 11.
+\item \textbf{Portas analógicas:} são as portas que trabalham com os sinais analógicos que são sinais com valores contínuos, no arduino podemos variar de 0 a 1023.
+\item \textbf{Portas de alimentação:} são as portas de saída de tensão do arduino, temos três portas: porta 3,3~V cuja saída trabalha em 3,3~V, porta 5~V cuja saída trabalha em 5~V e a porta Vin cuja saída trabalha com a tensão de entrada do arduino.
 \item \textbf{Led porta 13:} led conectado a porta 13 do arduino.
 \item \textbf{Leds das portas RX TX:} leds conectados às portas RX TX, sendo que o led TX serve para indicar a transmissão de dados e o RX para indicar a recepção de dados.
 \item \textbf{Processador ATMEGA328:} o processador é responsável pelo processamento da lógica de programação.
@@ -1143,5 +1187,5 @@ A Figura \ref{fig:integracao} é um fluxograma que descreve de maneira gráfica 
 O sistema de software se comunica com o sistema eletrônico através do envio de dados pela comunicação 
 Serial presente no Arduino IDE para o software presente no microcontrolador ATMEGA da placa Arduino. 
 Por sua vez, o microcontrolador envia um comando elétrico ao sistema eletrônico que acionará os motores 
-de passo que convertem a energia elétrica em mecânica transmitindo o movimento dos fusos da estrutura do 
+de passo que convertem a energia elétrica em mecânica transmitindo o movimento dos fusos a estrutura do 
 sistema mecânico.
