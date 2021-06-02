@@ -6,13 +6,11 @@ desenvolvimento do sistema de software e integração dos sistemas.
 \section{Sistema mecânico}\label{sec:metmecanico}
 
 Nesta seção será desenvolvido o projeto do sistema mecânico que se divide em estrutura e componentes. 
-Para compreensão facilitada do projeto, os cálculos de resistência e equilíbrio foram desconsiderados, 
-já que o equipamento é de pequena escala.
 
 \subsection{Estrutura}\label{subsec:metestrutura}
 
-A estrutura ou mesa cartesiana, como é chamada neste trabalho, compõem o sistema mecânico junto com seus 
-componentes, é a parte responsável por manter a união das peças que ela a compõem e também servir de base 
+A estrutura da mesa cartesiana, como é chamada neste trabalho, compõem o sistema mecânico junto com seus 
+componentes, sendo a parte responsável por manter a união das peças que ela a compõe e por servir de base 
 para o posicionamento dentro da área de testes do túnel de vento. Como o túnel de vento do Laboratório de 
 Sistemas Térmicos da Universidade Federal do Rio Grande é utilizado para atividades de pesquisa em energia 
 renovável e fenômenos de transporte, optou-se por projetar uma estrutura móvel, que pode ser colocada e 
@@ -21,106 +19,96 @@ operação se torne prática a mesa deve ser leve e resistente.
 
 Por ser um metal leve, durável e resistente, o alumínio se torna uma boa opção para a confecção desta 
 estrutura. Com uma alta relação resistência/peso, confere um excepcional desempenho, além de dar um ótimo 
-acabamento à peça. A estrutura de metal será dividida em duas partes, a base e o pórtico. A base será 
-o componente que terá a função de dar estabilidade a mesa e evitar que esta venha a tombar, terá um 
-formato retangular de 500~x~400~mm e será feito com um perfil V-Slot de 20~x~40~mm em alumínio, conforme 
-apresentado na Figura \ref{fig:p20x40p}. 
+acabamento à peça. A estrutura de metal é dividida em duas partes: base e pórtico. A base é 
+o componente que tem a função de dar estabilidade à mesa, evitando que a mesma venha a tombar. A base possui um 
+formato retangular de 500~x~400~mm e é feito com um perfil V-Slot de 20~x~40~mm em alumínio, conforme 
+apresentado na Figura \ref{fig:p20x40p}, com suas dimensões na Figura \ref{fig:p20x40d}. 
 Para fazer a união dos perfis, que serão cortados em tamanho adequado com cantos esquadrejados em 
-ângulo de 45°, para dar um melhor acabamento à peça, será utilizada uma placa de conexão 
-interna de 90°, conforme a Figura \ref{fig:pconexao90p}, que unirá os cantos dos perfis por 
-meio de parafusos Allen sem cabeça com rosca M5.
+ângulo de 45°, mostrado na Figura \ref{fig:detalhe45}, para dar um melhor acabamento à peça, foi utilizada uma placa de conexão 
+interna de 90°, conforme a Figura \ref{fig:pconexao90p}, com suas dimensões especificadas 
+na Figura \ref{fig:pconexao90d}, que unirá os cantos dos perfis por 
+meio de parafusos Allen sem cabeça com rosca M5. 
+A Figura \ref{fig:estruturamesa} mostra o esboço da estrutura da mesa cartesiana.
     
 \begin{figure}[H]
 \centering
+\caption{Perfil V-slot  20~x~40~mm em alumínio.}\label{fig:p20x40p}
 \includegraphics[scale = 0.3]{figuras/p20x40p2}
-\caption{Perfil V-slot  20~x~40~mm em alumínio.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{fig:p20x40p}
+\legend{\textbf{Fonte:} \citeauthor{figs:forsetisolucoes}, \citeyear{figs:forsetisolucoes}.}
 \end{figure}
     
 \begin{figure}[H]
 \centering
+\caption{Dimensões do perfil 20~x~40~mm.}\label{fig:p20x40d}
 \includegraphics[scale = 0.4]{figuras/p20x40d}
-\caption{Dimensões do perfil 20~x~40~mm.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{fig:p20x40d}
+\legend{\textbf{Fonte:} \citeauthor{figs:forsetisolucoes}, \citeyear{figs:forsetisolucoes}.}
 \end{figure}
     
 \begin{figure}[H]
 \centering
+\caption{Placa de conexão interna de 90°.}\label{fig:pconexao90p}
 \includegraphics[scale = 0.4]{figuras/pconexao90p}
-\caption{Placa de conexão interna de 90°.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{fig:pconexao90p}
+\legend{\textbf{Fonte:} \citeauthor{figs:forsetisolucoes}, \citeyear{figs:forsetisolucoes}.}
 \end{figure}
     
 \begin{figure}[H]
 \centering
-\includegraphics[scale = 0.4]{figuras/pconexao90d}
-\caption{Dimensões da placa de conexão interna de 90°.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{fig:pconexao90d}
+\caption{Dimensões da placa de conexão interna de 90°.}\label{fig:pconexao90d}
+\includegraphics[scale = 0.35]{figuras/pconexao90d}
+\legend{\textbf{Fonte:} \citeauthor{figs:forsetisolucoes}, \citeyear{figs:forsetisolucoes}.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
+\caption{Esboço da mesa cartesiana.}\label{fig:estruturamesa}
 \includegraphics[scale = 1]{figuras/estruturamesa}
-\caption{Esboço da mesa cartesiana.}
-\caption*{Fonte: Próprio autor}
-\label{fig:estruturamesa}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale = 0.5]{figuras/detalhe45}
-\caption{Detalhe do encaixe a 45° da base da estrutura.}
-\caption*{Fonte: Próprio autor}
-\label{fig:detalhe45}
+\caption{Detalhe do encaixe a 45° da base da estrutura.}\label{fig:detalhe45}
+\includegraphics[scale = 0.7]{figuras/detalhe45}
 \end{figure}
     
-O pórtico será feito com o perfil V-Slot de 20~x~20~mm em alumínio conforme apresenta 
-a Figura \ref{fig:p20x20p}, e terá as dimensões de 500~x~480~mm. Sua função é sustentar 
-e estabilizar o sistema de transmissão. Para fixação do pórtico à base será utilizada 
-uma placa T simples de aço, fixada com parafusos Allen cabeça abaulada com rosca M6~x~10~mm 
+O pórtico deve ser feito com o perfil V-Slot de 20~x~20~mm em alumínio conforme apresenta 
+a Figura \ref{fig:p20x20p}, com suas dimensões mostradas na Figura \ref{fig:p20x20d}, 
+e tem as dimensões de 500~x~480~mm. Sua função é sustentar 
+e estabilizar o sistema de transmissão. Para fixação do pórtico à base, é utilizada 
+uma placa T simples de aço, mostrada na Figura \ref{fig:placatp}, com suas dimensões mostradas na 
+Figura \ref{fig:placatd}, fixada com parafusos Allen cabeça abaulada com rosca M6~x~10~mm 
 e porca T reforçada com rosca M6. Na montagem da parte superior do pórtico a união 
-se dará por meio de parafusos com rosca M6~x~16~mm diretamente nos perfis, para tanto, 
-terá que ser feita uma rosca M6 nos furos dos perfis verticais V-Slot 20~x~40~mm para 
-fixação dos parafusos e furos de 5~mm no perfil horizontal do pórtico para que se 
-possa acessar e realizar o aperto desses parafusos com chave Allen de 4~mm realizando 
-assim uma união resistente entre os perfis.
-
-%DA PRA COLOCAR FOTO
+se dará por meio de parafusos com rosca M6~x~16~mm diretamente nos perfis. 
+Para tanto, deve ser feita uma rosca M6 nos furos dos perfis verticais V-Slot 20~x~40~mm, para 
+fixação dos parafusos e furos de 5~mm no perfil horizontal do pórtico, para que assim, se possa acessar 
+e realizar o aperto desses parafusos com chave Allen de 4~mm, realizando assim uma união 
+resistente entre os perfis.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale = 0.4]{figuras/p20x20p}
-\caption{Perfil V-Slot 20~x~20~mm em alumínio.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{fig:p20x20p}
+\caption{Perfil V-Slot 20~x~20~mm em alumínio.}\label{fig:p20x20p}
+\includegraphics[scale = 0.6]{figuras/p20x20p}
+\legend{\textbf{Fonte:} \citeauthor{figs:forsetisolucoes}, \citeyear{figs:forsetisolucoes}.}
 \end{figure}
     
 \begin{figure}[H]
 \centering
+\caption{Dimensões do perfil 20~x~20~mm.}\label{fig:p20x20d}
 \includegraphics[scale = 1]{figuras/p20x20d}
-\caption{Dimensões do perfil 20~x~20~mm.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{fig:p20x20d}
+\legend{\textbf{Fonte:} \citeauthor{figs:forsetisolucoes}, \citeyear{figs:forsetisolucoes}.}
 \end{figure}
     
 \begin{figure}[H]
 \centering
+\caption{Placa T simples de aço.}\label{fig:placatp}
 \includegraphics[scale = 0.4]{figuras/placatp}
-\caption{Placa T simples de aço.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{fig:placatp}
+\legend{\textbf{Fonte:} \citeauthor{figs:forsetisolucoes}, \citeyear{figs:forsetisolucoes}.}
 \end{figure}
     
 \begin{figure}[H]
 \centering
-\includegraphics[scale = 0.4]{figuras/placatd}
-\caption{Dimensões da placa T simples.}
-\caption*{Fonte: www.forsetisolucoes.com.br}
-\label{fig:placatd}
+\caption{Dimensões da placa T simples.}\label{fig:placatd}
+\includegraphics[scale = 0.3]{figuras/placatd}
+\legend{\textbf{Fonte:} \citeauthor{figs:forsetisolucoes}, \citeyear{figs:forsetisolucoes}.}
 \end{figure}
 
 \subsection{Sistema de transmissão}\label{subsec:mettransmissao}
@@ -129,30 +117,30 @@ assim uma união resistente entre os perfis.
 Segundo \citeauthor{budynas2016elementos} (\citeyear{budynas2016elementos}), o parafuso de potência 
 é um dispositivo usado para transformar o movimento angular em movimento linear e, usualmente, 
 para transmitir potência. Para fazer o movimento dos carros do eixo X e do eixo Y, 
-componentes que farão o efetivo deslocamento do equipamento de medição dentro da área de 
+componentes responsáveis pelo efetivo deslocamento do equipamento de medição dentro da área de 
 teste do túnel de vento, o fuso foi escolhido como elemento de transmissão, que vai transformar 
-o movimento giratório do motor de passo em deslocamento linear na estrutura da mesa cartesiana. 
+o movimento rotativo do motor de passo em deslocamento linear na estrutura da mesa cartesiana. 
 Acoplados aos motores de passo, por meio de acopladores de eixo e na outra extremidade por mancal para fuso 
 de 8~mm, os fusos farão o transporte dos carros horizontal e vertical. 
 
 Para que se tenha um deslocamento mais rápido das castanhas, elemento que estará em contato 
-direto com o fuso e o carro, foi selecionado o fuso TR8~x~8~mm com 4 entradas que é um fuso trapezoidal 
-de 8~mm de diâmetro e 2~mm de passo com um avanço de 8~mm. A elevação do sistema de medição será 
+direto com o fuso e o carro, foi selecionado o fuso TR8~x~8~mm com 4 entradas que é um fuso, com perfil 
+trapezoidal de 8~mm de diâmetro, 2~mm de passo e com um avanço de 8~mm. A elevação do sistema de medição será 
 executada por dois fusos paralelos. Para o deslocamento horizontal será utilizado um fuso TR8~x~8~mm 
 acoplado a um motor de passo junto com uma haste guia para dar sustentação e evitar que o sistema 
 de medição gire em torno do eixo.
 
 \subsection{Acionador}\label{subsec:metacionador}
 
-Os motores elétricos são máquinas capazes de transformar energia elétrica em energia mecânica, 
-essa energia se dá em forma de movimento angular. São equipamentos versáteis, muito eficientes 
-e amplamente utilizados. Para fazer a movimentação dos carros, nos eixos X e Y, optou-se por 
-motores de passo, por que é um motor que possibilita o controle da velocidade e o posicionamento 
-preciso, pois rotaciona em ângulos bem definidos, chamados de passos. O ponto negativo desses 
-motores é que o controle é mais complexo, necessitando de um comando eletrônico digital para 
-fazê-lo funcionar, por outro lado apresenta uma grande precisão no seu movimento. Os motores 
+Os motores elétricos são máquinas capazes de transformar energia elétrica em energia mecânica 
+na forma de movimento angular. Essa energia se dá em forma de movimento angular. 
+São equipamentos versáteis, muito eficientes e amplamente utilizados. Para fazer a movimentação dos carros, 
+nos eixos X e Y, optou-se por motores de passo, que possibilitam o controle da velocidade 
+e o posicionamento preciso, rotacionando em ângulos definidos chamados de passos. 
+O ponto negativo desses motores é o controle mais complexo que necessita de acionamento eletrônico 
+digital que, em contrapartida, apresenta uma precisão elevada no movimento. Os motores 
 serão acoplados aos perfis da estrutura de modo a possibilitar o movimento dos fusos e consequentemente 
-o equipamento de medição, que estará preso a ele por meio de uma guia com roldana. 
+o equipamento de medição, que estará fixado a ele por meio de uma guia com roldana. 
 
 \subsection{Cálculo dos esforços sobre a haste e o fuso}\label{subsec:metcalculos}
 
@@ -190,6 +178,7 @@ A equação \ref{eq:momentodeinercia} calcula o momento de inércia segundo o \c
 \begin{equation}\label{eq:momentodeinercia}
     I = \frac{\pi \cdot d^{4}}{64}
 \end{equation}
+\myequation{Momento de inércia}
 
 Utilizando a equação \ref{eq:momentodeinercia} se obtém o momento de inércia da haste.
 
@@ -199,16 +188,15 @@ A Figura \ref{fig:diagramacorpolivre} mostra o diagrama de corpo livre da haste.
 
 \begin{figure}[H]
 \centering
+\caption{Diagrama de corpo livre da haste.}\label{fig:diagramacorpolivre}
 \includegraphics[scale = 0.4]{figuras/diagramcorpolivre}
-\caption{Diagrama de corpo livre da haste.}
-\caption*{Fonte: Próprio autor}
-\label{fig:diagramacorpolivre}
 \end{figure}
 
 A equação \ref{eq:deflexao} calcula a deflexão segundo o \citeauthor{budynas2016elementos} (\citeyear{budynas2016elementos}).
 \begin{equation}\label{eq:deflexao}
     Y_{max} = \frac{F \cdot L^{3}}{48 \cdot E \cdot I}
 \end{equation}
+\myequation{Deflexão máxima}
 
 Utilizando a equação \ref{eq:deflexao} se obtém a força máxima para a deflexão de $0,05~mm$, 
 para isso foi utilizado o momento de inércia da haste.
@@ -222,10 +210,8 @@ sobre os dentes do fuso.
 
 \begin{figure}[H]
 \centering
+\caption{Força agindo sobre o fuso.}\label{fig:esqforcafuso}
 \includegraphics[scale = 0.25]{figuras/esqforcafuso}
-\caption{Força agindo sobre o fuso.}
-\caption*{Fonte: Próprio autor}
-\label{fig:esqforcafuso}
 \end{figure}
     
 Dados:
@@ -243,6 +229,7 @@ A equação \ref{eq:dmedio} calcula o diâmetro médio segundo o \citeauthor{bud
 \begin{equation}\label{eq:dmedio}
     d_{m} = d - \frac{P}{2}
 \end{equation}
+\myequation{Diâmetro médio}
 
 Utilizando a equação \ref{eq:dmedio} se obtém o diâmetro médio considerando $d_{m} = 8~mm$:
 
@@ -252,6 +239,7 @@ A equação \ref{eq:avanco} calcula o avanço.
 \begin{equation}\label{eq:avanco}
     L_{a} = n_{e} \cdot P = 8~mm
 \end{equation}
+\myequation{Avanço}
 
 Onde:
 \begin{itemize}
@@ -269,6 +257,7 @@ $$T = 5~kgf \cdot cm = 490,33~N \cdot mm$$
 \begin{equation}\label{eq:torque}
 T = \frac{F \cdot d_{m}}{2} \cdot (\frac{L_{a} + \pi \cdot f \cdot d_{m}}{\pi \cdot d_{m} - f \cdot L_{a}}) + \frac{F \cdot f_{c} \cdot d_{c}}{2}
 \end{equation}
+\myequation{Torque}
 
 Admitindo um coeficiente de fricção e coeficiente de fricção no colar igual a 0,08.
 $$f = f_{c} = 0,08$$
@@ -292,10 +281,8 @@ A Figura \ref{fig:forcadente} mostra a força causando a flexão e o cisalhament
 
 \begin{figure}[H]
 \centering
+\caption{Força agindo sobre o dente.}\label{fig:forcadente}
 \includegraphics[scale = 0.2]{figuras/forcadente}
-\caption{Força agindo sobre o dente.}
-\caption*{Fonte: Próprio autor}
-\label{fig:forcadente}
 \end{figure}
 
 Torcionais:
@@ -305,6 +292,7 @@ Tensão de cisalhamento devido ao momento de torção no lado externo do corpo d
 \begin{equation}\label{eq:tensaocilhamento}
 \tau = \frac{16 \cdot T}{\pi \cdot d_{r}^{3}}
 \end{equation}
+\myequation{Tensão cisalhamento}
 
 Onde:
 $d_{r}$ é o diâmetro menor.
@@ -340,6 +328,7 @@ $$\sigma = \frac{2 \cdot (0,38 \cdot 306,55~N)}{\pi \cdot 7~mm \cdot 1 \cdot 2~m
 \begin{equation}\label{eq:tensaoflexaoraizrosca}
 \sigma_{raiz} = \frac{6 \cdot (0,38 \cdot F)}{\pi \cdot d_{r} \cdot n_{t} \cdot P}
 \end{equation}
+\myequation{Tensão de flexão da raiz da rosca}
 
 Utilizando a equação \ref{eq:tensaoflexaoraizrosca} se obtém a tensão de flexão da raiz da rosca:
 
@@ -350,6 +339,7 @@ $$\sigma_{raiz} = \frac{6 \cdot (0,38 \cdot 306,55)~N}{\pi \cdot 6~mm \cdot 1 \c
 \begin{equation}\label{eq:vonmises}
 \sigma_{2}, \sigma_{3} = \frac{\sigma_{x} + \sigma_{y}}{2} \pm \sqrt{(\frac{\sigma_{x} - \sigma_{y}}{2})^2 + \tau_{xy}^{2}}
 \end{equation}
+\myequation{Tensão de Von Mises e tensão de cisalhamento máximo}
 
 Utilizando a equação \ref{eq:vonmises} se obtém a tensão de cisalhamento máximo:
 
@@ -368,6 +358,7 @@ A tensão de Von Mises:
 \begin{equation}
 \sigma' = (\frac{(\sigma_{1} - \sigma_{2})^{2} + (\sigma_{2} - \sigma_{3})^{2} + (\sigma_{3} - \sigma_{1})^{2}}{2})^{\frac{1}{2}}
 \end{equation}
+\myequation{Tensão de Von Mises}
 
 $$\sigma' = (\frac{(18,5 - 7,42)^{2} + (7,42 - (-18,26)))^{2} + (-18,26 - 18,5)^{2}}{2})^{\frac{1}{2}} = 32,66~MPa$$
 
@@ -375,27 +366,26 @@ Tensão Máxima:
 \begin{equation}\label{eq:tensaomaxima}
 \sigma_{1-3} = \frac{\sigma_{1} - \sigma{3}}{2}
 \end{equation}
+\myequation{Tensão Máxima}
 
 $$\sigma_{1-3} = \frac{18,5 - (-18,26)}{2} = 18,33~MPa$$
 
 \section{Sistema eletrônico}\label{sec:metsisele}
 
-O sistema eletrônico de uma mesa cartesiana foi dividido em módulos para um melhor detalhamento: 
-placa de prototipagem eletrônica Arduino, drivers de potência, atuadores elétricos, fonte de alimentação, 
-optoacopladores, encoders e um computador. É importante lembrar que para menor custo do projeto optou-se 
-pela criação de dispositivos.
+O sistema eletrônico da mesa cartesiana foi dividido em módulos para um melhor detalhamento.
+A Figura \ref{fig:fluxogramaeletronico} mostra um fluxograma do sistema eletrônico para apresentar 
+seus componentes:placa de prototipagem eletrônica Arduino, drivers de potência, atuadores elétricos, 
+fonte de alimentação, optoacopladores, encoders e um computador.
 
 \begin{figure}[H]
 \centering
+\caption{Fluxograma do sistema eletrônico.}\label{fig:fluxogramaeletronico}
 \includegraphics[scale = 0.6]{figuras/fluxogramaeletronico}
-\caption{Fluxograma do sistema eletrônico.}
-\caption*{Fonte: Próprio autor.}
-\label{fig:fluxogramaeletronico}
 \end{figure}
     
 \subsection{Placa de prototipagem eletrônica Arduino}\label{subsec:metarduino}
 
-A placa de prototipagem eletrônica Arduino é responsável pela recepção e tratamento dos dados provenientes 
+A placa de prototipagem eletrônica Arduino, mostrada da Figura \ref{fig:placaarduino}, é responsável pela recepção e tratamento dos dados provenientes 
 da interface computacional. O controle dos motores está fundamentado na programação do microcontrolador 
 de acordo com as necessidades definidas inicialmente para operação da mesa cartesiana.
 
@@ -411,14 +401,18 @@ digitais de entrada e saída, sendo que seis delas com capacidade de \ac{PWM}, s
 entradas analógicas e 32 KB de memória flash, 2 KB de \ac{RAM} e 1 KB de \ac{EEPROM}. 
 
 %ABREVIATURA DE USB
-A alimentação é via porta \ac{USB} ou por conector tipo Jack de alimentação externa que trabalha entre os 
-limites de 6~V e 20~V sendo recomendável o uso de 7~V a 12~V para não danificar. Para o fornecimento 
-de tensão contínua para alimentação dos circuitos e Shields, a placa Arduino UNO tem um regulador 
-de tensão de 3,3~V.
+A alimentação é via porta \ac{USB} ou por conector tipo Jack de alimentação externa entre os 
+limites de 6~V e 20~V, sendo recomendável o uso de 7~V a 12~V para não danificar. Internamente, 
+a placa Arduíno Uno possui um regulador de tensão para 3,3V com a finalidade de alimentar 
+os circuitos e shields à ela conectados.
 
 %ABREVIATURA DE USB
 Além de alimentar, a porta \ac{USB} é a via de comunicação com o computador para o envio do código de máquina 
-gerado pelo compilador. O código compilado é enviado pelo microcontrolador ATMEL ATMEGA16U2 que está 
+gerado pelo compilador. Através dos pinos RX e TX, sinalizados por leds, o processo de comunicação 
+bidirecional é estabelecido entre computador e a placa Arduíno.
+
+
+O código compilado é enviado pelo microcontrolador ATMEL ATMEGA16U2 que está 
 conectado a dois LEDs chamados de TX e RX cuja função é a indicação do envio e recepção dos dados da 
 placa para o computador.
 
@@ -427,10 +421,8 @@ A placa Arduino é programada via \ac{IDE}, utilizando uma linguagem baseada em 
 
 \begin{figure}[H]
 \centering
+\caption{Descrição dos componentes da placa Arduino.}\label{fig:placaarduino}
 \includegraphics[scale = 0.6]{figuras/placaarduino}
-\caption{Descrição dos componentes da placa Arduino.}
-\caption*{Fonte: Próprio autor.}
-\label{fig:placaarduino}
 \end{figure}
     
 \begin{itemize}
@@ -463,18 +455,17 @@ circuitos integrados).
 No presente projeto, os drivers têm a função de, a partir dos sinais originados pelo Arduino, atender 
 a demanda dos motores de passo utilizados.
 
-A construção dos drivers que controlam os motores de passo da mesa cartesiana foi baseada em um 
+A construção dos drivers que controlam os motores de passo da mesa cartesiana, foi baseada em um 
 circuito eletrônico para motores que trabalham com tensão de 12~V DC e até 10~A de corrente elétrica. 
 
 \begin{figure}[H]
 \centering
+\caption{Driver A4988.}\label{fig:driver}
 \includegraphics[scale = 0.4]{figuras/driver}
-\caption{Driver A4988.}
-\caption*{Fonte: https://www.eletrogate.com.}
-\label{fig:driver}
+\legend{\textbf{Fonte:} \citeauthor{figs:eletrogate}, \citeyear{figs:eletrogate}.}
 \end{figure}
 
-% Tabela 1
+% Tabela 2
 \begin{table}[H]
     \footnotesize
     \centering
@@ -491,19 +482,18 @@ circuito eletrônico para motores que trabalham com tensão de 12~V DC e até 10
         Tensão de operação máxima & 35~V\\ 
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:pdriver}
 \end{table}
 
 O driver foi utilizado para controlar motores de passo e pode operar com tensões entre 8~V e 35~V e 
-entregar até 35~V por bobina. A Figura \ref{fig:driverportas} mostra o driver com os respectivos componentes.
+entregar até 35~V por bobina. A Figura \ref{fig:driverportas} e a Tabela \ref{tab:pdriverportas}, 
+mostra os respectivos terminais do driver A4988.
 
 \begin{figure}[H]
 \centering
+\caption{Portas do driver A4988.}\label{fig:driverportas}
 \includegraphics[scale = 0.75]{figuras/driverportas}
-\caption{Portas do driver A4988.}
-\caption*{Fonte: www.alldatasheet.com}
-\label{fig:driverportas}
+\legend{\textbf{Fonte:} \citeauthor{figs:alldatasheet}, \citeyear{figs:alldatasheet}.}
 \end{figure}
     
 % Tabela 1
@@ -543,10 +533,9 @@ entregar até 35~V por bobina. A Figura \ref{fig:driverportas} mostra o driver c
          PAD & - & Pasta térmica para dissipação aprimorada\\
         \hline       
     \end{tabular}
-    \caption*{Fonte: www.alldatasheet.com.}
+    \legend{\textbf{Fonte:} \citeauthor{figs:alldatasheet}, \citeyear{figs:alldatasheet}.}
     \label{tab:pdriverportas}
 \end{table}
-
 
 \subsection{Atuadores}\label{subsec:metatuadores}
 
@@ -554,37 +543,36 @@ Atuadores são equipamentos ou dispositivos elétricos que convertem energia hid
 ou elétrica em energia mecânica. A energia gerada nos atuadores é transformada em movimento em 
 vários tipos de processos.
 
-Os atuadores utilizados neste projeto foram os elétricos que se dividem em  motores elétricos de 
-corrente alternada e contínua, servomotores e motores de passo. Esses atuadores convertem pulsos 
-elétricos recebidos em seus terminais em energia mecânica transformando-a em movimento rotativo 
-do motor, no caso do projeto os motores de passo que controlam o movimento dos fusos da mesa 
+Os atuadores utilizados neste projeto foram os elétricos, que se dividem em motores elétricos de 
+corrente alternada, contínua, servomotores e motores de passo. Esses atuadores convertem pulsos 
+elétricos recebidos em seus terminais em energia mecânica, transformando-a em movimento rotativo 
+do motor. No caso deste projeto são os motores de passo que controlam o movimento dos fusos da mesa 
 cartesiana. Os atuadores elétricos atendem a comandos manuais ou programáveis, localmente ou remotamente. 
 Eles se destacam por uma transmissão de potência simplificada e eficiente do ponto de vista de energia.
 
 Os motores de passo são atuadores eletromagnéticos com capacidade de converter pulsos elétricos digitais 
-recebidos em movimento de rotação incremental do eixo do motor. Sua aplicação é necessária em movimentos 
+em movimento de rotação incremental do eixo do motor. Sua aplicação é necessária em movimentos 
 rotativos com alta precisão que necessitam de controle de posição e velocidade. A sua escolha foi definida 
 pela precisão, baixo custo de aquisição e manutenção.
 
-A composição de um motor de passo contém um rotor e um estator que é a parte fixa do gerador elétrico,
-nessa está situado um conjunto de bobinas responsáveis pelo giro do rotor. Para que haja o movimento, 
-as bobinas estão ligadas aos terminais do motor, organizadas em pares, interligadas entre si e 
-posicionadas em sentidos opostos para que quando forem energizadas, der o movimento de rotação 
-do motor devido às interações magnéticas.
+O motor de passo é composto por um rotor e um estator que é a parte fixa do gerador 
+elétrico onde estão situados um conjunto de bobinas responsáveis pelo giro do rotor. 
+Para que haja o movimento, as bobinas estão ligadas aos terminais do motor, organizadas em pares, 
+interligadas entre si e posicionadas em sentidos opostos para que quando sejam energizadas, 
+ocorra o movimento de rotação do motor devido às interações magnéticas.
 
 O atributo que distingue o motor de passo dos demais motores elétricos é a capacidade de realizar passos, 
 que são rotações discretas incrementais e precisas. Os passos são definidos por um número fixo de 
-pólos magnéticos de dente de engrenagens do motor determinando assim, a precisão de ângulo de rotação 
+pólos magnéticos de dente de engrenagens do motor, determinando assim, a precisão de ângulo de rotação 
 do motor de passo. Para que haja um controle de quantos passos serão dados, o motor necessita de 
 largura de pulso a fim de enviar a corrente adequada para cada passo. A Figura \ref{fig:didaticopasso} 
 é um exemplo para melhor entendimento do conceito de passo.
 
 \begin{figure}[H]
 \centering
+\caption{Conceito didático do motor de passo.}\label{fig:didaticopasso}
 \includegraphics[scale = 0.4]{figuras/didaticopasso}
-\caption{Conceito didático do motor de passo.}
-\caption*{Fonte: https://www.fernandok.com.}
-\label{fig:didaticopasso}
+\legend{\textbf{Fonte:} \citeauthor{figs:fernandok}, \citeyear{figs:fernandok}.}
 \end{figure}
     
 A Figura \ref{fig:didaticopasso} mostra um motor de passo com 50 dentes de precisão, portanto combinando 
@@ -595,6 +583,7 @@ o número de passos ($n_{p}$) é igual ao número de dentes ($n_{d}$) multiplica
 \begin{equation}\label{eq:Npassos}
     n_{p} = n_{d} \cdot n_{f}
 \end{equation}
+\myequation{Número de passos}
 
 A precisão do motor é definida por 360° divididos pelo número de passos. Portanto, 
 360 divididos por 200 é igual a 1,8° de precisão. Já o segundo motor 
@@ -603,26 +592,30 @@ de passo possui 100 dentes de precisão, portanto a precisão é de 0,9°, o que
 
 Para aumentar a precisão dos motores é possível subdividir o passo de um motor em menores passos fornecendo 
 ao mesmo tempo corrente elétrica em duas fases. Essa forma de trabalho é chamada de micropassos.
-
 Logo, quando é fornecido a mesma magnitude de corrente a duas fases, um campo magnético de mesma magnitude 
 é gerado, resultando em um movimento angular com a metade do passo original, essa configuração é chamada de 
 meio passo. Assim, ao aplicar magnitudes de corrente diferentes a duas fases, o rotor se desloca 
 proporcionalmente ao campo eletromagnético mais forte.
 
-Os motores de passo utilizados no projeto da mesa cartesiana possuem 5 kgf.cm de torque, passo de 1,8° e 
+Os motores de passo utilizados possuem 5 kgf.cm de torque, passo de 1,8° e 
 corrente máxima de 2 Ampères por fase. O incremento de rotação e o torque são definidos conforme o modo 
-de excitação que pode ser por passo completo, meio passo e micropasso explicadas anteriormente. O passo 
+de excitação que pode ser por passo completo, meio passo e micropasso. O passo 
 é dividido em quatro, oito ou dezesseis na maioria das vezes, mas também, atualmente se encontra 
 sistemas capazes de dividir um passo em milhares de vezes.
 
+A Figura \ref{fig:meumotorbipolar} mostra um esquema elétrico do motor de passo.
+
 \begin{figure}[H]
 \centering
+\caption{Esquema elétrico do motor de passo.}\label{fig:meumotorbipolar}
 \includegraphics[scale = 0.6]{figuras/meumotorbipolar}
-\caption{Esquema elétrico do motor de passo.}
-\caption*{Fonte: Próprio autor.}
-\label{fig:meumotorbipolar}
 \end{figure}
-    
+
+As Tabelas \ref{tab:wavestephorario}, \ref{tab:fullstephorario}, \ref{tab:halfstephorario},
+\ref{tab:wavestepantihorario}, \ref{tab:fullstepantihorario} e \ref{tab:halfstepantihorario} 
+servem para a movimentação de motores de passo, cada uma com suas determinadas configurações.
+As Tabelas de uma fase apresentam uma baixa potência, já as de duas fases apresentam um maior torque.
+
 As Tabelas \ref{tab:wavestephorario}, \ref{tab:fullstephorario} e \ref{tab:halfstephorario} 
 mostram a sequência de polaridades aplicadas no motor no movimento de sentido horário.
 
@@ -641,7 +634,6 @@ mostram a sequência de polaridades aplicadas no motor no movimento de sentido h
         4 & 1 & 0 & 0 & 0 & 8\\        
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:wavestephorario}
 \end{table}
 
@@ -660,7 +652,6 @@ mostram a sequência de polaridades aplicadas no motor no movimento de sentido h
         4 & 1 & 1 & 0 & 0 & 12\\
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:fullstephorario}
 \end{table}
 
@@ -683,7 +674,6 @@ mostram a sequência de polaridades aplicadas no motor no movimento de sentido h
         8 & 1 & 0 & 0 & 0 & 8\\
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:halfstephorario}
 \end{table}
 
@@ -705,7 +695,6 @@ mostram a sequência de polaridades aplicadas no motor no movimento de sentido a
         4 & 0 & 0 & 0 & 1 & 1\\
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:wavestepantihorario}
 \end{table}
 
@@ -724,7 +713,6 @@ mostram a sequência de polaridades aplicadas no motor no movimento de sentido a
         4 & 1 & 0 & 0 & 1 & 9\\
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:fullstepantihorario}
 \end{table}
 
@@ -747,7 +735,6 @@ mostram a sequência de polaridades aplicadas no motor no movimento de sentido a
         8 & 1 & 0 & 0 & 1 & 9\\
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:halfstepantihorario}
 \end{table}
 
@@ -768,7 +755,6 @@ A Tabela \ref{tab:pmotordepasso} apresenta alguns parâmetros dos motores de pas
         Configuração das bobinas & Bipolar (4 fios)\\
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:pmotordepasso}
 \end{table}
 
@@ -797,7 +783,6 @@ A Tabela \ref{tab:demandafonte} apresenta a demanda de energia elétrica de cada
         Resultado & - & 12~V & - & 8,18~A\\
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:demandafonte}
 \end{table}
 
@@ -806,12 +791,11 @@ a 12~V, os drivers de potência no intervalo de 8~V a 35~V, os motores de passo 
 e o optoacoplador no intervalo de 5~V a 35~V. A tensão de saída de 12~V foi determinada como melhor 
 opção para o projeto.
 
-Outro parâmetro que a Tabela \ref{tab:demandafonte} apresenta é a corrente elétrica mínima para a operação 
+Outro parâmetro que a Tabela \ref{tab:demandafonte} apresenta, é a corrente elétrica mínima para a operação 
 do circuito. A placa controladora necessita de 800~mA, os drivers de potência necessitam de 2~A cada, 
-como são 2 drivers, 4~A são necessários, os motores de passo consomem 2 amperes cada, como o projeto 
-contém 2 motores, 4 Amperes são necessários e os optoacopladores necessitam de 10~mA cada, como o 
-projeto contém 2 optoacopladores, 20~mA são necessários. Decidiu-se acrescentar uma margem de 
-segurança adicional de 30\% na corrente, então, considerou-se uma corrente mínima necessária de 10,64~A.
+como são 2 drivers, 4~A são necessários, os motores de passo consomem 2~A cada, como o projeto 
+contém 2 motores, 4~A são necessários, os optoacopladores necessitam de 10~mA cada, como o 
+projeto contém 2 optoacopladores, 20~mA são necessários. 
 
 A equação \ref{eq:CorrenteNecessaria} calcula a demanda total de 
 corrente elétrica mínima para a operação do circuito onde:
@@ -821,58 +805,60 @@ demanda do motor de passo ($d_{motor}$) e demanda do optoacoplador ($d_{opto}$).
 \begin{equation}\label{eq:CorrenteNecessaria}
     d_{total} = 1,3 \cdot (d_{arduino} + 2 \cdot d_{driver} + 2 \cdot d_{motor} + 2 \cdot d_{opto})    
 \end{equation}
+\myequation{Demanda de corrente total}
+
+Decidiu-se acrescentar uma margem de segurança adicional de 30\% na corrente, então, 
+considerou-se uma corrente mínima necessária de 10,64~A.
 
 Conforme a determinação da tensão de saída e o cálculo de corrente necessária, 
-é possível determinar que a fonte deve ter 12~V e 10,64~A.
+é possível determinar que a fonte deve ter 12~V e 10,64~A. Devendo ser utilizada uma fonte 
+comercial com corrente superior. A fonte escolhida para o projeto foi do modelo 
+Fonte Chaveada 15~A 12~V 180~W Bivolt Som Automotivo Led Cftv, 
+conforme Figura \ref{fig:fonte}.
 
 \begin{figure}[H]
 \centering
+\caption{Fonte do sistema.}\label{fig:fonte}
 \includegraphics[scale = 0.6]{figuras/fonte}
-\caption{Fonte do sistema.}
-\caption*{Fonte: Próprio autor.}
-\label{fig:fonte}
+\legend{\textbf{Fonte:} \citeauthor{figs:casasbahia}, \citeyear{figs:casasbahia}.}
 \end{figure}
     
 \subsection{Acopladores ópticos}\label{subsec:metacoplador}
 
 Os acopladores ópticos ou optoacopladores são dispositivos que realizam a transferência de 
-sinais de um circuito para outro por meio de um feixe de luz sem a ligação elétrica.
+sinais de um circuito para outro, por meio de um feixe de luz e sem a ligação elétrica.
 
 A aplicação dentro do projeto é o isolamento elétrico que pode ser estabelecido entre 
-os circuitos de controle de potência, protegendo os circuitos sensíveis a uma alta tensão 
-como a placa controladora Arduino.
+os circuitos de controle de potência, protegendo os circuitos sensíveis a surtos de tensão, 
+como a placa controladora Arduino, como mostra a Figura \ref{fig:acoplador}.
 
 \begin{figure}[H]
 \centering
+\caption{Funcionamento do acoplador no sistema.}\label{fig:acoplador}
 \includegraphics[width = 1\linewidth]{figuras/acoplador}
-\caption{Funcionamento do acoplador no sistema.}
-\caption*{Fonte: Próprio autor.}
-\label{fig:acoplador}
 \end{figure}
     
 A sua composição contém uma fonte emissora de luz (LED) e um sensor fototransistor sensível às variações 
 espectrais da fonte emissora. Seu funcionamento é baseado no efeito fotoelétrico, onde o diodo LED produz 
-um feixe de luz infravermelha polarizando a base do fototransistor impondo uma condução entre base e emissor.
+um feixe de luz infravermelha, polarizando a base do fototransistor e impondo uma condução 
+entre base e emissor.
 
-O optoacoplador escolhido para o projeto foi o PC 817 por já estar disponível no Laboratório de Sistemas 
+O optoacoplador escolhido para o projeto foi o PC 817, por já estar disponível no Laboratório de Sistemas 
 Térmicos.
 
 \subsection{Encoders}\label{subsec:metencoder}
 
 Geradores de pulsos ou encoders são sensores/transdutores eletromecânicos responsáveis pelo sistema de 
-controle de posição transformando a medida de posição de algum objeto, seja linear ou angular, em sinal 
-elétrico digital que é transmitida à placa controladora, também conseguem converter movimentos circulares 
-ou lineares em pulso elétricos.
+controle de posição, transformando a medida de posição de algum objeto, seja linear ou angular, em sinal 
+elétrico digital que é transmitida à placa controladora. Os geradores de pulso também conseguem converter 
+movimentos circulares ou lineares em pulso elétricos.
 
 Um encoder tem a capacidade de quantização de distâncias, controle de velocidades, medição de ângulos, 
-medição de posição, medição de deslocamento relativo e etc. Sua composição contém um disco com marcações, 
+medição de posição, medição de deslocamento relativo e etc. Esse é composto por um disco com marcações, 
 um emissor e um receptor. Conforme o disco gira, vão sendo contadas às marcações e o emissor envia um sinal 
-à placa controladora que por sua vez executa cálculos de distâncias, velocidades, ângulos, número de rotações 
-e etc.
-
-O princípio de funcionamento é dividido em três tipos, sendo eles: tacômetro, incremental e absoluto.
-
-O encoder do tipo tacômetro possui um sinal de saída digital responsável em emitir um pulso para cada 
+à placa controladora, que por sua vez executa cálculos de distâncias, velocidades, ângulos, número de rotações 
+e etc. O princípio de funcionamento é dividido em três tipos, sendo eles: tacômetro, incremental e absoluto.
+O encoder do tipo tacômetro possui um sinal de saída digital responsável por emitir um pulso para cada 
 incremento captado no deslocamento. Este é utilizado na medição de velocidade e também no deslocamento 
 angular unidirecional. O encoder incremental conta com sistema eletrônico externo responsável pela 
 interpretação de posição, este dispositivo utiliza dois ou mais elementos geradores de sinal possuindo 
@@ -907,70 +893,64 @@ A seguir será descrito o desenvolvimento do sistema de software.
 %ABREVIATURA DE IDE
 \subsection{Plataforma de prototipação Arduino IDE}\label{subsec:metide}
 
-A plataforma de prototipação Arduino \ac{IDE} é um software que permite o desenvolvimento e envio 
-de códigos compilados direto para o microcontrolador. Essa plataforma tem a flexibilidade de 
-ser utilizada em vários sistemas operacionais e foi desenvolvida na linguagem Java oferecendo 
-suporte de desenvolvimento na linguagem C e C++. O download da plataforma foi realizado 
-através do link: https://www.arduino.cc/en/software
+A plataforma de prototipação Arduino \ac{IDE}, mostrada na Figura \ref{fig:idearduino}, 
+é um software que permite o desenvolvimento e envio de códigos compilados direto 
+para o microcontrolador. Essa plataforma tem a flexibilidade de ser utilizada em 
+vários sistemas operacionais e foi desenvolvida na linguagem Java, oferecendo 
+suporte de desenvolvimento na linguagem C e C++.
 
 % Figura 3.19
 \begin{figure}[H]
 \centering
+\caption{Ambiente de desenvolvimento integrado Arduino.}\label{fig:idearduino}
 \includegraphics[width = 1\linewidth]{figuras/idearduino}
-\caption{Ambiente de desenvolvimento integrado Arduino.}
-\caption*{Fonte: Próprio autor.}
-\label{fig:idearduino}
 \end{figure}
     
-\subsection{Logica de programação}\label{subsec:metlogica}
+\subsection{Lógica de programação}\label{subsec:metlogica}
 
 O desenvolvimento da lógica de programação da placa controladora foi organizado de maneira modular 
 usando orientação a objetos para uma manutenção facilitada e um entendimento mais claro do código.
 
-As operações que o software deve executar foram apresentadas no fluxograma abaixo.
+As operações que o software deve executar estão apresentadas na Figura \ref{fig:fluxoexecucao}.
 
 \begin{figure}[H]
 \centering
+\caption{Fluxo de execução do software.}\label{fig:fluxoexecucao}
 \includegraphics[width = 1\linewidth]{figuras/fluxoexecucao}
-\caption{Fluxo de execução do software.}
-\caption*{Fonte: Próprio autor.}
-\label{fig:fluxoexecucao}
 \end{figure}
     
 A Figura \ref{fig:fluxoexecucao} apresenta um fluxograma simplificado da lógica de programação presente 
-na placa controladora Arduino que inicialmente tem como primeiro comando ficar esperando o envio de 
-dados pela porta Serial, se caso há esse envio, então o programa faz a leitura da porta serial, 
-armazenando os dados em variáveis para em seguida realizar o tratamento de dados. Após o tratamento 
-de dados o software dará o comando de movimentação do motor que controla o fuso do eixo horizontal 
+na placa controladora Arduino que tem como primeiro comando esperar o envio de dados pela porta Serial, 
+caso haja algum comando, em seguida, o programa faz a leitura da porta serial, armazenando os dados 
+em variáveis para em seguida realizar o tratamento de dados. Após o tratamento de dados, o software 
+dará o comando de movimentação do motor que controla o fuso do eixo horizontal 
 (eixo X), em seguida, assim que o motor do eixo X parar sua rotação, o comando de movimentação 
 do motor do eixo vertical (eixo Y) será acionado. Finalmente, após o fim da execução do motor 
 que controla o eixo Y, o software volta a analisar se é enviado dados pela porta serial.
 
 \subsection{Diagrama de classes}\label{subsec:metdiagrama}
 
-Diagrama de classe é uma representação da estrutura e relações entre classes que um software possui 
+Diagrama de classe é uma representação da estrutura e relações entre classes que um software possui, 
 facilitando e servindo de modelo para criação de objetos. Esse diagrama permite modelar classes com seus 
 atributos e métodos além da relação entre objetos.
 
-Para o desenvolvimento do software da placa controladora cuja linguagem é C++ que é fundamentada em 
+Para o desenvolvimento do software da placa controladora cuja linguagem é C++, que é fundamentada em 
 orientação a objetos, foi definido que seria a melhor opção realizar um diagrama de classes antes do 
-desenvolvimento do código. Sendo assim a Figura \ref{fig:diagramaclasses} apresentada abaixo é 
-o resultado do que foi modelado.
+desenvolvimento do código. Sendo assim a Figura \ref{fig:diagramaclasses} apresenta o resultado do 
+que foi modelado.
 
 \begin{landscape}
 \begin{figure}[H]
 \centering
+\caption{Diagrama de classes do sistema de software presente no Arduino.}\label{fig:diagramaclasses}
 \includegraphics[scale = 0.65]{figuras/diagramaclasses}
-\caption{Diagrama de classes do sistema de software presente no Arduino.}
-\caption*{Fonte: Próprio autor.}
-\label{fig:diagramaclasses}
 \end{figure}
 \end{landscape}
 
 A seguir será explicado este diagrama classe a classe.
 
-“Sigmoidal” é a classe responsável pela aceleração sigmóide nos motores de passo, essa classe utiliza 
-a função sigmóide que é uma função matemática com o gráfico parecido com a letra S. Para o desenvolvimento 
+“Sigmoidal” é a classe responsável pela aceleração sigmóide nos motores de passo. Essa classe utiliza 
+a função sigmóide, que é uma função matemática com o gráfico parecido com a letra S. Para o desenvolvimento 
 da mesa cartesiana houve a preocupação dos projetistas em configurar os motores de passo com uma aceleração 
 variável para maior vida útil dos equipamentos, já que com aceleração constante pode causar forças 
 desnecessárias durante o processo de rotação.
@@ -990,14 +970,13 @@ da classe “Sigmoidal”.
         - periodoMinimo: double & Período máximo do passo do motor.\\
         - periodoMaximo: double & Período mínimo do passo do motor.\\
         - vetorAceleracao: int & Determina se a curva será de aceleração (1) ou desaceleração (-1)\\
-        - amplitude: double & Amplitude da aceleração, diferença do período máximo menos o período mínimo\\
+        - amplitude: double & Amplitude da aceleração, diferença do período máximo e período mínimo\\
         - declividade: double & Inclinação da curva de aceleração, o quão rápido o motor irá acelerar\\
         - xMedio: double & É a metade do número de iterações necessários para percorrer a curva sigmoidal\\
         - calculoDoXMedio(): double & Calcula o número de Iterações necessários para percorrer metade da curva sigmoidal.\\
         + calculoDoInstante(): double & Calcula um instante na curva tendo como entrada uma iteração\\
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:classesigmoidal}
 \end{table}
 
@@ -1009,10 +988,11 @@ que determina a inclinação da curva de aceleração (o quão rápido o motor i
 metade do número de passos (iterações) que o motor precisará para acelerar e é utilizado no cálculo 
 do instante. 
 
-Como operações, a classe “Sigmoidal” tem os métodos de acesso getters e setters que acessam os atributos 
-privados citados acima, esses métodos são necessários para cumprir o princípio de encapsulamento da orientação 
-a objetos protegendo a lógica da classe. A classe “Sigmoidal” dispõe de duas operações, as quais são definidas 
-por: “calculoDoXMedio”, que calcula o valor do atributo xMedio, “calculoDoInstante”, que calcula o período a 
+Como operações, a classe “Sigmoidal” tem os métodos de acesso \textit{getters} e \textit{setters} 
+que acessam os atributos privados citados acima. Esses métodos são necessários para cumprir 
+o princípio de encapsulamento da orientação a objetos protegendo a lógica da classe. 
+A classe “Sigmoidal” dispõe de duas operações, as quais são definidas por: “calculoDoXMedio”, 
+que calcula o valor do atributo xMedio, “calculoDoInstante”, que calcula o período a 
 ser aplicado em um determinado instante, esse cálculo é utilizado na lógica do método “rotacionarPasso” 
 da classe “Eixo”.
 
@@ -1038,7 +1018,6 @@ classe “Pino”.
         - estado: unsigned int & Estado do pino (LOW, HIGH) | (0, 255) | (0, 1023).\\
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:classepino}
 \end{table}
 
@@ -1048,7 +1027,7 @@ a porta é de entrada ou saída de dados, e “estado”, que pode estar ligado 
 ter valores de 0 a 255 nas portas \ac{PWM} e de 0 a 1023 nas portas analogicas. Como operações, a classe “Pino” 
 tem os métodos de acesso getters e setters que acessam os atributos privados citados acima.
 
-“Driver” é a classe responsável pelo controle digital do driver de potência, com ela é possível definir 
+“Driver” é a classe responsável pelo controle digital do driver de potência. Com ela é possível definir 
 o modo do passo dos motores, executar o pulso que dará movimento ao motor de passo, ligar e desligar 
 o driver, deixá-lo no modo “sleep” e também “reseta-lo”.
 
@@ -1090,7 +1069,6 @@ classe “Driver”
         + setarModoPasso(mp:int, b:byte):void & Definir o modo de passo do driver.\\
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:classedriver}
 \end{table}
 
@@ -1138,7 +1116,6 @@ classe “Eixo”.
         + rotacionarPara(coordenada:double):void & Rotacionar o motor tendo como parâmetro a coordenada cartesiana do eixo.\\
         \hline       
     \end{tabular}
-    \caption*{Fonte: Próprio Autor, 2021.}
     \label{tab:classeeixo}
 \end{table}
 
@@ -1154,17 +1131,16 @@ passo ou se já chegou ao fim do curso, “rotacionarPassos”, que rotaciona o 
 entrada uma direção e uma quantidade de passos a serem executadas e “rotacionarPara”, que rotaciona o 
 eixo tendo como parâmetros de entrada uma coordenada cartesiana.
 
-Além das classes utilizadas, o software possui a \textit{sketch} principal que é responsável pela configuração das 
-informações iniciais, criação dos objetos na memória, configuração dos atributos de cada objeto, execução 
-da leitura pela porta serial, tratamento de dados recebidos e a movimentação dos motores.
+Além das classes utilizadas, o software possui a \textit{sketch} principal, que é responsável 
+pela configuração das informações iniciais, criação dos objetos na memória, 
+configuração dos atributos de cada objeto, execução da leitura pela porta serial, 
+tratamento de dados recebidos e a movimentação dos motores.
 A Figura \ref{fig:orgsoftware} apresenta um diagrama geral da organização do software.
 
 \begin{figure}[H]
 \centering
+\caption{Diagrama da organização geral do software.}\label{fig:orgsoftware}
 \includegraphics[width = 1\linewidth]{figuras/orgsoftware}
-\caption{Diagrama da organização geral do software.}
-\caption*{Fonte: Próprio autor.}
-\label{fig:orgsoftware}
 \end{figure}
     
 O arquivo “MesaCartesiana.ino” é o principal, ele instancia os objetos das classes: “Pino”, “Sigmoidal”, 
@@ -1178,10 +1154,8 @@ A Figura \ref{fig:integracao} é um fluxograma que descreve de maneira gráfica 
 
 \begin{figure}[H]
 \centering
+\caption{Fluxograma para apresentar a integração dos sistemas.}\label{fig:integracao}
 \includegraphics[width = 1\linewidth]{figuras/integracao}
-\caption{Fluxograma para apresentar a integração dos sistemas.}
-\caption*{Fonte: Próprio autor.}
-\label{fig:integracao}
 \end{figure}
     
 O sistema de software se comunica com o sistema eletrônico através do envio de dados pela comunicação 
