@@ -7,6 +7,18 @@ com a metodologia (seção \ref{ch:metodologia}). Primeiramente são apresentado
 em seguida são mostrados os resultados da programação do sistema de software.
 
 \section{Sistema mecânico}\label{sec:resmecanico}
+    
+A Figura \ref{fig:mesatunel} apresenta o esquema do sistema mecânico 
+da mesa cartesiana dentro do túnel de vento. Assim, é possível observar que a estrutura da mesa 
+cobre praticamente toda a seção transversal da área de teste. Permitindo assim uma medição automatizada com 
+deslocamentos precisos tendo uma maior facilidade na obtenção dos dados, já que não é necessário desligar 
+o túnel de vento e abrir a seção de testes a cada iteração. 
+
+\begin{figure}[H]
+\centering
+\caption{Mesa cartesiana dentro do túnel de vento.}\label{fig:mesatunel}
+\includegraphics[scale = 0.35]{figuras/mesatunel}
+\end{figure}
 
 %PRECISA DE REFERENCIA PARA TABELA DA LISTA DE MATERIAIS
 Para o desenvolvimento da mesa cartesiana foi necessário adquirir componentes estruturais e 
@@ -38,6 +50,27 @@ M6~x~10~mm e porca T reforçada com rosca M6. Já a união da parte superior do 
 realizada com parafusos Allen cabeça abaulada M6~x~16~mm.
 
 \pagebreak
+Lista dos componentes em PLA:
+\begin{itemize}
+    \item 1 - Suporte do mancal;
+    \item 2 - Suporte do motor de passo;
+    \item 3 - Suporte de elevação;
+    \item 4 - Suporte do motor horizontal;
+    \item 5 - Suporte da haste e mancal;
+    \item 6a - Suporte de serviço parte frontal;
+    \item 6b - Suporte de serviço parte traseira;
+\end{itemize}
+
+Na Figura \ref{fig:vistaexplodida} são apresentados (em vista explodida) os suportes 
+que devem ser fabricados em PLA.
+
+\begin{figure}[H]
+\centering
+\caption{Vista explodida dos componentes em PLA.}\label{fig:vistaexplodida}
+\includegraphics[scale = 0.45]{figuras/vistaexplodida}
+\end{figure}
+
+\pagebreak
 %PRECISA DE REFERENCIA PARA FIGURA
 Para o sistema de transmissão foram utilizados fusos TR8~x~8~mm unidos aos motores de passo 
 por meio de acoplamento flexível em alumínio 5~x~8~mm e apoiados na outra extremidade por 
@@ -51,7 +84,7 @@ em \ac{PLA} conforme Figura \ref{fig:ressuportemancal}.
 \caption{Suporte do mancal.}\label{fig:ressuportemancal}
 \includegraphics[scale = 0.4]{figuras/ressuportemancal}
 \end{figure}
-        
+            
 \pagebreak
 
 Para fixação dos motores de passo dos eixos verticais, foi criado um suporte denominado 
@@ -184,7 +217,7 @@ Será discutido os resultados dos cálculos situados na seção \ref{subsec:metc
 De forma geral, os cálculos referentes as peças foram realizados de forma conservadora 
 com o objetivo de serem dimensionados para a situação de maior carregamento.
 
-Para a haste, foi estipulado uma deflexão máxima de $0,05~mm$ resultando em uma força de $22,92106~N$ 
+Para a haste, foi estipulado uma deflexão máxima de $0,05~mm$ resultando em uma força de $22,92~N$ 
 que equivale aproximadamente $2,3~kg$. Então, se comparar essa força ao peso da haste, que é de $619~g$ mais 
 o peso do tubo de Pitot, que é de aproximadamente $80~g$ e o peso suporte de serviço, que é de aproximadamente 
 $300~g$, se obtém aproximadamente $1~kg$. Sendo assim, a haste tem um fator de segurança de 2,3. 
@@ -196,21 +229,18 @@ $300~g$, se obtém aproximadamente $1~kg$. Sendo assim, a haste tem um fator de 
 \end{itemize}
 
 Para a parte do fuso calculou-se a força máxima que ele suportaria erguer, que é de 306,55~N ou 31,2~kg. 
-Através dos cálculos realizados na seção \ref{subsec:metcalculos}. Encontrou-se o valor da tensão máxima 
-que o fuso suporta, este valor é de 18,33~MPa.
+Através dos cálculos realizados na seção \ref{subsec:metcalculos}. Encontrou-se o valor da tensão equivalente 
+de Von Mises que é de 32,3~MPa.
 
 Como o fabricante do fuso não especifica o aço utilizado na fabricação, foi considerado um aço inox~303, 
 que é um dos aços com menor tensão de escoamento para validar o projeto. Considerando a tensão admissível 
-do aço inox~303 que é de 241~MPa com a máxima tensão suportada pelo fuso, na região da raiz do filete, 
-que é de 18~MPa, encontrou-se um fator de segurança igual a 13. 
+do aço inox~303 que é de 241~MPa com a máxima tensão equivalente de Von Mises, encontrou-se um fator de 
+segurança igual a 7,46. 
 
 Através destes resultados, foi concluído que o peso do sistema junto aos equipamentos de medição estão bem 
 abaixo dos valores máximos de forças e tensões suportados pelo sistema de transmissão.
 
 %\section{Sistema eletrônico}\label{sec:ressisele}
-
-
-
 
 \section{Sistema de software}\label{sec:ressissof}
 
@@ -292,7 +322,7 @@ através do comando abaixo com seus devidos parâmetros de entrada.
 \subsection{Detalhamento do arquivo principal (MesaCartesiana.ino)}\label{subsec:resmesa}
 
 O arquivo principal tem a responsabilidade de gerenciar toda aplicação, neste arquivo 
-serão construídos todos objetos necessários. Segue abaixo um resumo com todas 
+foram construídos todos objetos necessários. Segue abaixo um resumo com todas 
 funcionalidades que este possui.
 
 \lstinputlisting[style = mystyle]{elementos-pos-textuais/apendices/MesaCartesianaino.txt}

@@ -23,7 +23,7 @@ acabamento à peça. A estrutura de metal é dividida em duas partes: base e pó
 o componente que tem a função de dar estabilidade à mesa, evitando que a mesma venha a tombar. A base possui um 
 formato retangular de 500~x~400~mm e é feito com um perfil V-Slot de 20~x~40~mm em alumínio, conforme 
 apresentado na Figura \ref{fig:p20x40p}, com suas dimensões na Figura \ref{fig:p20x40d}. 
-Para fazer a união dos perfis, que serão cortados em tamanho adequado com cantos esquadrejados em 
+Para fazer a união dos perfis, que foram cortados em tamanho adequado com cantos esquadrejados em 
 ângulo de 45°, mostrado na Figura \ref{fig:detalhe45}, para dar um melhor acabamento à peça, foi utilizada uma placa de conexão 
 interna de 90°, conforme a Figura \ref{fig:pconexao90p}, com suas dimensões especificadas 
 na Figura \ref{fig:pconexao90d}, que unirá os cantos dos perfis por 
@@ -139,23 +139,29 @@ nos eixos X e Y, optou-se por motores de passo, que possibilitam o controle da v
 e o posicionamento preciso, rotacionando em ângulos definidos chamados de passos. 
 O ponto negativo desses motores é o controle mais complexo que necessita de acionamento eletrônico 
 digital que, em contrapartida, apresenta uma precisão elevada no movimento. Os motores 
-serão acoplados aos perfis da estrutura de modo a possibilitar o movimento dos fusos e consequentemente 
+foram acoplados aos perfis da estrutura de modo a possibilitar o movimento dos fusos e consequentemente 
 o equipamento de medição, que estará fixado a ele por meio de uma guia com roldana. 
 
-\subsection{Cálculo dos esforços sobre a haste e o fuso}\label{subsec:metcalculos}
+\subsection{Cálculo dos esforços sobre a haste guia e fuso}\label{subsec:metcalculos}
 
-As forças envolvidas para erguer a carga e fazer o deslocamento do tubo de Pitot na direção horizontal 
-são baixas, não havendo necessidade de se fazer um cálculo estrutural, porém por se tratar de 
-um projeto mecânico, é inevitável que se tenha a garantia de que a estrutura resista aos 
-esforços mecânicos. Para tanto serão feitos cálculos para obter valores máximos de esforços 
-e compará-los com os valores admissíveis.
+As forças envolvidas para erguer  e fazer o deslocamento do tubo de Pitot na direção horizontal são 
+consideravelmente baixas para a estrutura da mesa cartesiana . Portanto, foram realizados cálculos 
+somente para os elementos críticos, que são os sistemas de elevação e de deslocamento 
+horizontal. Estes sistemas são compostos por motores de passo, acopladores, fusos, castanhas e mancais. 
+No sistema de deslocamento horizontal, além destes componentes ainda possui uma haste guia, 
+que serve para dar a sustentação para o suporte do tubo de Pitot. Os cálculos foram feitos com 
+o intuito de se obter os valores máximos e compará-los com os valores admissíveis dos componentes.
 
-Os cálculos a seguir serão fundamentados nos livros \citeauthor{juvinall2020fundamentals} (\citeyear{juvinall2020fundamentals}) e \citeauthor{budynas2016elementos} (\citeyear{budynas2016elementos}).
+Os cálculos a seguir foram fundamentados nos 
+livros \citeauthor{juvinall2020fundamentals} (\citeyear{juvinall2020fundamentals}) 
+e \citeauthor{budynas2016elementos} (\citeyear{budynas2016elementos}).
 
 \subsubsection{Cálculo da máxima deflexão}
 
-Para os cálculos, foi considerado o Aço inoxidável 303, por segurança, pois o fabricante da haste e do fuso 
-não especifíca o material.
+Como o fabricante apenas informa que, haste e fuso, são de aço inoxidável, mas não informa 
+a composição e o tratamento realizado nestas peças, por segurança, adotou-se as 
+características do aço inoxidável 303 para realização dos cálculos, por se tratar de um aço 
+inox com menores tensões de escoamento e ruptura.
 
 Dados: 
 $E_{Aco}~=~190~GPa$ de acordo com o \citeauthor{juvinall2020fundamentals} (\citeyear{juvinall2020fundamentals}),\\
@@ -182,7 +188,7 @@ A equação \ref{eq:momentodeinercia} calcula o momento de inércia segundo o \c
 
 Utilizando a equação \ref{eq:momentodeinercia} se obtém o momento de inércia da haste.
 
-$$I_{h} = \frac{\pi \cdot (8~mm)^{4}}{64} = 3216,990877~mm^{4}$$   
+$$I_{h} = \frac{\pi \cdot (16~mm)^{4}}{64} = 3216,99~mm^{4}$$   
 
 A Figura \ref{fig:diagramacorpolivre} mostra o diagrama de corpo livre da haste.
 
@@ -201,7 +207,7 @@ A equação \ref{eq:deflexao} calcula a deflexão segundo o \citeauthor{budynas2
 Utilizando a equação \ref{eq:deflexao} se obtém a força máxima para a deflexão de $0,05~mm$, 
 para isso foi utilizado o momento de inércia da haste.
 
-$$F = \frac{0,05~mm \cdot 48 \cdot 190 \cdot 10^{3}~\frac{N}{mm^{2}} \cdot 3216,990877~mm^{4}}{(400~mm)^{3}} = 22,92106~N$$
+$$F = \frac{0,05~mm \cdot 48 \cdot 190 \cdot 10^{3}~\frac{N}{mm^{2}} \cdot 3216,99~mm^{4}}{(400~mm)^{3}} = 22,92~N$$
 
 \subsubsection{Cálculo da força máxima suportada pelo fuso}
 
@@ -211,7 +217,7 @@ sobre os dentes do fuso.
 \begin{figure}[H]
 \centering
 \caption{Força agindo sobre o fuso.}\label{fig:esqforcafuso}
-\includegraphics[scale = 0.25]{figuras/esqforcafuso}
+\includegraphics[scale = 0.3]{figuras/esqforcafuso}
 \end{figure}
     
 Dados:
@@ -222,7 +228,7 @@ Onde:
     \item $d_{m}$ é o diâmetro médio;
     \item $P$ é o passo;
     \item $L_{a}$ é o avanço que é igual ao número de entradas vezes o passo;
-    \item $T$ é o torque do motor (Datasheet).
+    \item $T$ é o torque do motor (conforme o \textit{datasheet} do motor).
 \end{itemize}
 
 A equação \ref{eq:dmedio} calcula o diâmetro médio segundo o \citeauthor{budynas2016elementos} (\citeyear{budynas2016elementos}).
@@ -251,7 +257,13 @@ Onde:
 Utilizando a equação \ref{eq:avanco} se obtém o avanço considerando o número de entrada igual a 4 e o passo igual $2~mm$:
 $$L_{a} = 4 \cdot 2 = 8~mm$$ 
 
-Considerando o torque do motor conforme o \textit{datasheet}.
+Para o cálculo da força máxima que o fuso suporta erguer, utilizamos a equação \ref{eq:torque}, que relaciona a força, 
+o torque, o coeficientes de fricção e dados da geometria do fuso. Foi então considerado um torque 
+de $5~kgf \cdot cm$, conforme o \textit{datasheet} do motor utilizado. Para o coeficiente de fricção ($f$), 
+foi arbitrado o valor de 0,08, pois a castanha utilizada neste projeto é feita de latão, 
+sendo este um material que causa baixo atrito. O coeficiente de fricção do colar foi desprezado, 
+pois as partes que fixam o fuso são todas girantes.
+
 $$T = 5~kgf \cdot cm = 490,33~N \cdot mm$$
 
 \begin{equation}\label{eq:torque}
@@ -269,15 +281,14 @@ Onde:
     \item $d_{c}$ é o diametro do colar.
 \end{itemize}
 
-Considerando o $d_{c}$ = 0
-
 $$490,33~N \cdot mm = \frac{F \cdot 7~mm}{2} \cdot (\frac{8~mm + \pi \cdot 0,08 \cdot 7~mm}{\pi \cdot 7~mm - 0,08 \cdot 8~mm})$$
 
 $F = 306,55~N$
 
 \subsubsection{Tensões de corpo}
 
-A Figura \ref{fig:forcadente} mostra a força causando a flexão e o cisalhamento transversal na raiz da rosca.
+A Figura \ref{fig:forcadente} mostra a força agindo sobre um filete de rosca que causa 
+a flexão deste filete e gera uma tensão de cisalhamento transversal na raiz da rosca.
 
 \begin{figure}[H]
 \centering
@@ -287,7 +298,8 @@ A Figura \ref{fig:forcadente} mostra a força causando a flexão e o cisalhament
 
 Torcionais:
 
-Tensão de cisalhamento devido ao momento de torção no lado externo do corpo do fuso.
+Na equação \ref{eq:tensaocilhamento} é possível calcular a tensão de cisalhamento devido 
+ao momento de torção do lado externo do corpo do fuso. 
 
 \begin{equation}\label{eq:tensaocilhamento}
 \tau = \frac{16 \cdot T}{\pi \cdot d_{r}^{3}}
@@ -295,33 +307,22 @@ Tensão de cisalhamento devido ao momento de torção no lado externo do corpo d
 \myequation{Tensão cisalhamento}
 
 Onde:
-$d_{r}$ é o diâmetro menor.
+$d_{r}$ é o diâmetro menor, calculado diminuindo o passo do diâmetro nominal.
 $$d_{r} = d - P = 8~mm - 2~mm = 6~mm$$
 
 $$\tau = \frac{16 \cdot 490,33~N \cdot mm}{\pi \cdot (6~mm)^{3}} = 11,56~MPa$$
 
 Tensões compressiva ou normal axial:
 
-$$\sigma = - \frac{4 \cdot F}{ \pi (d_{r})^{2}}$$
+Para calcular a tensão compressiva utilizou-se a equação \ref{eq:tensaocompressiva} e 
+foi considerado a força máxima que o fuso suporta erguer.
+
+\begin{equation}\label{eq:tensaocompressiva}
+\sigma = - \frac{4 \cdot F}{ \pi (d_{r})^{2}}
+\end{equation}
+\myequation{Tensões compressiva ou normal axial}
 
 $$\sigma = - \frac{4 \cdot 306,55~N}{ \pi (6~mm)^{2}} = -10,84~\frac{N}{mm^{2}}$$
-
-\subsubsection{Tensão de sustentação}
-
-Considerações:
-\begin{itemize}
-    \item A tensão de sustentação com uma rosca carregando 0,38~F;
-    \item Número de roscas engajadas é igual a 1;
-\end{itemize}
-
-Onde:
-\begin{itemize}
-    \item $n_{t}$ é o número de roscas engajadas;
-\end{itemize}
-
-$$\sigma = \frac{2 \cdot (0,38 \cdot F)}{\pi \cdot d_{m} \cdot n_{t} \cdot P}$$
-
-$$\sigma = \frac{2 \cdot (0,38 \cdot 306,55~N)}{\pi \cdot 7~mm \cdot 1 \cdot 2~mm} = 5,29~MPa$$
 
 \subsubsection{Tensão de flexão da raiz da rosca}
 
@@ -334,41 +335,35 @@ Utilizando a equação \ref{eq:tensaoflexaoraizrosca} se obtém a tensão de fle
 
 $$\sigma_{raiz} = \frac{6 \cdot (0,38 \cdot 306,55)~N}{\pi \cdot 6~mm \cdot 1 \cdot 2~mm} = 18,5~MPa$$
 
-\subsubsection{Tensão de Von Mises e tensão de cisalhamento máximo}
+\subsubsection{Tensão de Von Mises}
 
-\begin{equation}\label{eq:vonmises}
-\sigma_{2}, \sigma_{3} = \frac{\sigma_{x} + \sigma_{y}}{2} \pm \sqrt{(\frac{\sigma_{x} - \sigma_{y}}{2})^2 + \tau_{xy}^{2}}
+Segundo a teoria da energia de distorção para materiais dúcteis, haverá escoamento do material 
+se a tensão equivalente de Von Mises ($\sigma^{'}$), mostrada na equação \ref{eq:tensaovonmises} 
+for igual ou superior a tensão de escoamento do material.
+
+\begin{equation}\label{eq:tensaovonmises}
+    \sigma^{'} = \frac{1}{\sqrt{2}} \cdot ((\sigma_{x} - \sigma_{y})^{2} + (\sigma_{y} - \sigma_{z})^{2} + (\sigma_{z} - \sigma_{x})^{2} + 6 \cdot (\tau_{xy}^{2} + \tau_{yz}^{2} + \tau_{zx}^{2}))^{\frac{1}{2}}
 \end{equation}
-\myequation{Tensão de Von Mises e tensão de cisalhamento máximo}
+\myequation{Tensão equivalente de Von Mises}
 
-Utilizando a equação \ref{eq:vonmises} se obtém a tensão de cisalhamento máximo:
+O sistema de componentes cartesianos de tensões apresentam tensão normal nos eixos X e Z, 
+por causa do momento fletor. Já a tensão de cisalhamento no plano YZ acontece 
+devido ao momento de torção que age sobre o fuso.
 
-$$\sigma_{2}, \sigma_{3} = \frac{-10,82}{2} \pm \sqrt{(\frac{-10,82}{2})^2 + 11,56^{2}}$$
+Logo as tensões tridimensionais são:
 
-$$\sigma_{2} = 7,42~MPa$$
-$$\sigma_{3} = -18,26~MPa$$
+$$\sigma_{x} = 18,5~MPa$$
+$$\sigma_{y} = 0~MPa$$
+$$\sigma_{z} = -10,39~MPa$$
+$$\tau_{xy} = 0~MPa$$
+$$\tau_{yz} = 11,56~MPa$$
+$$\tau_{zx} = 0~MPa$$
 
-Logo:
+Substituindo os valores das tensões na equação \ref{eq:tensaovonmises} foi obtido.
 
-$$\sigma_{1} = 18,5~MPa$$
-$$\sigma_{2} = 7,42~MPa$$
-$$\sigma_{3} = -18,26~MPa$$
+$$\sigma^{'} = \frac{1}{\sqrt{2}} \cdot ((18,5)^{2} + (-10,39)^{2} + (-10,39 - 18,5)^{2} + 6 \cdot (11,56^{2}))^{\frac{1}{2}}$$
 
-A tensão de Von Mises:
-\begin{equation}
-\sigma' = (\frac{(\sigma_{1} - \sigma_{2})^{2} + (\sigma_{2} - \sigma_{3})^{2} + (\sigma_{3} - \sigma_{1})^{2}}{2})^{\frac{1}{2}}
-\end{equation}
-\myequation{Tensão de Von Mises}
-
-$$\sigma' = (\frac{(18,5 - 7,42)^{2} + (7,42 - (-18,26)))^{2} + (-18,26 - 18,5)^{2}}{2})^{\frac{1}{2}} = 32,66~MPa$$
-
-Tensão Máxima:
-\begin{equation}\label{eq:tensaomaxima}
-\sigma_{1-3} = \frac{\sigma_{1} - \sigma{3}}{2}
-\end{equation}
-\myequation{Tensão Máxima}
-
-$$\sigma_{1-3} = \frac{18,5 - (-18,26)}{2} = 18,33~MPa$$
+$$\sigma^{'} = 32,3~MPa$$
 
 \section{Sistema eletrônico}\label{sec:metsisele}
 
@@ -563,7 +558,7 @@ ocorra o movimento de rotação do motor devido às interações magnéticas.
 
 O atributo que distingue o motor de passo dos demais motores elétricos é a capacidade de realizar passos, 
 que são rotações discretas incrementais e precisas. Os passos são definidos por um número fixo de 
-pólos magnéticos de dente de engrenagens do motor, determinando assim, a precisão de ângulo de rotação 
+pólos magnéticos de dentes de engrenagens do motor, determinando assim, a precisão de ângulo de rotação 
 do motor de passo. Para que haja um controle de quantos passos serão dados, o motor necessita de 
 largura de pulso a fim de enviar a corrente adequada para cada passo. A Figura \ref{fig:didaticopasso} 
 é um exemplo para melhor entendimento do conceito de passo.
